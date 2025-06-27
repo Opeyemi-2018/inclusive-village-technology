@@ -1,3 +1,4 @@
+import HomeSectionEight from "@/components/home-section/HomeSectionEight"
 import HomeSectionFive from "@/components/home-section/HomeSectionFive"
 import HomeSectionFour from "@/components/home-section/HomeSectionFour"
 import HomeSectionOne from "@/components/home-section/HomeSectionOne"
@@ -16,6 +17,7 @@ const HomePage = () => {
             <HomeSectionFive />
             <HomeSectionSix />
             <HomeSectionSeven />
+            <HomeSectionEight />
         </div>
     )
 }
