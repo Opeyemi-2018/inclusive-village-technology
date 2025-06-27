@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutSectionTwo = () => {
     return (
-        <div className="lg:px-10 px-3">
+        <div className="lg:px-10 px-3 pb-20">
             <div className="max-w-7xl mx-auto">
                 {/* Top section indicator */}
                 <div className="flex items-center gap-3 pb-14">
