@@ -1,0 +1,70 @@
+'use client';
+
+import { useState } from 'react';
+import { HiOutlineMinus } from "react-icons/hi";
+import { FiPlus } from "react-icons/fi";
+
+
+type Service = {
+    name: string;
+    description: string;
+};
+
+const services: Service[] = [
+    {
+        name: 'Branding',
+        description: 'We create strong brand identities that are memorable and effective.',
+    },
+    {
+        name: 'UI/UX Design',
+        description: 'Designing intuitive interfaces and seamless user experiences.',
+    },
+    {
+        name: 'Web Development',
+        description: 'Building responsive and scalable websites and web apps.',
+    },
+];
+
+const HomeSectionFour = () => {
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+    return (
+        <div className="lg:px-10 px-3 py-40 bg-white">
+            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:mb-12 mb-2">
+                <div className="flex items-center gap-3">
+                    <p className="text-lg font-semibold">Our Services</p>
+                    <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
+                </div>
+                <h1 className="flex-1 lg:text-7xl text-5xl capitalize font-bold max-w-2xl">
+                    top-notch <br /> services
+                </h1>
+            </div>
+
+            {/* Services List */}
+            <div className="pt-10">
+                {services.map((service, index) => (
+                    <div
+                        key={index}
+                        className={`transition-all duration-300 border-b-2 cursor-pointer rounded-lg px-4 py-10 
+              ${hoveredIndex === index ? 'bg-orange-600 text-white border-orange-600' : 'bg-white border-gray-200'}
+            `}
+                        onMouseEnter={() => setHoveredIndex(index)}
+                        onMouseLeave={() => setHoveredIndex(null)}
+                    >
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                            <h2 className="text-3xl md:text-4xl font-semibold md:w-1/3">{service.name}</h2>
+
+                            <p className="text-base flex-1 text-left md:text-center">{service.description}</p>
+
+                            <div className="hidden md:block">
+                                {hoveredIndex === index ? <HiOutlineMinus size={30} /> : <FiPlus size={30} />}
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default HomeSectionFour;
