@@ -35,3 +35,24 @@ body {
     animation: slide 25s linear infinite;
   }
 }
+/* hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes scrollLeftToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.scroll-animation {
+  animation: scrollLeftToRight 30s linear infinite;
+}

@@ -58,11 +58,11 @@ const Header = () => {
                         className="hidden lg:flex fixed  left-0 right-0 z-40 min-h-screen items-center justify-center bg-white"
                     >
                         <nav className="text-7xl font-bold flex flex-col gap-6 items-center uppercase">
-                            <Link href="/">Home</Link>
-                            <Link href="/home">About</Link>
-                            <Link href="/home">Work</Link>
-                            <Link href="/home">Blog</Link>
-                            <Link href="/home">Contact</Link>
+                            <Link href="/" onClick={() => setMenuOpen(!menuOpen)}>Home</Link>
+                            <Link href="/about" onClick={() => setMenuOpen(!menuOpen)}>About</Link>
+                            <Link href="/home" onClick={() => setMenuOpen(!menuOpen)}>Work</Link>
+                            <Link href="/home" onClick={() => setMenuOpen(!menuOpen)}>Blog</Link>
+                            <Link href="/home" onClick={() => setMenuOpen(!menuOpen)}>Contact</Link>
                         </nav>
                     </motion.div>
                 )}
@@ -81,7 +81,7 @@ const Header = () => {
                     >
                         <nav className="rounded-lg px-6 py-4 text-2xl font-bold flex flex-col gap-4 uppercase">
                             <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
-                            <Link href="/home" onClick={() => setMenuOpen(false)}>About</Link>
+                            <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
                             <Link href="/home" onClick={() => setMenuOpen(false)}>Work</Link>
                             <Link href="/home" onClick={() => setMenuOpen(false)}>Blog</Link>
                             <Link href="/home" onClick={() => setMenuOpen(false)}>Contact</Link>

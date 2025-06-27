@@ -1,6 +1,7 @@
 'use client';
 
-import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
+// import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
+import LinkWithArrow from '../contactButton';
 type ProcessStep = {
   number: number;
   name: string;
@@ -56,7 +57,7 @@ const HomeSectionFive = () => {
         ))}
       </div>
 
-      
+
       <div className="bg-orange-600 text-black rounded-2xl  px-10 py-10 flex flex-col gap-16 max-w-md mx-auto w-full shadow-md">
         <h2 className="text-4xl font-extrabold leading-tight mb-4">
           GOT A <br />
@@ -67,12 +68,16 @@ const HomeSectionFive = () => {
           Book a call to learn more about how we can solve your design needs.
         </p>
 
-        <button className="flex items-center justify-end gap-2 text-sm font-semibold group">
-          <span className="relative after:block after:absolute after:w-full after:h-[1px] after:bg-black after:bottom-[-2px] after:left-0">
-            SCHEDULE A CALL
-          </span>
-          <FaArrowUpRightFromSquare size={14} />
-        </button>
+        <div className="flex items-center justify-end gap-2 text-sm font-semibold group">
+          <div>
+            <LinkWithArrow
+              href="/contact"
+              label="get in touch"
+              underlineColor="bg-black"
+              iconColor="text-black"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

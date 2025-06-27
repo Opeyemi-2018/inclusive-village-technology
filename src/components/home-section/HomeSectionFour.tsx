@@ -40,7 +40,7 @@ const HomeSectionFour = () => {
                 </h1>
             </div>
 
-            {/* Services List */}
+           
             <div className="pt-10">
                 {services.map((service, index) => (
                     <div

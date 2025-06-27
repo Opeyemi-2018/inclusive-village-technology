@@ -1,7 +1,6 @@
 'use client';
 
-import Link from "next/link";
-import { MdOutlineArrowOutward } from "react-icons/md";
+import LinkWithArrow from "../contactButton";
 
 const HomeSectionSeven = () => {
   return (
@@ -24,16 +23,12 @@ const HomeSectionSeven = () => {
             A diverse group of creators, strategists, and programmers, bound by a mutual passion for crafting impactful digital engagements. ●
           </p>
           <div>
-            <Link
-              href={'/contact'}
-              className="uppercase flex flex-col items-start gap-1 font-semibold group"
-            >
-              <div className="flex items-center gap-3">
-                get in touch
-                <MdOutlineArrowOutward className="text-orange-600" size={30} />
-              </div>
-              <span className="w-10 h-[2px] bg-black"></span>
-            </Link>
+            <LinkWithArrow
+              href="/contact"
+              label="get in touch"
+              underlineColor="bg-black"
+              iconColor="text-orange-600"
+            />
           </div>
         </div>
       </div>
