@@ -24,7 +24,7 @@ const AboutSectionThree = () => {
                     />
                 </div>
 
-                <div className="bg-gray-100 p-6 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between h-[300px]">
+                <div className="bg-gray-100 p-6 rounded-2xl shadow-md   flex flex-col justify-between h-[300px]">
                     <div className='flex flex-col gap-24'>
                         <div className='flex items-center md:text-5xl text-4xl  font-bold'>
                             <h3 className="  mb-2">200</h3>
@@ -38,7 +38,7 @@ const AboutSectionThree = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-gray-100 p-6 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between h-[300px]">
+                <div className="bg-gray-100 p-6 rounded-2xl shadow-md   flex flex-col justify-between h-[300px]">
                     <div className='flex flex-col gap-24'>
                         <div className='flex items-center md:text-5xl text-4xl  font-bold'>
                             <h3 className="  mb-2">200</h3>
@@ -52,7 +52,7 @@ const AboutSectionThree = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-gray-100 p-6 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between h-[300px]">
+                <div className="bg-gray-100 p-6 rounded-2xl shadow-md   flex flex-col justify-between h-[300px]">
                     <div className='flex flex-col gap-24'>
                         <div className='flex items-center md:text-5xl text-4xl  font-bold'>
                             <h3 className="  mb-2">200</h3>
@@ -66,7 +66,7 @@ const AboutSectionThree = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-gray-100 p-6 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between h-[300px]">
+                <div className="bg-gray-100 p-6 rounded-2xl shadow-md   flex flex-col justify-between h-[300px]">
                     <div className='flex flex-col gap-24'>
                         <div className='flex items-center md:text-5xl text-4xl  font-bold'>
                             <h3 className="  mb-2">200</h3>

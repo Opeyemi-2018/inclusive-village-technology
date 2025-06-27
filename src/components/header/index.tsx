@@ -11,10 +11,8 @@ import { RiTwitterXLine } from "react-icons/ri";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-
     return (
         <div className="lg:px-6 px-3 pt-7 relative">
-            {/* ✅ Top bar with logo and toggle icon */}
             <div className="fixed top-0 left-0 right-0 z-50 bg-white lg:px-6 px-3 py-4">
                 <div className="flex justify-between items-center">
                     <Link href={'/'}><Image src="/iv-logo-no-bg.png" alt="iv logo" width={50} height={50} /></Link>
@@ -46,7 +44,6 @@ const Header = () => {
                 </div>
             </div>
 
-            {/* ✅ Fixed Desktop Nav with animation */}
             <AnimatePresence>
                 {menuOpen && (
                     <motion.div
@@ -60,15 +57,14 @@ const Header = () => {
                         <nav className="text-7xl font-bold flex flex-col gap-6 items-center uppercase">
                             <Link href="/" onClick={() => setMenuOpen(!menuOpen)}>Home</Link>
                             <Link href="/about" onClick={() => setMenuOpen(!menuOpen)}>About</Link>
-                            <Link href="/home" onClick={() => setMenuOpen(!menuOpen)}>Work</Link>
-                            <Link href="/home" onClick={() => setMenuOpen(!menuOpen)}>Blog</Link>
-                            <Link href="/home" onClick={() => setMenuOpen(!menuOpen)}>Contact</Link>
+                            <Link href="/work" onClick={() => setMenuOpen(!menuOpen)}>Work</Link>
+                            <Link href="/blog" onClick={() => setMenuOpen(!menuOpen)}>Blog</Link>
+                            <Link href="/contact" onClick={() => setMenuOpen(!menuOpen)}>Contact</Link>
                         </nav>
                     </motion.div>
                 )}
             </AnimatePresence>
 
-            {/* ✅ Fixed Mobile Nav (untouched visually, now fixed in position) */}
             <AnimatePresence>
                 {menuOpen && (
                     <motion.div
@@ -82,9 +78,9 @@ const Header = () => {
                         <nav className="rounded-lg px-6 py-4 text-2xl font-bold flex flex-col gap-4 uppercase">
                             <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
                             <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
-                            <Link href="/home" onClick={() => setMenuOpen(false)}>Work</Link>
-                            <Link href="/home" onClick={() => setMenuOpen(false)}>Blog</Link>
-                            <Link href="/home" onClick={() => setMenuOpen(false)}>Contact</Link>
+                            <Link href="/work" onClick={() => setMenuOpen(false)}>Work</Link>
+                            <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+                            <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
                         </nav>
 
                         <div className="space-y-4 px-6 pt-4 ">
