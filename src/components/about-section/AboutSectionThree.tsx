@@ -14,8 +14,8 @@ const AboutSectionThree = () => {
 
                 </h1>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="relative h-[300px] w-full bg-gray-100 rounded-2xl overflow-hidden ">
+            <div className="grid grid-cols-1  2xl:grid-cols-3 lg:grid-cols-2 gap-6">
+                <div className="relative h-[350px] w-full bg-gray-100 rounded-2xl overflow-hidden ">
                     <Image
                         src={'/man-2.avif'}
                         alt="Team working"
@@ -24,8 +24,8 @@ const AboutSectionThree = () => {
                     />
                 </div>
 
-                <div className="bg-gray-100 p-6 rounded-2xl    flex flex-col justify-between h-[300px]">
-                    <div className='flex flex-col gap-24'>
+                <div className="bg-gray-100 p-6  rounded-2xl flex flex-col justify-between h-[350px]">
+                    <div className='flex flex-col  md:gap-28 gap-16'>
                         <div className='flex items-center md:text-5xl text-4xl  font-bold'>
                             <h3 className="  mb-2">200</h3>
                             <span className='text-orange-600'>+</span>
@@ -38,8 +38,8 @@ const AboutSectionThree = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-gray-100 p-6 rounded-2xl    flex flex-col justify-between h-[300px]">
-                    <div className='flex flex-col gap-24'>
+                <div className="bg-gray-100 p-6 rounded-2xl    flex flex-col justify-between h-[350px]">
+                    <div className='flex flex-col md:gap-28 gap-16'>
                         <div className='flex items-center md:text-5xl text-4xl  font-bold'>
                             <h3 className="  mb-2">200</h3>
                             <span className='text-orange-600'>+</span>
@@ -52,8 +52,8 @@ const AboutSectionThree = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-gray-100 p-6 rounded-2xl    flex flex-col justify-between h-[300px]">
-                    <div className='flex flex-col gap-24'>
+                <div className="bg-gray-100 p-6 rounded-2xl    flex flex-col justify-between h-[350px]">
+                    <div className='flex flex-col md:gap-28 gap-16'>
                         <div className='flex items-center md:text-5xl text-4xl  font-bold'>
                             <h3 className="  mb-2">200</h3>
                             <span className='text-orange-600'>+</span>
@@ -66,8 +66,8 @@ const AboutSectionThree = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-gray-100 p-6 rounded-2xl    flex flex-col justify-between h-[300px]">
-                    <div className='flex flex-col gap-24'>
+                <div className="bg-gray-100 p-6 rounded-2xl    flex flex-col justify-between h-[350px]">
+                    <div className='flex flex-col md:gap-28 gap-16'>
                         <div className='flex items-center md:text-5xl text-4xl  font-bold'>
                             <h3 className="  mb-2">200</h3>
                             <span className='text-orange-600'>+</span>
@@ -83,7 +83,7 @@ const AboutSectionThree = () => {
 
                 
 
-                <div className="relative h-[300px] w-full bg-gray-200 rounded-2xl overflow-hidden ">
+                <div className="relative h-[350px] w-full bg-gray-200 rounded-2xl overflow-hidden ">
                     <Image
                         src={'/red-men.avif'}
                         alt="Team working"
