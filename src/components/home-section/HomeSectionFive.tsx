@@ -29,12 +29,12 @@ const steps: ProcessStep[] = [
 const HomeSectionFive = () => {
   return (
     <div className="lg:px-10 px-3 py-20 ">
-      <div className="flex flex-col  items-center gap-4 lg:mb-20 mb-16">
+      <div className="flex flex-col  items-center gap-4 lg:mb-36 mb-16">
         <div className="flex items-center gap-3">
           <p className="text-lg font-semibold">Our Services</p>
           <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
         </div>
-        <h1 className=" lg:text-7xl text-5xl capitalize font-bold max-w-2xl">
+        <h1 className=" lg:text-8xl text-5xl capitalize font-bold ">
           OUR PROCESS
 
         </h1>

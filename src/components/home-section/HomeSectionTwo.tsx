@@ -8,15 +8,15 @@ const HomeSectionTwo = () => {
     const logos = [...clientLogos, ...clientLogos];
 
     return (
-        <div className="lg:px-10 px-3 py-40">
+        <div className="lg:px-10 px-3 py-48">
             <div className="flex flex-col lg:flex-row lg:items-center justify-between lg:gap-20 gap-4">
-                <div className="w-full lg:w-[40%]">
+                <div className="w-full lg:w-auto">
                     <Image
                         src={'/man.avif'}
                         alt="man"
-                        width={700}
+                        width={1000}
                         height={600}
-                        className="rounded-lg w-full h-[450px] object-cover"
+                        className="rounded-lg w-[600px] h-[400px] "
                     />
                 </div>
 
@@ -26,22 +26,22 @@ const HomeSectionTwo = () => {
                     </p>
 
                     <div className="flex items-center justify-between pt-5">
-                        <div className="flex  flex-col">
+                        <div className="flex flex-col">
                             <h1 className="text-orange-600 text-5xl font-extrabold">200 +</h1>
                             <p className="text-gray-700 text-[18px]">Projects delivered</p>
                         </div>
-                        <div className="flex  flex-col">
-                            <h1 className="text-orange-600 text-5xl font-extrabold">95% </h1>
-                            <p className="text-gray-700 text-[18px]">Projects delivered</p>
+                        <div className="flex flex-col">
+                            <h1 className="text-orange-600 text-5xl font-extrabold">95%</h1>
+                            <p className="text-gray-700 text-[18px]">Client satisfaction</p>
                         </div>
-                        <div className="flex  flex-col">
+                        <div className="flex flex-col">
                             <h1 className="text-orange-600 text-5xl font-extrabold">12 +</h1>
-                            <p className="text-gray-700 text-[18px]">Projects delivered</p>
+                            <p className="text-gray-700 text-[18px]">Years of experience</p>
                         </div>
-
                     </div>
                 </div>
             </div>
+
             <div className="overflow-hidden pt-20 bg-white">
                 <div className="whitespace-nowrap animate-slide">
                     {logos.map((logo, index) => (

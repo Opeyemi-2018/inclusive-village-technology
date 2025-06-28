@@ -52,7 +52,7 @@ const Header = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -30 }}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
-                        className="hidden lg:flex fixed  left-0 right-0 z-40 min-h-screen items-center justify-center bg-white"
+                        className="hidden lg:flex  fixed top-0  left-0 right-0 z-40 min-h-screen items-center justify-center bg-white"
                     >
                         <nav className="text-7xl font-bold flex flex-col gap-6 items-center uppercase">
                             <Link href="/" onClick={() => setMenuOpen(!menuOpen)}>Home</Link>
