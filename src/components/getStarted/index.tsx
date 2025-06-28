@@ -17,8 +17,8 @@ const GetStarted = () => {
                     </div>
 
                     <div>
-                        <h1 className="w-full text-[16vw] font-bold text-center leading-none whitespace-nowrap overflow-hidden">
-                            let’s work together
+                        <h1 className="w-full text-[10vw] uppercase font-bold text-center leading-none whitespace-nowrap overflow-hidden">
+                            let’s work <br /> together
                         </h1>
                     </div>
 

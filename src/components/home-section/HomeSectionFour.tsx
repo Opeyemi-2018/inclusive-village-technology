@@ -22,6 +22,10 @@ const services: Service[] = [
         name: 'Web Development',
         description: 'Building responsive and scalable websites and web apps.',
     },
+    {
+        name: 'Web Development',
+        description: 'Building responsive and scalable websites and web apps.',
+    },
 ];
 
 const HomeSectionFour = () => {
@@ -54,7 +58,7 @@ const HomeSectionFour = () => {
                 {services.map((service, index) => (
                     <div
                         key={index}
-                        className={`transition-all duration-300 cursor-pointer px-4 py-10 
+                        className={`transition-all duration-300 cursor-pointer px-4 md:py-16 py-10 
                         ${hoveredIndex === index ? 'md:bg-orange-600 rounded-lg md:text-white' : ''}
                         ${hoveredIndex === index ? 'md:rounded-lg' : ''}
                         md:border-b md:border-gray-200

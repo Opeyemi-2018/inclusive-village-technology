@@ -46,7 +46,7 @@ const HomeSectionEight = () => {
                 </h1>
             </div>
 
-            <div className="flex lg:flex-row flex-col justify-between gap-5e pt-6">
+            <div className="flex lg:flex-row flex-col justify-between gap-5 pt-6">
                 {blogs.map((blog: BlogPost) => (
                     <div
                         key={blog.id}
