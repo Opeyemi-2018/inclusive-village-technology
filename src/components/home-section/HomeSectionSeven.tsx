@@ -6,19 +6,21 @@ const HomeSectionSeven = () => {
   return (
     <div className="relative bg-white">
       <div
-        className="relative bg-cover bg-center py-40 px-4 sm:px-6 lg:px-8"
+        className="relative bg-cover bg-center pt-10 px-4 sm:px-6 lg:px-8"
         style={{
           backgroundImage: "url('/hero-men.jpg')",
           backgroundBlendMode: 'lighten',
           backgroundColor: 'rgba(255, 255, 255, 0.5)', // adds a white overlay
           filter: 'grayscale(60%)',
+          height: '100vh',
+          borderRadius: "20px",
         }}
       >
         {/* Gradient Fade Into White */}
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-white pointer-events-none" />
 
-        <div className="max-w-2xl space-y-5">
-          <h2 className="text-3xl md:text-7xl font-semibold mb-6">MEET OUR TEAM</h2>
+        <div className="max-w-2xl space-y-20">
+          <h2 className="text-3xl md:text-7xl font-semibold mb-6">MEET OUR <br /> TEAM</h2>
           <p className="text-lg  ">
             A diverse group of creators, strategists, and programmers, bound by a mutual passion for crafting impactful digital engagements. ●
           </p>

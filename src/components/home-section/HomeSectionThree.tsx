@@ -1,10 +1,11 @@
 import Image from "next/image";
+import LinkWithArrow from "../contactButton";
 
 const recentWorks = [
 
     {
         id: 3,
-        name: "TravelEase",
+        name: "Bright app",
         type: "Web",
         year: "December 10, 2024",
         image: "/optimization.jpg"
@@ -50,7 +51,7 @@ const HomeSectionThree = () => {
 
                         <div className="mt-4 flex items-center justify-between text-lg font-medium">
                             <div>
-                                <p className="capitalize text-2xl">{name}</p>
+                                <p className="capitalize text-3xl ">{name}</p>
                                 <p className="text-gray-500 text-sm">{type}</p>
                             </div>
                             <p className="text-gray-800">{year}</p>
@@ -58,6 +59,15 @@ const HomeSectionThree = () => {
                     </div>
                 ))}
             </div>
+
+             <div className="flex items-center justify-center pt-20">
+                        <LinkWithArrow
+                            href="/contact"
+                            label="view more work"
+                            underlineColor="bg-black"
+                            iconColor="text-orange-600"
+                        />
+                    </div>
         </div>
     );
 };

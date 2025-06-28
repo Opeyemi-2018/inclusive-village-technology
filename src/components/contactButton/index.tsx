@@ -23,9 +23,9 @@ const LinkWithArrow: React.FC<LinkWithArrowProps> = ({
         <div className={className}>
             <Link
                 href={href}
-                className="uppercase flex flex-col items-start gap-1 font-semibold group"
+                className="uppercase flex flex-col items-start gap-1  group"
             >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3  font-semibold">
                     {label}
                     {/* Render passed icon or default */}
                     {icon ?? <MdOutlineArrowOutward className={iconColor} size={30} />}

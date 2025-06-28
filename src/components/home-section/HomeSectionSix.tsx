@@ -16,31 +16,31 @@ const testimonials: Testimonial[] = [
         quote: 'PixelHive exceeded our expectations! The design was sleek, modern, and incredibly easy to customize. Highly recommend their templates!',
         name: 'Tawhid A.',
         title: 'Design Lead @WFC',
-        avatar: '/bio.webp',
+        avatar: '/team.png',
     },
     {
         quote: 'Working with PixelHive was a game-changer for our brand. The UI/UX design is top-notch, and the no-code flexibility made it simple for us to make changes.',
         name: 'Aziz H.',
         title: 'Founder @WFC',
-        avatar: '/bio.webp',
+        avatar: '/team.png',
     },
     {
         quote: 'Finally Found PixelHive was a game-changer for our brand. The UI/UX design is top-notch, and the no-code flexibility made it simple for us to make changes.',
         name: 'Arif I.',
         title: 'Developer @WFC',
-        avatar: '/bio.webp',
+        avatar: '/team.png',
     },
     {
         quote: 'The quality of their work is exceptional. PixelHive delivered exactly what we needed and more. Will definitely work with them again!',
         name: 'Sarah K.',
         title: 'Marketing Director @ABC Corp',
-        avatar: '/bio.webp',
+        avatar: '/team.png',
     },
 ];
 
 const HomeSectionSix = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [itemsToShow, setItemsToShow] = useState(3); 
+    const [itemsToShow, setItemsToShow] = useState(3);
 
     useEffect(() => {
         const handleResize = () => {
@@ -51,19 +51,21 @@ const HomeSectionSix = () => {
             }
         };
 
-        // Set initial value
-        handleResize();
+        if (typeof window !== 'undefined') {
+            handleResize(); 
+            window.addEventListener('resize', handleResize);
+        }
 
-        // Add event listener
-        window.addEventListener('resize', handleResize);
-
-        // Clean up
-        return () => window.removeEventListener('resize', handleResize);
+        return () => {
+            if (typeof window !== 'undefined') {
+                window.removeEventListener('resize', handleResize);
+            }
+        };
     }, []);
 
-   
 
-    // Calculate visible testimonials
+
+
     const visibleTestimonials = [];
     for (let i = 0; i < itemsToShow; i++) {
         const index = (currentIndex + i) % testimonials.length;
@@ -77,22 +79,22 @@ const HomeSectionSix = () => {
                     <p className="text-lg font-semibold">Testimonials</p>
                     <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
                 </div>
-                <h1 className="flex-1 lg:text-7xl text-5xl capitalize font-bold max-w-2xl">
+                <h1 className="flex-1 lg:text-8xl text-5xl uppercase font-bold max-w-2xl">
                     What Our Customers Say
                 </h1>
             </div>
 
             <div className="py-20 bg-white relative">
-                {/* Carousel container */}
+
                 <div className="relative overflow-hidden">
-                    <div className="flex transition-transform duration-300 ease-in-out">
+                    <div className="flex gap-4 transition-transform duration-300 ease-in-out">
                         {visibleTestimonials.map((item, index) => (
                             <div
                                 key={`${currentIndex}-${index}`}
-                                className="w-full md:w-1/3 px-4 flex-shrink-0"
+                                className="w-full md:w-1/3 flex-shrink-0"
                             >
-                                <div className="bg-white border border-gray-200 rounded-xl p-10 flex flex-col gap-6 justify-between shadow-sm h-full">
-                                    <FaQuoteLeft size={50} className="text-orange-600 mb-4 font-extrabold" />
+                                <div className="bg-white border border-gray-100 rounded-xl p-10 flex flex-col gap-10 justify-between h-full">
+                                    <FaQuoteLeft size={60} className="text-orange-600 mb-4 font-extrabold" />
                                     <p className="text-[22px] font-medium text-gray-900 mb-6">{item.quote}</p>
                                     <div className="flex items-center gap-4 mt-auto">
                                         <Image
@@ -104,7 +106,7 @@ const HomeSectionSix = () => {
                                         />
                                         <div>
                                             <p className="font-semibold text-[20px] text-orange-600">{item.name}</p>
-                                            <p className="text-gray-400 text-1xl font-semibold">{item.title}</p>
+                                            <p className="text-gray-400 text-[20px] font-medium">{item.title}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -113,7 +115,7 @@ const HomeSectionSix = () => {
                     </div>
                 </div>
 
-               
+
 
                 {/* Dots pagination */}
                 <div className="flex justify-center gap-2 mt-8">

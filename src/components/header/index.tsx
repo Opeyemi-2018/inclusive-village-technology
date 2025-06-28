@@ -13,7 +13,7 @@ const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
         <div className="lg:px-6 px-3 pt-7 relative">
-            <div className="fixed top-0 left-0 right-0 z-50 bg-white lg:px-6 px-3 py-4">
+            <div className="fixed top-0 left-0 right-0 z-50 lg:px-6 px-3 py-4">
                 <div className="flex justify-between items-center">
                     <Link href={'/'}><Image src="/iv-logo-no-bg.png" alt="iv logo" width={50} height={50} /></Link>
                     <button onClick={() => setMenuOpen(!menuOpen)} className="transition-all duration-300">

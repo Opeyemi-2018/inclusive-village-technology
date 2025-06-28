@@ -41,16 +41,16 @@ const HomeSectionEight = () => {
                     <p className="text-lg font-semibold">Latest Blog</p>
                     <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
                 </div>
-                <h1 className="flex-1 lg:text-7xl text-5xl capitalize font-bold max-w-2xl">
+                <h1 className="flex-1 lg:text-8xl text-5xl capitalize font-bold max-w-2xl">
                     Our blog <br /> insights
                 </h1>
             </div>
 
-            <div className="flex lg:flex-row flex-col justify-between gap-3 pt-6">
+            <div className="flex lg:flex-row flex-col justify-between gap-5e pt-6">
                 {blogs.map((blog: BlogPost) => (
                     <div
                         key={blog.id}
-                        className="w-full  border border-gray-200 rounded-lg p-4 flex flex-col justify-between"
+                        className="w-full  border border-gray-200 rounded-lg gap-4 p-4 flex flex-col justify-between"
                     >
                         <div className="relative w-full h-64 mb-4">
                             <Image
@@ -62,11 +62,11 @@ const HomeSectionEight = () => {
                         </div>
                         <div className='flex items-center gap-2'>
                             <span className="w-5 h-5 bg-black  rounded-full inline-block"></span>
-                            <h3 className="text-sm  text-gray-600">
+                            <h3 className="capitalize">
                                 {blog.title}
                             </h3>
                         </div>
-                        <p className="text-[22px]  text-gray-900 ">
+                        <p className="text-[24px] capitalize">
                             {blog.description}
                         </p>
                     </div>

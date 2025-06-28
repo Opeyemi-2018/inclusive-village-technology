@@ -170,7 +170,7 @@ const Contact = () => {
                                 className="w-full flex justify-between items-center py-4 text-left"
                             >
                                 <span className="text-lg font-medium">{faq.question}</span>
-                                {openIndex === index ? <FiMinus className="text-2xl" /> : <FiPlus className="text-2xl" />}
+                                {openIndex === index ? <FiMinus className="text-3xl" /> : <FiPlus className="text-3xl" />}
                             </button>
                             {openIndex === index && (
                                 <p className="text-gray-600 pb-4">{faq.answer}</p>

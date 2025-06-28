@@ -11,8 +11,8 @@ const AboutSectionOne = () => {
                 </div>
 
                 <div className='space-y-1'>
-                    <h1 className='lg:text-5xl font-bold text-3xl'>Establishing online</h1>
-                    <h1 className='lg:text-5xl font-bold text-3xl'>brilliance from 2025</h1>
+                    <h1 className='lg:text-6xl font-bold uppercase text-3xl'>Establishing online</h1>
+                    <h1 className='lg:text-6xl font-bold uppercase text-3xl'>brilliance from 2025</h1>
                 </div>
             </div>
 
@@ -35,7 +35,7 @@ const AboutSectionOne = () => {
                         className="w-full lg:w-[400px] h-[300px] object-cover rounded-lg"
                     />
                 </div>
-                <div className="w-full lg:w-auto max-w-md space-y-10">
+                <div className="w-full lg:w-auto max-w-md space-y-16">
                     <Image
                         src={'/table.avif'}
                         alt="table"

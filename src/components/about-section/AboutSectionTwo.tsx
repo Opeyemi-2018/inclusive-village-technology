@@ -16,7 +16,7 @@ const AboutSectionTwo = () => {
                         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
                             OUR VISION
                         </h2>
-                        <p className="text-lg text-gray-700 leading-relaxed">
+                        <p className="text-lg text-gray-900 leading-relaxed">
                             Bond started by defining a clear profile of the type of partners
                             Cloudbeds was looking for. Once the profile was agreed upon,
                             Bond started the outreach on Linkedin, Hospitality
@@ -29,7 +29,7 @@ const AboutSectionTwo = () => {
                             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
                                 OUR MISSION
                             </h2>
-                        <p className="text-lg text-gray-700 leading-relaxed">
+                        <p className="text-lg text-gray-900 leading-relaxed">
                             Bond started by defining a clear profile of the type of partners
                             Cloudbeds was looking for. Once the profile was agreed upon,
                             Bond started the outreach on Linkedin, Hospitality

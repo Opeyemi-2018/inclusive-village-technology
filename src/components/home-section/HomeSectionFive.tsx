@@ -29,7 +29,7 @@ const steps: ProcessStep[] = [
 const HomeSectionFive = () => {
   return (
     <div className="lg:px-10 px-3 py-20 ">
-      <div className="flex flex-col  lg:items-center gap-4 lg:mb-20 mb-16">
+      <div className="flex flex-col  items-center gap-4 lg:mb-20 mb-16">
         <div className="flex items-center gap-3">
           <p className="text-lg font-semibold">Our Services</p>
           <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
@@ -44,27 +44,27 @@ const HomeSectionFive = () => {
         {steps.map((step) => (
           <div
             key={step.number}
-            className="bg-gray-200 text-black rounded-2xl px-10 py-10 flex flex-col gap-16 max-w-md w-full shadow-md"
+            className="bg-gray-200 text-black rounded-2xl p-7 flex flex-col gap-16 max-w-md w-full shadow-md"
           >
-            <h2 className="text-7xl font-bold mb-4 text-orange-600">{step.number}</h2>
+            <h2 className="text-7xl mb-4 text-orange-600 font-extrabold">{step.number}</h2>
 
-            <h3 className="text-3xl font-extrabold leading-tight mb-2">{step.name}</h3>
+            <h3 className="text-3xl md:text-4xl uppercase font-extrabold leading-tight mb-2">{step.name}</h3>
 
 
-            <p className="text-lg mb-10">{step.description}</p>
+            <p className="text-[22px] font-semibold text-gray-500 mb-10">{step.description}</p>
 
           </div>
         ))}
       </div>
 
 
-      <div className="bg-orange-600 text-black rounded-2xl  px-10 py-10 flex flex-col gap-16 max-w-md mx-auto w-full shadow-md">
+      <div className="bg-orange-600 text-black rounded-2xl  p-7 flex flex-col gap-16 max-w-md mx-auto w-full shadow-md">
         <h2 className="text-4xl font-extrabold leading-tight mb-4">
           GOT A <br />
           PROJECT IN <br />
           MIND?
         </h2>
-        <p className="text-lg mb-10">
+        <p className="text-[22px] font-semibold  mb-10">
           Book a call to learn more about how we can solve your design needs.
         </p>
 

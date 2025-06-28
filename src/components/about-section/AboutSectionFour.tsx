@@ -5,27 +5,27 @@ const imageData = [
     {
         name: 'ALEX JOHNSON',
         post: 'Chief Executive Officer (CEO)',
-        imageUrl: '/team-man.avif', // Using the provided image file
+        imageUrl: '/team-man.avif', 
     },
     {
         name: 'JOHN DOE',
         post: 'Chief Marketing Officer (CMO)',
-        imageUrl: '/team-man.avif', // Using the provided image file
+        imageUrl: '/team-man.avif', 
     },
     {
         name: 'JANE SMITH',
         post: 'Chief Financial Officer (CFO)',
-        imageUrl: '/team-man.avif', // Using the provided image file
+        imageUrl: '/team-man.avif', 
     },
     {
         name: 'PETER JONES',
         post: 'Head of Sales',
-        imageUrl: '/team-man.avif', // Using the provided image file
+        imageUrl: '/team-man.avif', 
     },
     {
         name: 'SARAH LEE',
         post: 'HR Director',
-        imageUrl: '/team-man.avif', // Using the provided image file
+        imageUrl: '/team-man.avif', 
     },
 ];
 
