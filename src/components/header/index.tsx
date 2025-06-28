@@ -69,13 +69,13 @@ const Header = () => {
                 {menuOpen && (
                     <motion.div
                         key="mobile-nav"
-                        className="lg:hidden pb-6 fixed top-[80px] left-0 right-0 z-40 bg-white"
+                        className="lg:hidden pb-6 fixed top-0 left-0 right-0 z-40 bg-white"
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.4 }}
                     >
-                        <nav className="rounded-lg px-6 py-4 text-2xl font-bold flex flex-col gap-4 uppercase">
+                        <nav className="rounded-lg px-6 pb-4 pt-28 text-2xl font-bold flex flex-col gap-4 uppercase">
                             <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
                             <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
                             <Link href="/work" onClick={() => setMenuOpen(false)}>Work</Link>
