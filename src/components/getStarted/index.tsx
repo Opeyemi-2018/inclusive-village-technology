@@ -10,7 +10,7 @@ const GetStarted = () => {
         <div>
             <div className="lg:px-10 px-3 pt-40 pb-10 bg-white">
                 <div className="max-w-5xl mx-auto">
-                    <div className="flex items-center gap-5 overflow-x-auto scrollbar-hide">
+                    <div className="flex items-center gap-5 overflow-x-auto scrollbar-hide pb-4">
                         <Image src={'/work-1.avif'} alt="work" width={250} height={250} className="rounded-lg" />
                         <Image src={'/art.avif'} alt="work" width={400} height={400} className="rounded-lg" />
                         <Image src={'/work-2.avif'} alt="work" width={250} height={250} className="rounded-lg" />
