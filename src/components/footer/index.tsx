@@ -42,7 +42,7 @@ const Footer = () => {
             </h1>
 
             {/* <div className="max-w-7xl"> */}
-            <div className="flex md:flex-row flex-col gap-4 justify-center md:justify-end items-center md:gap-80 pt-6 text-[20px] text-gray-900">
+            <div className="flex md:flex-row flex-col gap-4 justify-center md:justify-start items-center md:gap-80 pt-6 text-[20px] text-gray-900">
                 <p>© {new Date().getFullYear()} All rights reserved</p>
 
                 <p>powered by inclusive</p>

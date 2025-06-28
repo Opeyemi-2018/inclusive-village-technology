@@ -54,13 +54,13 @@ const HomeSectionFour = () => {
                 {services.map((service, index) => (
                     <div
                         key={index}
-                        className={`transition-all duration-300 cursor-pointer px-4 py-10 rounded-lg
-              ${hoveredIndex === index ? 'md:bg-orange-600 md:text-white' : ''}
-              ${hoveredIndex === index ? 'md:rounded-lg' : ''}
-              md:border-b md:border-gray-200
-              md:hover:bg-orange-600 md:hover:text-white
-              bg-white
-            `}
+                        className={`transition-all duration-300 cursor-pointer px-4 py-10 
+                        ${hoveredIndex === index ? 'md:bg-orange-600 rounded-lg md:text-white' : ''}
+                        ${hoveredIndex === index ? 'md:rounded-lg' : ''}
+                        md:border-b md:border-gray-200
+                        md:hover:bg-orange-600 md:hover:text-white
+                        bg-white
+                        `}
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
