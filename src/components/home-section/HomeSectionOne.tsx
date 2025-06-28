@@ -10,7 +10,7 @@ const HomeSectionOne = () => {
                     <h1 className="w-full text-[22vw] text-center leading-none  whitespace-nowrap">
                         inclusive
                     </h1>
-                    <h2 className="lg:text-5xl text-3xl uppercase">village technology</h2>
+                    <h2 className="lg:text-5xl text-2xl uppercase">village technology</h2>
                 </div>
 
                 <div className="lg:hidden flex justify-center relative lg:absolute lg:left-1/2 lg:top-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2">

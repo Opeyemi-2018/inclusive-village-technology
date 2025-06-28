@@ -82,6 +82,7 @@ const HomeSectionSix = () => {
                 <h1 className="flex-1 lg:text-8xl text-5xl uppercase font-bold max-w-2xl">
                     What Our Customers Say
                 </h1>
+                
             </div>
 
             <div className="py-20 bg-white relative">
