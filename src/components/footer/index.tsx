@@ -37,7 +37,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <h1 className="w-full pt-10 text-[21vw] font-bold text-center leading-none  whitespace-nowrap overflow-hidden">
+            <h1 className="w-full pt-10 text-[22vw] font-bold text-center leading-none  whitespace-nowrap ">
                 inclusive
             </h1>
 
