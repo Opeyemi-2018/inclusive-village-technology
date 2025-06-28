@@ -44,7 +44,7 @@ const HomeSectionFive = () => {
         {steps.map((step) => (
           <div
             key={step.number}
-            className="bg-gray-200 text-black rounded-2xl p-7 flex flex-col gap-16 max-w-md w-full shadow-md"
+            className="bg-gray-200 text-black rounded-2xl p-7 flex flex-col md:gap-8 gap-6 max-w-md w-full "
           >
             <h2 className="text-7xl mb-4 text-orange-600 font-extrabold">{step.number}</h2>
 
@@ -58,7 +58,7 @@ const HomeSectionFive = () => {
       </div>
 
 
-      <div className="bg-orange-600 text-black rounded-2xl  p-7 flex flex-col gap-16 max-w-md mx-auto w-full shadow-md">
+      <div className="bg-orange-600 text-black rounded-2xl  p-7 flex flex-col gap-16 max-w-md mx-auto w-full ">
         <h2 className="text-4xl font-extrabold leading-tight mb-4">
           GOT A <br />
           PROJECT IN <br />
