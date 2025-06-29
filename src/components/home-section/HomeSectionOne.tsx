@@ -5,13 +5,14 @@ import LinkWithArrow from "../contactButton";
 const HomeSectionOne = () => {
     return (
         <div>
-            <div className=" lg:px-10  lg:pt-0 pt-2 flex flex-col space-y-12 relative">
-                <div className="flex flex-col  items-center justify-center w-full font-bold ">
-                    <h1 className="w-full text-[22vw] text-center leading-none  whitespace-nowrap">
+            <div className=" lg:px-6  lg:pt-0 pt-2 flex flex-col space-y-12 relative">
+                <div className="flex flex-col  items-center justify-center w-full font-bold font-unbounded">
+                    <h1 className="w-full text-[17vw] capitalize text-center leading-none  whitespace-nowrap">
                         inclusive
                     </h1>
-                    <h2 className="lg:text-5xl text-2xl uppercase">village technology</h2>
+                    <h2 className="lg:text-3xl text-1xl uppercase">village technology</h2>
                 </div>
+
 
                 <div className="lg:hidden flex justify-center relative lg:absolute lg:left-1/2 lg:top-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2">
                     <Image

@@ -43,13 +43,13 @@ const HomeSectionFour = () => {
     }, []);
 
     return (
-        <div className="lg:px-10 px-3 py-40 bg-white">
+        <div className="lg:px-10 px-3 pt-40 md:pb-28  bg-white">
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:mb-12 mb-2">
                 <div className="flex items-center gap-3">
-                    <p className="text-lg font-semibold">Our Services</p>
+                    <p className="text-lg font-semibold ">Our Services</p>
                     <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
                 </div>
-                <h1 className="flex-1 lg:text-7xl text-5xl capitalize font-bold max-w-2xl">
+                <h1 className="flex-1 lg:text-7xl text-4xl uppercase font-unbounded font-bold max-w-2xl">
                     top-notch <br /> services
                 </h1>
             </div>

@@ -36,7 +36,13 @@ const recentWorks = [
 const HomeSectionThree = () => {
     return (
         <div className=" lg:px-10 px-3">
-            <h1 className="text-8xl font-bold mb-10 flex lg:justify-end">Recent Work</h1>
+            <div className="flex flex-col lg:flex-row justify-between items-start  gap-6 lg:mb-12 mb-2">
+                <div className="flex items-center gap-3">
+                    <p className="text-lg font-semibold ">Recent Works</p>
+                    <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
+                </div>
+                <h1 className="md:text-7xl md:w-auto w-[50px] text-4xl font-bold mb-20 flex lg:justify-end font-unbounded uppercase">Recent Work</h1>
+            </div>
             <div className="grid gap-10 lg:grid-cols-2">
                 {recentWorks.map(({ id, name, type, year, image }) => (
                     <div key={id}>
@@ -60,14 +66,14 @@ const HomeSectionThree = () => {
                 ))}
             </div>
 
-             <div className="flex items-center justify-center pt-20">
-                        <LinkWithArrow
-                            href="/contact"
-                            label="view more work"
-                            underlineColor="bg-black"
-                            iconColor="text-orange-600"
-                        />
-                    </div>
+            <div className="flex items-center justify-center pt-20">
+                <LinkWithArrow
+                    href="/contact"
+                    label="view more work"
+                    underlineColor="bg-black"
+                    iconColor="text-orange-600"
+                />
+            </div>
         </div>
     );
 };

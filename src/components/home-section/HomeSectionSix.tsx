@@ -79,7 +79,7 @@ const HomeSectionSix = () => {
                     <p className="text-lg font-semibold">Testimonials</p>
                     <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
                 </div>
-                <h1 className="flex-1 lg:text-8xl text-5xl uppercase font-bold max-w-2xl">
+                <h1 className="flex-1 lg:text-7xl text-4xl uppercase font-bold font-unbounded max-w-2xl">
                     What Our Customers Say
                 </h1>
                 

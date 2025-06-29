@@ -29,12 +29,12 @@ const steps: ProcessStep[] = [
 const HomeSectionFive = () => {
   return (
     <div className="lg:px-10 px-3 py-20 ">
-      <div className="flex flex-col  items-center gap-4 lg:mb-36 mb-16">
+      <div className="flex flex-col  items-center md:gap-4 gap-7 lg:mb-36 mb-16">
         <div className="flex items-center gap-3">
           <p className="text-lg font-semibold">Our Services</p>
           <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
         </div>
-        <h1 className=" lg:text-8xl text-5xl capitalize font-bold ">
+        <h1 className=" lg:text-7xl text-5xl uppercase text-center font-unbounded font-bold ">
           OUR PROCESS
 
         </h1>
@@ -46,9 +46,9 @@ const HomeSectionFive = () => {
             key={step.number}
             className="bg-gray-200 text-black rounded-2xl p-7 flex flex-col md:gap-8 gap-6 max-w-md w-full "
           >
-            <h2 className="text-7xl mb-4 text-orange-600 font-extrabold">{step.number}</h2>
+            <h2 className="text-7xl mb-4 text-orange-600 font-bold font-unbounded">{step.number}</h2>
 
-            <h3 className="text-3xl md:text-4xl uppercase font-extrabold leading-tight mb-2">{step.name}</h3>
+            <h3 className="text-3xl md:text-4xl uppercase font-bold font-unbounded leading-tight mb-2">{step.name}</h3>
 
 
             <p className="text-[22px] font-semibold text-gray-500 mb-10">{step.description}</p>
@@ -59,7 +59,7 @@ const HomeSectionFive = () => {
 
 
       <div className="bg-orange-600 text-black rounded-2xl  p-7 flex flex-col gap-16 max-w-md mx-auto w-full ">
-        <h2 className="text-4xl font-extrabold leading-tight mb-4">
+        <h2 className="text-4xl font-bold font-unbounded leading-tight mb-4">
           GOT A <br />
           PROJECT IN <br />
           MIND?

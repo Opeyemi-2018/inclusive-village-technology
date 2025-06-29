@@ -54,7 +54,7 @@ const Header = () => {
                         transition={{ duration: 0.4, ease: "easeInOut" }}
                         className="hidden lg:flex  fixed top-0  left-0 right-0 z-40 min-h-screen items-center justify-center bg-white"
                     >
-                        <nav className="text-7xl font-bold flex flex-col gap-6 items-center uppercase">
+                        <nav className="text-7xl font-bold font-unbounded flex flex-col gap-6 items-center uppercase">
                             <Link href="/" onClick={() => setMenuOpen(!menuOpen)}>Home</Link>
                             <Link href="/about" onClick={() => setMenuOpen(!menuOpen)}>About</Link>
                             <Link href="/work" onClick={() => setMenuOpen(!menuOpen)}>Work</Link>
@@ -75,7 +75,7 @@ const Header = () => {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.4 }}
                     >
-                        <nav className="rounded-lg px-6 pb-4 pt-28 text-2xl font-bold flex flex-col gap-4 uppercase">
+                        <nav className="rounded-lg px-6 pb-4 pt-28 text-2xl font-unbounded font-bold flex flex-col gap-4 uppercase">
                             <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
                             <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
                             <Link href="/work" onClick={() => setMenuOpen(false)}>Work</Link>
