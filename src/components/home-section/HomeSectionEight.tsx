@@ -14,20 +14,20 @@ const blogs: BlogPost[] = [
     {
         id: 1,
         title: "Fintech",
-        image: "/man.avif",
+        image: "/men.avif",
         description: "5 Fintech Trends Dominating 2025"
     },
     {
         id: 2,
         title: "Fintech",
-        image: "/man.avif",
+        image: "/red-men.avif",
         description: "How We Built a Cloud-Ready Remittance System"
 
     },
     {
         id: 3,
         title: "Design",
-        image: "/man.avif",
+        image: "/men.avif",
         description: "Why UX Is the Missing Link in Africa’s Tech Boom"
 
     }
