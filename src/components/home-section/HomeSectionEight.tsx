@@ -1,7 +1,6 @@
 'use client';
 import Image from 'next/image';
-// import Link from 'next/link';
-// import { MdOutlineArrowOutward } from 'react-icons/md';
+
 import LinkWithArrow from '../contactButton';
 
 interface BlogPost {
@@ -14,22 +13,22 @@ interface BlogPost {
 const blogs: BlogPost[] = [
     {
         id: 1,
-        title: "backend engineering",
+        title: "Fintech",
         image: "/man.avif",
-        description: "from code to launch web development"
+        description: "5 Fintech Trends Dominating 2025"
     },
     {
         id: 2,
-        title: "software engineering",
+        title: "Fintech",
         image: "/man.avif",
-        description: "from code to launch web development"
+        description: "How We Built a Cloud-Ready Remittance System"
 
     },
     {
         id: 3,
-        title: "technical writing",
+        title: "Design",
         image: "/man.avif",
-        description: "from code to launch web development"
+        description: "Why UX Is the Missing Link in Africa’s Tech Boom"
 
     }
 ];

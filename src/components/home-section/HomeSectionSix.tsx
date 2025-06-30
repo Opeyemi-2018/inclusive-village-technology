@@ -13,21 +13,21 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
     {
-        quote: 'PixelHive exceeded our expectations! The design was sleek, modern, and incredibly easy to customize. Highly recommend their templates!',
-        name: 'Tawhid A.',
-        title: 'Design Lead @WFC',
+        quote: 'Inclusive Village helped us modernize our entire fintech stack. From UX to integration with Mastercard Payment Gateway—everything just worked',
+        name: 'David. J',
+        title: 'CTO, FinServ Africa',
         avatar: '/team.png',
     },
     {
-        quote: 'Working with PixelHive was a game-changer for our brand. The UI/UX design is top-notch, and the no-code flexibility made it simple for us to make changes.',
-        name: 'Aziz H.',
-        title: 'Founder @WFC',
+        quote: 'We needed a scalable education platform. Afripay Learn was delivered faster than expected, and our students love it.',
+        name: 'Mr. Ben. O',
+        title: 'Head of IT, University Alliance',
         avatar: '/team.png',
     },
     {
-        quote: 'Finally Found PixelHive was a game-changer for our brand. The UI/UX design is top-notch, and the no-code flexibility made it simple for us to make changes.',
-        name: 'Arif I.',
-        title: 'Developer @WFC',
+        quote: 'Their team is sharp, communicative, and proactive. We treat them as our extended tech department.',
+        name: 'Jackson. A.',
+        title: 'Founder, Estate360',
         avatar: '/team.png',
     },
     {
@@ -82,7 +82,6 @@ const HomeSectionSix = () => {
                 <h1 className="flex-1 lg:text-7xl text-4xl uppercase font-bold font-unbounded max-w-2xl">
                     What Our Customers Say
                 </h1>
-                
             </div>
 
             <div className="py-20 bg-white relative">

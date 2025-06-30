@@ -11,18 +11,23 @@ type ProcessStep = {
 const steps: ProcessStep[] = [
   {
     number: 1,
-    name: 'Strategy & Analysis',
-    description: 'We start by understanding your goals, audience, and business to craft the perfect plan.',
+    name: 'Discovery & Research',
+    description: 'Understanding your goals, users, and challenges.',
   },
   {
     number: 2,
-    name: 'Design & Development',
-    description: 'Our team creates beautiful interfaces and builds smooth digital experiences.',
+    name: 'Design & Architecture',
+    description: 'Crafting intuitive user experiences and robust system blueprints.',
   },
   {
     number: 3,
-    name: 'Launch & Iterate',
-    description: 'We deploy your solution and optimize based on real-world feedback.',
+    name: 'Development & Integration',
+    description: 'Turning concepts into scalable, efficient software solutions.',
+  },
+  {
+    number: 4,
+    name: 'Deployment & Support',
+    description: 'Launching, monitoring, and supporting your digital ecosystem.',
   },
 ];
 

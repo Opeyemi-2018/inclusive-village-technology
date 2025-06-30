@@ -20,9 +20,9 @@ interface Plan {
 
 const pricingPlans: Plan[] = [
     {
-        name: "Basic",
-        price: 499,
-        description: "Our primary pricing strategy strives to deliver superior value and features.",
+        name: "Startup Plan",
+        price:  499,
+        description: "For early-stage businesses that need reliable MVPs and digital presence.",
         isPopular: false,
         features: [
             { name: "Unlimited requests", status: "included" },
@@ -33,22 +33,22 @@ const pricingPlans: Plan[] = [
         ],
     },
     {
-        name: "Growth",
-        price: 799,
-        description: "Growth plan is outlined for enterprises that need advanced features.",
+        name: "Growth Plan",
+        price: 1299,
+        description: "Ideal for SMEs scaling operations with custom tools and automation.",
         isPopular: true,
         features: [
             { name: "Unlimited requests", status: "included" },
             { name: "Unlimited revisions", status: "included" },
-            { name: "Project management", status: "not-included" }, // Corrected based on image
-            { name: "Access to all services", status: "not-included" }, // Corrected based on image
-            { name: "Pause or cancel anytime", status: "not-included" }, // Corrected based on image
+            { name: "Project management", status: "not-included" },
+            { name: "Access to all services", status: "not-included" },
+            { name: "Pause or cancel anytime", status: "not-included" },
         ],
     },
     {
-        name: "Premium Plan",
-        price: 1299,
-        description: "Our Premium pricing plan is designed for a corporate with premium support.",
+        name: "Enterprise Plan",
+        price: 2499,
+        description: "Dedicated solutions, high availability, and white-glove support.",
         isPopular: false,
         features: [
             { name: "Unlimited requests", status: "included" },

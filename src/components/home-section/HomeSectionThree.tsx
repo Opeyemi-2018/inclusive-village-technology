@@ -8,28 +8,28 @@ const recentWorks = [
         name: "AfriPay+",
         type: "Gateway System",
         info: "A fast, secure, and developer-friendly payment gateway transforming how businesses collect payments across Africa.",
-        image: "/optimization.jpg"
+        image: "/afripay.png"
     },
     {
         id: 4,
         name: "Inclusive Remittance",
         info: "A compliant, multi-channel remittance platform enabling global money transfer with local payout efficiency.",
         type: "Gateway System",
-        image: "/optimization.jpg"
+        image: "/remittance.webp"
     },
     {
         id: 5,
         name: "Afripay Learn",
         info: "A full-featured learning management system for schools and institutions.",
         type: "Gateway System",
-        image: "/optimization.jpg"
+        image: "/afripay-learn.png"
     },
     {
         id: 6,
         name: "Eazybiller",
         info: "An invoicing and billing automation solution that simplifies finances for SMEs.",
         type: "Gateway System",
-        image: "/optimization.jpg"
+        image: "/easybiller.png"
     }
 ];
 
@@ -46,14 +46,17 @@ const HomeSectionThree = () => {
             <div className="grid gap-14 lg:grid-cols-2">
                 {recentWorks.map(({ id, name, type, info, image }) => (
                     <div key={id}>
-                        <div className="w-full h-[300px] md:h-[400px]  relative rounded-lg overflow-hidden">
+                        <div className="w-full h-[300px] md:h-[400px] relative rounded-lg overflow-hidden group">
                             <Image
                                 src={image}
                                 alt={name}
                                 fill
                                 className="object-cover"
                             />
+                            {/* Overlay color layer */}
+                            <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-all duration-300"></div>
                         </div>
+
 
                         <div className="mt-4">
                             <div className="flex items-center gap-8 justify-between">
