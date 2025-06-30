@@ -68,7 +68,7 @@ const PricingSection: React.FC = () => {
                     <p className="text-lg font-semibold">pricing</p>
                     <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
                 </div>
-                <h1 className=" lg:text-6xl md:max-w-4xl mx-auto max-w-auto text-4xl uppercase text-center font-unbounded font-bold ">
+                <h1 className=" lg:text-6xl md:max-w-4xl mx-auto max-w-5xl text-4xl uppercase text-center font-unbounded font-bold ">
                     Simple Plans, Powerful Results
                 </h1>
             </div>
@@ -79,14 +79,17 @@ const PricingSection: React.FC = () => {
                         className={`relative flex flex-col  rounded-lg  p-6 
                 ${plan.isPopular ? 'bg-gray-100' : 'border border-gray-200'}`}
                     >
-                        {plan.isPopular && (
-                            <div className="absolute top-7 right-7 bg-orange-600  font-semibold p-2 flex items-center gap-2 rounded-full uppercase">
-                                <PiFireLight /><span> Most popular</span>
-                            </div>
-                        )}
-                        <h2 className="text-xl font-semibold text-gray-800 mb-2">{plan.name}</h2>
+
+                        <div className='flex items-center justify-between'>
+                            <h2 className="text-xl font-semibold text-gray-800 mb-2">{plan.name}</h2>
+                            {plan.isPopular && (
+                                <div className=" bg-orange-600  font-semibold p-2 flex items-center gap-2 rounded-full uppercase">
+                                    <PiFireLight /><span> Most popular</span>
+                                </div>
+                            )}
+                        </div>
                         <div className='flex items-center py-5'>
-                            <p className="md:text-5xl text-3xl font-unbounded font-bold  mb-4">
+                            <p className="md:text-5xl text-3xl font-unbounded font-bold">
                                 ${plan.price}
                             </p>
                             <span className="text-[21px] font-normal">/month</span>

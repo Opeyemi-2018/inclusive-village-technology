@@ -74,8 +74,8 @@ const HomeSectionFour = () => {
                 {services.map((service, index) => (
                     <div
                         key={index}
-                        className={`transition-all duration-300 cursor-pointer px-4 md:py-16 py-10 
-                        ${hoveredIndex === index ? 'md:bg-orange-600 rounded-lg md:text-white' : ''}
+                        className={`transition-all duration-300 cursor-pointer  md:py-16 py-10 
+                        ${hoveredIndex === index ? 'md:bg-orange-600 px-3 rounded-lg md:text-white' : ''}
                         ${hoveredIndex === index ? 'md:rounded-lg' : ''}
                         md:border-b md:border-gray-200
                         md:hover:bg-orange-600 md:hover:text-white
