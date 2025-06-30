@@ -17,7 +17,7 @@ const GetStarted = () => {
                     </div>
 
                     <div>
-                        <h1 className="w-full md:text-6xl text-3xl uppercase font-unbounded font-bold text-center leading-none whitespace-nowrap overflow-hidden">
+                        <h1 className="lg:text-6xl md:text-3xl text-[21px] uppercase font-unbounded font-bold text-center leading-none whitespace-nowrap overflow-hidden">
                             Let’s Build Something <br /> Incredible
                         </h1>
                         <p className='text-center py-4 text-[20px] text-gray-800'>Whether you&apos;re building from scratch, scaling what exists, or transforming legacy tools — we’re ready.</p>
@@ -65,7 +65,7 @@ const GetStarted = () => {
             </div>
 
             <div className="lg:px-10 px-3 flex lg:flex-row flex-col justify-between pt-24 pb-20">
-                <h1 className="font-unbounded font-semibold uppercase md:text-4xl text-2xl leading-loose max-w-3xl">
+                <h1 className="font-unbounded font-semibold uppercase md:text-4xl text-2xl leading-relaxed max-w-3xl">
                     Let’s collaborate on scalable technology that drives real business results.
                 </h1>
                 <div className='flex items-center  pt-10'>

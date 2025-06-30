@@ -67,7 +67,7 @@ const HomeSectionNine = () => {
                          bg-gradient-to-t from-orange-600 via-orange-600/50 to-transparent
                          flex flex-col justify-end items-center p-4 pb-2"
                         >
-                            <p className="text-white text-center text-1xl md:text-2xl font-unbounded font-bold uppercase mb-1">
+                            <p className="text-white text-center  text-1xl md:text-2xl font-unbounded font-bold uppercase mb-1">
                                 {person.name}
                             </p>
                             {/* <p className="text-white text-md">
