@@ -11,20 +11,36 @@ type Service = {
 
 const services: Service[] = [
     {
-        name: 'Branding',
-        description: 'We create strong brand identities that are memorable and effective.',
+        name: 'Strategy',
+        description: 'Business & Tech Consulting • Roadmapping • System Architecture',
     },
     {
         name: 'UI/UX Design',
-        description: 'Designing intuitive interfaces and seamless user experiences.',
+        description: 'Wireframes • Prototyping • Interaction Design • User Research.',
     },
     {
         name: 'Web Development',
-        description: 'Building responsive and scalable websites and web apps.',
+        description: 'Corporate Websites • SaaS Platforms • CMS.',
     },
     {
-        name: 'Web Development',
-        description: 'Building responsive and scalable websites and web apps.',
+        name: 'Mobile App Development',
+        description: 'Cross-Platform (Flutter, React Native) • Native iOS & Android.',
+    },
+    {
+        name: 'Enterprise Software Development',
+        description: 'Custom Software • ERP Solutions • Internal Tools.',
+    },
+    {
+        name: 'Cloud & DevOps',
+        description: 'Infrastructure Setup • CI/CD Pipelines • AWS, Azure, GCP.',
+    },
+    {
+        name: 'Fintech Solutions',
+        description: 'Digital Wallets • Payment Gateways • Core Banking Systems.',
+    },
+    {
+        name: 'Cybersecurity',
+        description: 'Risk Assessment • Data Protection • Compliance & Governance.',
     },
 ];
 
@@ -37,7 +53,7 @@ const HomeSectionFour = () => {
             setIsMobile(window.innerWidth < 768);
         };
 
-        checkMobile(); 
+        checkMobile();
         window.addEventListener('resize', checkMobile);
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
@@ -69,10 +85,10 @@ const HomeSectionFour = () => {
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
                         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                            <h2 className="text-3xl md:text-4xl font-medium md:w-1/3">{service.name}</h2>
+                            <h2 className="text-3xl  md:text-5xl font-medium ">{service.name}</h2>
 
                             {(hoveredIndex === index || isMobile) && (
-                                <p className="text-base flex-1 text-left md:text-center text-[20px]">
+                                <p className=" flex-1 text-left md:text-center text-2xl">
                                     {service.description}
                                 </p>
                             )}

@@ -43,14 +43,12 @@ const Contact = () => {
                     <p className="text-lg font-semibold">Reach Out</p>
                     <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
                 </div>
-                <div className='flex items-center flex-col gap-0 md:gap-2 md:flex-row'>
-                    <h1 className="flex-1 pt-2 lg:text-8xl text-5xl capitalize font-bold flex items-center">
+                    <h1 className="flex-1 pt-8 lg:text-6xl text-4xl uppercase font-unbounded font-bold flex items-center">
                         LET&apos;S CONNECT
                     </h1>
-                </div>
             </div>
 
-            <div className='flex lg:flex-row flex-col lg:gap-0 gap-7 justify-between lg:items-center pt-32'>
+            <div className='flex lg:flex-row flex-col lg:gap-0 gap-7 justify-between lg:items-start pt-32'>
                 <div className='space-y-8'>
                     <div>
                         <p className='text-[20px] text-gray-700'>+1 (800) 123-4567</p>
@@ -143,10 +141,9 @@ const Contact = () => {
             </div>
 
 
-            {/* faq section */}
             <section className="max-w-7xl mx-auto  pt-36 grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div className=" space-y-10 max-w-[300px]">
-                    <h1 className="md:text-7xl text-4xl md:font-extrabold font-bold">FAQ</h1>
+                <div className=" space-y-14 max-w-[300px]">
+                    <h1 className="md:text-7xl text-4xl font-unbounded font-bold">FAQ</h1>
                     <p className="text-[20px]">
                         We&apos;ve witnessed it all. <br />
                         Here’s your essential guide before collaborating with us.
@@ -161,7 +158,6 @@ const Contact = () => {
                     </div>
                 </div>
 
-                {/* Right section */}
                 <div className="md:col-span-2 space-y-6">
                     {faqs.map((faq, index) => (
                         <div key={index} className="border-b border-gray-300">

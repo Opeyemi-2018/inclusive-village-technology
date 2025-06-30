@@ -7,6 +7,7 @@ import HomeSectionSeven from "@/components/home-section/HomeSectionSeven"
 import HomeSectionSix from "@/components/home-section/HomeSectionSix"
 import HomeSectionThree from "@/components/home-section/HomeSectionThree"
 import HomeSectionTwo from "@/components/home-section/HomeSectionTwo"
+import PricingSection from "@/components/home-section/Pricing"
 
 const HomePage = () => {
     return (
@@ -18,6 +19,7 @@ const HomePage = () => {
             <HomeSectionFive />
             <HomeSectionSix />
             <HomeSectionSeven />
+            <PricingSection/>
             <HomeSectionEight />
             {/* <HomeSectionNine /> */}
         </div>

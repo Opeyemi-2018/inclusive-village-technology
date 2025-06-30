@@ -13,7 +13,7 @@ const AboutSectionTwo = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
                     {/* OUR VISION Section */}
                     <div className="flex flex-col">
-                        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+                        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-unbounded mb-6 tracking-tight">
                             OUR VISION
                         </h2>
                         <p className="text-lg text-gray-900 leading-relaxed">
@@ -26,7 +26,7 @@ const AboutSectionTwo = () => {
 
                     {/* OUR MISSION Section */}
                     <div className="flex flex-col">
-                            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+                            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-unbounded mb-6 tracking-tight">
                                 OUR MISSION
                             </h2>
                         <p className="text-lg text-gray-900 leading-relaxed">

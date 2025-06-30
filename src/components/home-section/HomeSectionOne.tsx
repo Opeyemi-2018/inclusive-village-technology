@@ -7,9 +7,12 @@ const HomeSectionOne = () => {
         <div>
             <div className=" lg:px-6  lg:pt-0 pt-2 flex flex-col space-y-12 relative">
                 <div className="flex flex-col  items-center justify-center w-full font-bold font-unbounded">
-                    <h1 className="w-full text-[17vw] capitalize text-center leading-none  whitespace-nowrap">
+                    <h1
+                        className="w-full text-[17vw] capitalize text-center leading-none whitespace-nowrap bg-gradient-to-r from-blue-800 to-orange-600 bg-clip-text text-transparent"
+                    >
                         inclusive
                     </h1>
+
                     <h2 className="lg:text-3xl text-1xl uppercase">village technology</h2>
                 </div>
 
@@ -26,11 +29,11 @@ const HomeSectionOne = () => {
 
 
                 <div className="flex px-3 md:items-center md:gap-0 gap-14 justify-between md:flex-row flex-col">
-                    <p className="max-w-[500px] text-[19px] text-gray-800 leading-relaxed">At pixelHive, our expertise lies in web design, ui/ux, creating a brand identity, and enhancing your online visibility. </p>
+                    <p className="max-w-[500px] text-[19px] text-gray-800 leading-relaxed">At Inclusive Village, we’re more than a tech company—we’re your strategic partner in digital transformation. From fintech to education, our tailored software solutions are crafted to scale, secure, and simplify how you do business. </p>
                     <div>
                         <LinkWithArrow
                             href="/contact"
-                            label="get in touch"
+                            label="Let's Talk"
                             underlineColor="bg-black"
                             iconColor="text-orange-600"
                         />

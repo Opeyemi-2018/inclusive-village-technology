@@ -7,11 +7,11 @@ const Work = () => {
                     <p className="text-lg font-semibold">Recent Work</p>
                     <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
                 </div>
-                <div className='flex items-center md:flex-col uppercase text-center md:gap-0 gap-2 flex-row'>
-                    <h1 className="flex-1 pt-2 lg:text-9xl  text-6xl capitalize font-bold flex items-center">
+                <div className='flex items-center flex-col font-unbounded uppercase text-center md:gap-0 gap-2 '>
+                    <h1 className="flex-1 pt-2 lg:text-9xl  text-6xl  font-bold flex items-center">
                         Recent
                     </h1>
-                    <h1 className="flex-1 pt-2 lg:text-9xl  text-6xl capitalize font-bold flex items-center">
+                    <h1 className="flex-1 pt-2 lg:text-9xl  text-6xl  font-bold flex items-center">
                         work
                     </h1>
                 </div>

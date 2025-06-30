@@ -5,17 +5,21 @@ const Blog = () => {
             <div className="flex flex-col justify-center items-center ">
                 <div className="flex items-center gap-3">
                     <p className="text-lg font-semibold">Ideas & Tips</p>
-                    <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
+                    <span className="w-5 h-5 pt-2 bg-orange-600 rounded-full inline-block"></span>
                 </div>
-                <div className='flex items-center flex-col gap-0 md:gap-20 uppercase md:flex-row'>
-                    <h1 className="flex-1 pt-2 lg:text-8xl text-5xl  font-bold max-w-[300px] mx-auto flex items-center">
+                <div className='md:hidden flex items-center font-unbounded flex-col gap-20 pt-8 uppercase '>
+                    <h1 className="  lg:text-8xl text-5xl  font-bold  flex items-center">
                         Latest
 
                     </h1>
-                    <h1 className="flex-1 pt-2 lg:text-8xl text-5xl  font-bold max-w-[300px] mx-auto flex items-center">
+                    <h1 className="  lg:text-8xl text-5xl  font-bold  flex items-center">
                         Articles
                     </h1>
                 </div>
+
+                <h1 className=" md:inline pt-10 uppercase font-unbounded hidden text-6xl   font-bold ">
+                    Latest Articles
+                </h1>
             </div>
 
             <div className="grid lg:grid-cols-3  gap-10 pt-20">

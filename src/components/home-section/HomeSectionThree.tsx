@@ -5,30 +5,30 @@ const recentWorks = [
 
     {
         id: 3,
-        name: "Bright app",
-        type: "Web",
-        year: "December 10, 2024",
+        name: "AfriPay+",
+        type: "Gateway System",
+        info: "A fast, secure, and developer-friendly payment gateway transforming how businesses collect payments across Africa.",
         image: "/optimization.jpg"
     },
     {
         id: 4,
-        name: "Fintrack",
-        type: "App",
-        year: "December 10, 2024",
+        name: "Inclusive Remittance",
+        info: "A compliant, multi-channel remittance platform enabling global money transfer with local payout efficiency.",
+        type: "Gateway System",
         image: "/optimization.jpg"
     },
     {
         id: 5,
-        name: "EduConnect",
-        type: "Web",
-        year: "December 10, 2024",
+        name: "Afripay Learn",
+        info: "A full-featured learning management system for schools and institutions.",
+        type: "Gateway System",
         image: "/optimization.jpg"
     },
     {
         id: 6,
-        name: "Eventio",
-        type: "App",
-        year: "December 10, 2024",
+        name: "Eazybiller",
+        info: "An invoicing and billing automation solution that simplifies finances for SMEs.",
+        type: "Gateway System",
         image: "/optimization.jpg"
     }
 ];
@@ -44,7 +44,7 @@ const HomeSectionThree = () => {
                 <h1 className="md:text-7xl md:w-auto w-[50px] text-4xl font-bold mb-20 flex lg:justify-end font-unbounded uppercase">Recent Work</h1>
             </div>
             <div className="grid gap-10 lg:grid-cols-2">
-                {recentWorks.map(({ id, name, type, year, image }) => (
+                {recentWorks.map(({ id, name, type, info, image }) => (
                     <div key={id}>
                         <div className="w-full h-[300px] md:h-[400px] relative rounded-lg overflow-hidden">
                             <Image
@@ -55,12 +55,13 @@ const HomeSectionThree = () => {
                             />
                         </div>
 
-                        <div className="mt-4 flex items-center justify-between text-lg font-medium">
+                        <div className="mt-4 flex lg:gap-6  gap-3 text-lg font-medium">
                             <div>
-                                <p className="capitalize text-3xl ">{name}</p>
-                                <p className="text-gray-500 text-sm">{type}</p>
+                                <p className="capitalize md:text-3xl text-2xl ">{name}</p>
+                                <p className="text-gray-800 pt-3">{info}</p>
                             </div>
-                            <p className="text-gray-800">{year}</p>
+                            <p className="text-gray-500 text-sm">{type}</p>
+
                         </div>
                     </div>
                 ))}
