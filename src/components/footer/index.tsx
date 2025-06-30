@@ -40,7 +40,7 @@ const Footer = () => {
             <h1 className="w-full text-[17vw] capitalize text-center font-bold font-unbounded pt-6 leading-none  whitespace-nowrap">
                 inclusive
             </h1>
-            <p className="text-[20px] py-8 text-center text-gray-800">Crafting human-centered digital products that empower businesses and communities.</p>
+            <p className="text-[20px] md:inline hidden py-8 text-center text-gray-800">Crafting human-centered digital products that empower businesses and communities.</p>
 
             {/* <div className="max-w-7xl"> */}
             <div className="flex md:flex-row flex-col gap-4 justify-center md:justify-start items-center md:gap-80 pt-6 text-[20px] text-gray-900">
