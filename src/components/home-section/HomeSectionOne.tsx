@@ -5,7 +5,7 @@ import LinkWithArrow from "../contactButton";
 const HomeSectionOne = () => {
     return (
         <div>
-            <div className=" lg:px-6  lg:pt-0 pt-2 flex flex-col space-y-12 relative">
+            <div className=" px-3  lg:pt-0 pt-2 flex flex-col space-y-12 relative">
                 <div className="flex flex-col  items-center justify-center w-full font-bold font-unbounded">
                     <h1
                         className="w-full text-[17vw] capitalize text-center leading-none whitespace-nowrap bg-gradient-to-r from-blue-800 to-orange-600 bg-clip-text text-transparent"
