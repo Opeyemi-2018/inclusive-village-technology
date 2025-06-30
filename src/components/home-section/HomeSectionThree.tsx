@@ -56,8 +56,8 @@ const HomeSectionThree = () => {
                         </div>
 
                         <div className="mt-4">
-                            <div className="flex items-center justify-between">
-                                <p className="capitalize md:text-3xl text-2xl text-nowrap">{name}</p>
+                            <div className="flex items-center gap-8 justify-between">
+                                <p className="capitalize md:text-3xl text-2xl ">{name}</p>
                                 <p className="text-gray-500 text-[20px] text-nowrap">{type}</p>
                             </div>
                             <p className="text-gray-800 pt-3 text-[20px]">{info}</p>
