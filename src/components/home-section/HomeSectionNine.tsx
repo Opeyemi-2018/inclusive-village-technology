@@ -32,7 +32,7 @@ const Products = [
     }
 ];
 
-const AboutSectionFour = () => {
+const HomeSectionNine = () => {
     return (
         <div className="lg:px-10 px-3">
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 py-44 mb-2">
@@ -67,7 +67,7 @@ const AboutSectionFour = () => {
                          bg-gradient-to-t from-orange-600 via-orange-600/50 to-transparent
                          flex flex-col justify-end items-center p-4 pb-2"
                         >
-                            <p className="text-white text-1xl md:text-2xl font-unbounded font-bold uppercase mb-1">
+                            <p className="text-white text-center text-1xl md:text-2xl font-unbounded font-bold uppercase mb-1">
                                 {person.name}
                             </p>
                             {/* <p className="text-white text-md">
@@ -83,4 +83,4 @@ const AboutSectionFour = () => {
     );
 };
 
-export default AboutSectionFour;
+export default HomeSectionNine;
