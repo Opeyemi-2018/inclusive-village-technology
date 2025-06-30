@@ -165,11 +165,11 @@ const Contact = () => {
                                 onClick={() => toggleFAQ(index)}
                                 className="w-full flex justify-between items-center py-4 text-left"
                             >
-                                <span className="text-lg font-medium">{faq.question}</span>
+                                <span className="text-lg font-medium md:mr-0 mr-4">{faq.question}</span>
                                 {openIndex === index ? <FiMinus className="text-3xl" /> : <FiPlus className="text-3xl" />}
                             </button>
                             {openIndex === index && (
-                                <p className="text-gray-600 pb-4">{faq.answer}</p>
+                                <p className="text-gray-600 pb-4 md:mr-0 mr-6">{faq.answer}</p>
                             )}
                         </div>
                     ))}

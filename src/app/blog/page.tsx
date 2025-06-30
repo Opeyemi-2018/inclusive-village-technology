@@ -7,7 +7,7 @@ const Blog = () => {
                     <p className="text-lg font-semibold">Ideas & Tips</p>
                     <span className="w-5 h-5 pt-2 bg-orange-600 rounded-full inline-block"></span>
                 </div>
-                <div className='md:hidden flex items-center font-unbounded flex-col gap-20 pt-8 uppercase '>
+                <div className='md:hidden flex items-center font-unbounded flex-col gap-2 pt-8 uppercase '>
                     <h1 className="  lg:text-8xl text-5xl  font-bold  flex items-center">
                         Latest
 
