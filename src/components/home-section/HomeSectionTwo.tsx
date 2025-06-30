@@ -26,7 +26,7 @@ const HomeSectionTwo = () => {
                         alt="man"
                         width={1000}
                         height={600}
-                        className="rounded-lg w-[600px] h-[400px] "
+                        className="rounded-lg lg:w-[600px] w-full lg:h-[400px] h-[300px] object-cover"
                     />
                 </div>
 

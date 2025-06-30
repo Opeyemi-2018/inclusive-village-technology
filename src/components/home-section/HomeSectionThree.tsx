@@ -43,10 +43,10 @@ const HomeSectionThree = () => {
                 </div>
                 <h1 className="md:text-7xl md:w-auto w-[50px] text-4xl font-bold mb-20 flex lg:justify-end font-unbounded uppercase">Recent Work</h1>
             </div>
-            <div className="grid gap-10 lg:grid-cols-2">
+            <div className="grid gap-14 lg:grid-cols-2">
                 {recentWorks.map(({ id, name, type, info, image }) => (
                     <div key={id}>
-                        <div className="w-full h-[300px] md:h-[400px] relative rounded-lg overflow-hidden">
+                        <div className="w-full h-[300px] md:h-[400px]  relative rounded-lg overflow-hidden">
                             <Image
                                 src={image}
                                 alt={name}
@@ -55,13 +55,12 @@ const HomeSectionThree = () => {
                             />
                         </div>
 
-                        <div className="mt-4 flex lg:gap-6  gap-3 text-lg font-medium">
-                            <div>
+                        <div className="mt-4">
+                            <div className="flex items-center justify-between">
                                 <p className="capitalize md:text-3xl text-2xl ">{name}</p>
-                                <p className="text-gray-800 pt-3">{info}</p>
+                                <p className="text-gray-500 text-[20px]">{type}</p>
                             </div>
-                            <p className="text-gray-500 text-sm">{type}</p>
-
+                            <p className="text-gray-800 pt-3 text-[20px]">{info}</p>
                         </div>
                     </div>
                 ))}
