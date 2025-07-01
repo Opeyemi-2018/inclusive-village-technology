@@ -85,7 +85,7 @@ const HomeSectionOne = () => {
                 </div>
             </div>
 
-            <div className="w-full h-[57rem] overflow-hidden rounded-3xl mt-20">
+            <div className="w-full md:h-[55rem] h-60 overflow-hidden rounded-3xl mt-20">
                 <Image
                     src="/banner.jpg"
                     width={1000}
