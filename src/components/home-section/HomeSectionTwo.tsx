@@ -67,7 +67,7 @@ const HomeSectionTwo = () => {
                 </div>
 
                 <div className="max-w-[750px] mt-4 lg:mt-0 lg:inline hidden space-y-10">
-                    <p className="md:text-3xl text-2xl font-semibold leading-relaxed">
+                    <p className="md:text-3xl text-2xl font-medium leading-relaxed">
                         We are a software innovation agency with a mission to empower organizations through reliable, cutting-edge digital solutions. With a team of passionate engineers, designers, and strategists. Inclusive Village helps startups, enterprises, and institutions across Africa and beyond achieve their business goals.
                     </p>
 
