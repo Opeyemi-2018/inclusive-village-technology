@@ -72,7 +72,7 @@ const HomeSectionOne = () => {
 
                 <div className="flex md:items-center md:gap-0 gap-14 justify-between md:flex-row flex-col animate-up">
                     <p className="max-w-[500px] text-[19px] text-gray-800 leading-relaxed">
-                        At Inclusive Village, we're more than a tech company we're your strategic partner in digital transformation.
+                        At Inclusive Village, we&apos;re more than a tech company we&apos;re your strategic partner in digital transformation.
                     </p>
                     <div>
                         <LinkWithArrow

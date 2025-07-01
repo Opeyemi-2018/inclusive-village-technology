@@ -50,7 +50,6 @@ const GetStarted = () => {
                             className="w-[300px] h-[300px] object-cover shrink-0"
                         />
                     ))}
-                    {/* Duplicate for seamless loop */}
                     {['/ipad.avif', '/mochup.avif', '/phone.avif', '/mac.avif', '/ipad.avif'].map((src, idx) => (
                         <Image
                             key={`dup-${idx}`}
