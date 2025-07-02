@@ -67,7 +67,7 @@ const FinancialInfra = () => {
                 </div>
             </div>
 
-            <div className="space-y-20 pt-28">
+            <div className="space-y-20 pt-28 max-w-4xl mx-auto">
                 {data.map((item, index) => (
                     <div
                         key={index}
@@ -76,7 +76,7 @@ const FinancialInfra = () => {
                         }} className={`flex flex-col-reverse ${index % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row"
                             } lg:items-center gap-10`}
                     >
-                        {/* TEXT */}
+                       
                         <div className="lg:w-1/2 w-full space-y-4 text-left">
                             <div>
                                 <h1 className="lg:text-[27px] text-2xl font-bold uppercase font-unbounded">
@@ -90,14 +90,14 @@ const FinancialInfra = () => {
                         </div>
 
                         {/* IMAGE */}
-                        <div className="lg:w-1/2 w-full">
+                        <div className="lg:w-1/2 w-full lg:inline hidden">
                             <div className="overflow-hidden rounded-lg group">
                                 <Image
                                     src={item.image}
                                     alt={item.title}
                                     width={500}
                                     height={400}
-                                    className="w-full h-[250px] lg:h-[300px] object-cover transform transition-transform duration-500 group-hover:scale-105"
+                                    className="w-full h-[250px] lg:h-[200px] object-cover transform transition-transform duration-500 group-hover:scale-105"
                                 />
                             </div>
                         </div>

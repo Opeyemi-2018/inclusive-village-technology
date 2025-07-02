@@ -14,7 +14,7 @@ const blogs: BlogPost[] = [
     {
         id: 1,
         title: "Fintech",
-        image: "/men.avif",
+        image: "/developer.avif",
         description: "from code to launch Dominating 2025"
     },
     {
