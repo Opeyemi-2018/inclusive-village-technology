@@ -10,20 +10,20 @@ const recentWorks = [
         id: 3,
         name: "AfriPay+",
         type: "Gateway System",
-        info: "A fast, secure, and developer-friendly payment gateway transforming how businesses collect payments across Africa.",
+        info: "A fast, secure, and developer-friendly payment gateway.",
         image: "/afripay.png"
     },
     {
         id: 4,
         name: "Inclusive Remittance",
-        info: "A compliant, multi-channel remittance platform enabling global money transfer with local payout efficiency.",
+        info: "A compliant, multi-channel remittance platform .",
         type: "Gateway System",
         image: "/remittance.webp"
     },
     {
         id: 5,
         name: "Afripay Learn",
-        info: "A full-featured learning management system for schools and institutions.",
+        info: "A full-featured learning management system for schools.",
         type: "Gateway System",
         image: "/afripay-learn.png"
     },
@@ -78,7 +78,7 @@ const HomeSectionThree = () => {
 
             <div className="grid gap-14 lg:grid-cols-2">
                 {recentWorks.map(({ id, name, type, info, image }) => (
-                    <div key={id}>
+                    <div key={id} className="space-y-8 font-inter">
                         <div className="w-full h-[300px] md:h-[400px] relative rounded-lg overflow-hidden group">
                             <Image
                                 src={image}
@@ -89,12 +89,12 @@ const HomeSectionThree = () => {
                             <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-all duration-300"></div>
                         </div>
 
-                        <div className="mt-4">
-                            <div className="flex items-center gap-8 justify-between">
-                                <p className="capitalize md:text-3xl text-2xl">{name}</p>
-                                <p className="text-gray-500 text-[20px] whitespace-nowrap">{type}</p>
+                        <div className="space-y-2">
+                            <div className="flex items-center gap-7 justify-between">
+                                <p className="capitalize text-[#0b0b0b] md:text-[32px] font-semibold text-[26px]">{name}</p>
+                                <p className="text-[#0b0b0b] text-[16px] whitespace-nowrap">{type}</p>
                             </div>
-                            <p className="text-gray-800 pt-3 text-[20px]">{info}</p>
+                            <p className="text-[#0b0b0b] text-[16px] capitalize">{info}</p>
                         </div>
                     </div>
                 ))}

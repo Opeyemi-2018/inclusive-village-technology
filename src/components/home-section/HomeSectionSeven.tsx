@@ -6,7 +6,7 @@ const HomeSectionSeven = () => {
   return (
     <div className="relative bg-white">
       <div
-        className="relative bg-cover bg-center lg:pt-10 pt-2 px-4 sm:px-6 lg:px-8 h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]"
+        className="relative bg-cover bg-center lg:pt-10 pt-2 px-3 sm:px-6 lg:px-10 h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]"
         style={{
           backgroundImage: "url('/hero-men.jpg')",
           backgroundBlendMode: 'lighten',

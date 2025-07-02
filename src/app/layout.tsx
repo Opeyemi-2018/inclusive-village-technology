@@ -4,6 +4,12 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import GetStarted from "@/components/getStarted";
+import { Inter } from 'next/font/google'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${unbounded.variable}`}
+      className={`${geistSans.variable} ${inter.variable} ${geistMono.variable} ${unbounded.variable}`}
     >
       <body className="antialiased">
         <Header />

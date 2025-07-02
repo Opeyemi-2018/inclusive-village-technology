@@ -37,7 +37,7 @@ const AboutSectionFour = () => {
                     <p className="text-lg font-semibold">Our Team</p>
                     <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
                 </div>
-                <h1 className="flex-1 lg:text-7xl text-5xl uppercase font-unbounded font-bold max-w-2xl">
+                <h1 className="flex-1 lg:text-[60px] text-[#0b0b0b] text-5xl uppercase font-unbounded font-bold max-w-2xl">
                     meet the <br /> expert
                 </h1>
             </div>
@@ -60,10 +60,10 @@ const AboutSectionFour = () => {
                          bg-gradient-to-t from-orange-600 via-orange-600/50 to-transparent
                          flex flex-col justify-end items-center p-4 pb-2" 
                         >
-                            <p className="text-white text-2xl md:text-3xl font-unbounded font-bold uppercase mb-1">
+                            <p className="text-white text-2xl md:text-[20px] font-unbounded font-bold uppercase mb-1">
                                 {person.name}
                             </p>
-                            <p className="text-white text-md">
+                            <p className="text-white text-[16px] font-inter">
                                 {person.post}
                             </p>
                         </div>
@@ -76,14 +76,14 @@ const AboutSectionFour = () => {
                      transform transition-transform duration-300 hover:scale-105"
                 >
                     <div className='flex items-center flex-col gap-2'>
-                        <h1 className="text-2xl md:text-3xl  font-bold font-unbounded uppercase">
+                        <h1 className="text-2xl md:text-[20px]  font-bold font-unbounded uppercase">
                             you can be here
                         </h1>
-                        <p className="text-base leading-relaxed mb-4">
+                        <p className="text-[16px] font-inter leading-relaxed mb-4">
                             We prize inquisitiveness, teamwork, and a solution-oriented mindset. Yes, and caffeine—plenty of caffeine. Become part of a group that values your distinct talents and aids you in realizing your utmost capabilities.
                         </p>
                     </div>
-                    <h2 className="text-2xl md:text-3xl font-unbounded font-bold uppercase">
+                    <h2 className="text-2xl md:text-[20px] font-unbounded font-bold uppercase">
                         join our team
                     </h2>
                 </div>

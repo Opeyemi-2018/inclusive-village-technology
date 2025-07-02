@@ -52,7 +52,7 @@ const HomeSectionFour = () => {
 
     return (
         <div className="lg:px-10 px-3 pt-40 md:pb-28 bg-white">
-            {/* Marquee */}
+           
             <div className="overflow-hidden w-[200px] h-6 relative mb-6">
                 <div
                     ref={marqueeRef}
@@ -68,14 +68,14 @@ const HomeSectionFour = () => {
                 </div>
             </div>
 
-            {/* Heading */}
+           
             <div className="flex flex-col lg:flex-row md:justify-end items-start lg:items-center gap-6 lg:mb-12 mb-2">
                 <h1 className="flex-1 lg:text-7xl text-4xl uppercase font-unbounded font-bold max-w-2xl">
                     top-notch <br /> services
                 </h1>
             </div>
 
-            {/* Services */}
+            
             <div className="pt-10">
                 {services.map((service, index) => (
                     <motion.div
@@ -83,7 +83,7 @@ const HomeSectionFour = () => {
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                         className={`transition-all duration-300 cursor-pointer md:py-16 py-10 
-                            ${hoveredIndex === index ? 'md:bg-orange-600 px-3 rounded-lg md:text-white' : ''}
+                            ${hoveredIndex === index ? 'md:bg-orange-600 px-12 rounded-2xl md:text-white' : ''}
                             md:border-b md:border-gray-200
                             md:hover:bg-orange-600 md:hover:text-white
                             bg-white`}
@@ -98,7 +98,7 @@ const HomeSectionFour = () => {
                             <AnimatePresence>
                                 {(hoveredIndex === index || isMobile) && (
                                     <motion.p
-                                        className="flex-1 text-left md:text-center text-2xl"
+                                        className="flex-1 text-left md:max-w-[450px]  text-2xl"
                                         initial={{ y: 40 }}
                                         animate={{ y: 0 }}
                                         exit={{ y: 40 }}

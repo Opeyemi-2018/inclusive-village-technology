@@ -15,7 +15,7 @@ const blogs: BlogPost[] = [
         id: 1,
         title: "Fintech",
         image: "/men.avif",
-        description: "5 Fintech Trends Dominating 2025"
+        description: "from code to launch Dominating 2025"
     },
     {
         id: 2,
@@ -60,12 +60,12 @@ const HomeSectionEight = () => {
                             />
                         </div>
                         <div className='flex items-center gap-2'>
-                            <span className="w-5 h-5 bg-black  rounded-full inline-block"></span>
-                            <h3 className="capitalize">
+                            <span className="w-3 h-3 bg-black  rounded-full inline-block"></span>
+                            <h3 className="capitalize font-medium text-[14px] text-[#0b0b0b] font-inter">
                                 {blog.title}
                             </h3>
                         </div>
-                        <p className="text-[24px] capitalize">
+                        <p className="text-[24px]  text-[#0b0b0b] font-inter capitalize">
                             {blog.description}
                         </p>
                     </div>
@@ -73,12 +73,12 @@ const HomeSectionEight = () => {
             </div>
 
             <div className='flex items-center justify-center pt-16'>
-                 <LinkWithArrow
-                            href="/contact"
-                            label="get in touch"
-                            underlineColor="bg-black"
-                            iconColor="text-orange-600"
-                        />
+                <LinkWithArrow
+                    href="/contact"
+                    label="get in touch"
+                    underlineColor="bg-black"
+                    iconColor="text-orange-600"
+                />
             </div>
 
 

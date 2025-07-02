@@ -41,28 +41,27 @@ const Contact = () => {
             <div className="flex flex-col justify-center items-center ">
                 <div className="flex items-center gap-3">
                     <p className="text-lg font-semibold">Reach Out</p>
-                    <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
+                    <span className="w-3 h-3 bg-orange-600 rounded-full inline-block"></span>
                 </div>
-                    <h1 className="flex-1 pt-8 lg:text-6xl text-4xl uppercase font-unbounded font-bold flex items-center">
-                        LET&apos;S CONNECT
-                    </h1>
+                <h1 className="flex-1 pt-8 lg:text-[42px] text-[#0b0b0b] text-4xl uppercase font-unbounded font-bold flex items-center">
+                    Let’s Get Your Project Started
+                </h1>
             </div>
 
             <div className='flex lg:flex-row flex-col lg:gap-0 gap-7 justify-between lg:items-start pt-32'>
-                <div className='space-y-8'>
+                <div className='space-y-8 text-[#0b0b0b] font-inter'>
+                    <p className='text-[#0b0b0b] text-[20px] font-inter lg:max-w-[400px] text-justify'>We’re excited to work with forward-thinking brands, teams, and businesses. Whether you’re looking to build a fintech platform, streamline your estate management, or create an education system that scales—we’re ready when you are.</p>
                     <div>
-                        <p className='text-[20px] text-gray-700'>+1 (800) 123-4567</p>
-                        <p className='text-[30px] font-medium'>contact@pixelhive.com</p>
+                        <p className='text-[20px] '>+234 (0) 903 822 4418</p>
+                        <p className='text-[24px]'> info@ivillagetech.com</p>
                     </div>
                     <div>
                         <h2 className='text-[20px] font-semibold'>Find us</h2>
                     </div>
-                    <div className='text-gray-800 text-[18px]'>
-                        <h2>
-                            1701 Pine Street, San Francisco,
-                        </h2>
-                        <h2>CA 94115, US</h2>
-                    </div>
+                    <h2 className='text-[20px]'>
+                        Eko Atlantic, Victoria Island, Lagos, Nigeria.
+                        Banana Island, Ikoyi, Lagos, Nigeria.
+                    </h2>
 
                     <div className="flex items-center gap-3 text-orange-600">
                         <RiTwitterXLine size={25} />
@@ -107,7 +106,7 @@ const Contact = () => {
                             <div className="flex items-center">
                                 <input
                                     type="checkbox"
-                                     className="h-6 w-6 rounded border border-gray-800 appearance-none checked:bg-orange-600 focus:ring-gray-800 cursor-pointer"
+                                    className="h-6 w-6 rounded border border-gray-800 appearance-none checked:bg-orange-600 focus:ring-gray-800 cursor-pointer"
 
                                 />
                                 <label
@@ -119,7 +118,7 @@ const Contact = () => {
                             <div className="flex items-center">
                                 <input
                                     type="checkbox"
-                                   className="h-6 w-6 rounded border border-gray-800 appearance-none checked:bg-orange-600 focus:ring-gray-800 cursor-pointer"
+                                    className="h-6 w-6 rounded border border-gray-800 appearance-none checked:bg-orange-600 focus:ring-gray-800 cursor-pointer"
 
                                 />
                                 <label

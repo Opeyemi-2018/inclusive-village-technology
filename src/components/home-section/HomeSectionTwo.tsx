@@ -7,7 +7,7 @@ import gsap from "gsap"
 const HomeSectionTwo = () => {
     const marqueeRef = useRef(null)
 
-    const clientLogos = Array(10).fill("/sayswitch.jpg")
+    const clientLogos = Array(10).fill("/sayswitch-no-bg.png")
     const logos = [...clientLogos, ...clientLogos]
 
     useEffect(() => {
@@ -27,7 +27,7 @@ const HomeSectionTwo = () => {
 
     return (
         <div className="lg:px-10 px-3 py-48">
-            <div className="overflow-hidden w-[180px] h-6 relative mb-6 mx-auto">
+            <div className="overflow-hidden w-[180px] h-6 pb-24">
                 <div
                     ref={marqueeRef}
                     className="flex whitespace-nowrap w-max"
@@ -36,27 +36,17 @@ const HomeSectionTwo = () => {
                     {/* Duplicate content for seamless scroll */}
                     {[...Array(2)].map((_, i) => (
                         <div key={i} className="flex gap-3">
-                            <div className="flex items-center gap-3 pr-8">
-                                <p className="text-lg font-semibold">About us</p>
-                                <span className="w-4 h-4 bg-orange-600 rounded-full inline-block"></span>
-                            </div>
-                            <div className="flex items-center gap-3 pr-8">
-                                <p className="text-lg font-semibold">About us</p>
-                                <span className="w-4 h-4 bg-orange-600 rounded-full inline-block"></span>
+                            <div className="flex items-center gap-2 justify-start">
+                                <p className="text-lg capitalize font-semibold">About us</p>
+                                <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <div className="flex flex-col items-center md:gap-4 gap-7 lg:mb-36 mb-16">
-                <h1 className="lg:text-7xl text-5xl uppercase text-center font-unbounded font-bold">
-                    Who We Are
-                </h1>
-            </div>
-
             <div className="flex flex-col lg:flex-row lg:items-center justify-between lg:gap-20 gap-4">
-                <div className="w-full lg:w-auto">
+                <div className="w-full lg:w-96">
                     <Image
                         src={'/hero-men.jpg'}
                         alt="man"
@@ -67,7 +57,7 @@ const HomeSectionTwo = () => {
                 </div>
 
                 <div className="max-w-[750px] mt-4 lg:mt-0 lg:inline hidden space-y-10">
-                    <p className="md:text-3xl text-2xl font-medium leading-relaxed">
+                    <p className="md:text-3xl text-2xl font-medium leading-loose">
                         We are a software innovation agency with a mission to empower organizations through reliable, cutting-edge digital solutions. With a team of passionate engineers, designers, and strategists. Inclusive Village helps startups, enterprises, and institutions across Africa and beyond achieve their business goals.
                     </p>
 
@@ -89,19 +79,25 @@ const HomeSectionTwo = () => {
             </div>
 
             <div className="overflow-hidden pt-20 bg-white">
-                <div className="whitespace-nowrap animate-slide">
+                <div className="whitespace-nowrap animate-slide flex items-center gap-20">
                     {logos.map((logo, index) => (
-                        <Image
-                            key={index}
-                            src={logo}
-                            alt={`Client ${index}`}
-                            width={100}
-                            height={100}
-                            className="inline-block mx-6 grayscale hover:grayscale-0 transition duration-300"
-                        />
+                        <div key={index} className="flex items-center gap-3">
+                            <span className="text-gray-400 font-bold text-1xl">Sayswitch</span>
+                            <div className="w-10 h-10">
+                                <Image
+                                    src={logo}
+                                    alt={`Client ${index}`}
+                                    width={70}
+                                    height={70}
+                                    className="filter grayscale brightness-[1.8]"
+                                />
+                            </div>
+                        </div>
+
                     ))}
                 </div>
             </div>
+
         </div>
     )
 }

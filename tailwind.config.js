@@ -10,6 +10,7 @@ module.exports = {
         geist: ["var(--font-geist-sans)"],
         mono: ["var(--font-geist-mono)"],
         unbounded: ["var(--font-unbounded)"],
+        inter: ["var(--font-inter)", "sans-serif"],
       },
     },
   },

@@ -57,8 +57,8 @@ const Header = () => {
                         <nav className="text-7xl font-bold font-unbounded flex flex-col gap-6 items-center uppercase">
                             <Link href="/" onClick={() => setMenuOpen(!menuOpen)}>Home</Link>
                             <Link href="/about" onClick={() => setMenuOpen(!menuOpen)}>About</Link>
-                            <Link href="/work" onClick={() => setMenuOpen(!menuOpen)}>Work</Link>
-                            <Link href="/blog" onClick={() => setMenuOpen(!menuOpen)}>Blog</Link>
+                            <Link href="/services" onClick={() => setMenuOpen(!menuOpen)}>services</Link>
+                            <Link href="/solution" onClick={() => setMenuOpen(!menuOpen)}>Solution</Link>
                             <Link href="/contact" onClick={() => setMenuOpen(!menuOpen)}>Contact</Link>
                         </nav>
                     </motion.div>
@@ -78,8 +78,8 @@ const Header = () => {
                         <nav className="rounded-lg px-6 pb-4 pt-28 text-2xl font-unbounded font-bold flex flex-col gap-4 uppercase">
                             <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
                             <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
-                            <Link href="/work" onClick={() => setMenuOpen(false)}>Work</Link>
-                            <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+                            <Link href="/services" onClick={() => setMenuOpen(false)}>services</Link>
+                            <Link href="/solution" onClick={() => setMenuOpen(false)}>Solution</Link>
                             <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
                         </nav>
 

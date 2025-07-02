@@ -52,7 +52,7 @@ const HomeSectionSix = () => {
         };
 
         if (typeof window !== 'undefined') {
-            handleResize(); 
+            handleResize();
             window.addEventListener('resize', handleResize);
         }
 
@@ -94,8 +94,8 @@ const HomeSectionSix = () => {
                                 className="w-full md:w-1/3 flex-shrink-0"
                             >
                                 <div className="bg-white border border-gray-100 rounded-xl p-10 flex flex-col gap-10 justify-between h-full">
-                                    <FaQuoteLeft size={60} className="text-orange-600 mb-4 font-extrabold" />
-                                    <p className="text-[22px] font-medium text-gray-900 mb-6">{item.quote}</p>
+                                    <FaQuoteLeft size={65} className="text-orange-600 mb-4 font-extrabold" />
+                                    <p className="text-[24px] font-inter text-[#0b0b0b] mb-6">{item.quote}</p>
                                     <div className="flex items-center gap-4 mt-auto">
                                         <Image
                                             src={item.avatar}
