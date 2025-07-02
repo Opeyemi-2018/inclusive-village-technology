@@ -34,11 +34,11 @@ const HomeSectionOne = () => {
     return (
         <div ref={sectionRef}>
             <div className="lg:px-10 px-3 lg:pt-0 pt-2 flex flex-col space-y-12 relative">
-                <div className="flex flex-col items-center justify-center w-full font-bold font-unbounded animate-up">
-                    <h1 className="w-full text-[17vw] capitalize text-center leading-none whitespace-nowrap tracking-tighter">
+                <div className="flex flex-col items-center justify-center w-full font-semibold font-inter animate-up">
+                    <h1 className="w-full tracking-tighter text-[24vw] capitalize text-center leading-none whitespace-nowrap">
                         inclusive
                     </h1>
-                    
+
                     <h2 className="lg:text-4xl text-xl uppercase">village technology</h2>
                 </div>
 
@@ -85,9 +85,9 @@ const HomeSectionOne = () => {
                 </div>
             </div>
 
-            <div className="w-full md:h-[55rem] h-60 overflow-hidden rounded-3xl mt-20">
+            <div className="w-full md:h-[40rem] h-72 overflow-hidden rounded-3xl mt-20">
                 <Image
-                    src="/banner.jpg"
+                    src="/space.jpg"
                     width={1000}
                     height={1000}
                     alt="hero image"
