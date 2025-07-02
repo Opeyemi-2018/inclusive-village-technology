@@ -32,11 +32,11 @@ const Work = () => {
                     <p className="text-lg font-semibold">what we do</p>
                     <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
                 </div>
-                <div className="flex items-center flex-col font-unbounded uppercase text-center md:gap-0 gap-2">
-                    <h1 className="flex-1 pt-2 lg:text-9xl text-6xl font-bold flex items-center">
+                <div className="flex items-center lg:text-6xl text-4xl pt-4 flex-col font-unbounded uppercase text-center md:gap-0 gap-2">
+                    <h1 className="flex-1 pt-2  font-bold flex items-center">
                         Our
                     </h1>
-                    <h1 className="flex-1 pt-2 lg:text-9xl text-6xl font-bold flex items-center">
+                    <h1 className="flex-1 pt-2  font-bold flex items-center">
                         services
                     </h1>
                 </div>
@@ -69,16 +69,19 @@ const Work = () => {
                         md:group-hover:bottom-0 
                         transition-all duration-500"
                         >
-                            <div className="flex items-center justify-between">
-                                <h1 className="text-2xl font-bold">{service.title}</h1>
+                            <div className="space-y-4">
+                                <div>
+                                    <h1 className="text-2xl font-bold">{service.title}</h1>
+                                    <p className="text-sm">{service.type}</p>
+                                </div>
+
                                 <Link
                                     href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}
-                                    className="text-sm underline text-white hover:text-orange-200 transition"
+                                    className="text-sm underline text-white text-nowrap hover:text-orange-200 transition"
                                 >
                                     Learn more
                                 </Link>
                             </div>
-                            <p className="text-sm">{service.type}</p>
                         </div>
                     </div>
                 ))}

@@ -9,7 +9,7 @@ const AboutSectionThree = () => {
                     <p className="text-lg font-semibold">Our Performance</p>
                     <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
                 </div>
-                <h1 className="flex-1 lg:text-7xl text-[60px] font-unbounded uppercase font-bold max-w-2xl">
+                <h1 className="flex-1 lg:text-7xl text-4xl font-unbounded uppercase font-bold max-w-2xl">
                     Our Impact in Numbers
 
                 </h1>

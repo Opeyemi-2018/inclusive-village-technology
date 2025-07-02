@@ -9,11 +9,11 @@ const Blog = () => {
                 </div>
                 <div className='md:hidden flex items-center font-unbounded flex-col gap-2 pt-8 uppercase '>
                     <h1 className="  lg:text-8xl text-5xl  font-bold  flex items-center">
-                        Latest
+                        our
 
                     </h1>
                     <h1 className="  lg:text-8xl text-5xl  font-bold  flex items-center">
-                        Articles
+                        solution
                     </h1>
                 </div>
 

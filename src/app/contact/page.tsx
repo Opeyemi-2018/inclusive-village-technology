@@ -50,7 +50,7 @@ const Contact = () => {
 
             <div className='flex lg:flex-row flex-col lg:gap-0 gap-7 justify-between lg:items-start pt-32'>
                 <div className='space-y-8 text-[#0b0b0b] font-inter'>
-                    <p className='text-[#0b0b0b] text-[20px] font-inter lg:max-w-[400px] text-justify'>We’re excited to work with forward-thinking brands, teams, and businesses. Whether you’re looking to build a fintech platform, streamline your estate management, or create an education system that scales—we’re ready when you are.</p>
+                    <p className='text-[#0b0b0b] text-[20px] font-inter lg:max-w-[400px]'>We’re excited to work with forward-thinking brands, teams, and businesses. Whether you’re looking to build a fintech platform, streamline your estate management, or create an education system that scales—we’re ready when you are.</p>
                     <div>
                         <p className='text-[20px] '>+234 (0) 903 822 4418</p>
                         <p className='text-[24px]'> info@ivillagetech.com</p>
@@ -58,7 +58,7 @@ const Contact = () => {
                     <div>
                         <h2 className='text-[20px] font-semibold'>Find us</h2>
                     </div>
-                    <h2 className='text-[20px]'>
+                    <h2 className='text-[20px] lg:max-w-[400px]'>
                         Eko Atlantic, Victoria Island, Lagos, Nigeria.
                         Banana Island, Ikoyi, Lagos, Nigeria.
                     </h2>
