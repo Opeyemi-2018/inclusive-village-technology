@@ -23,6 +23,11 @@ const services = [
         image: '/black-case.avif',
         title: 'Infrastructure Solutions',
         type: 'Cloud, DevOps',
+    },
+    {
+        image: '/black-case.avif',
+        title: 'development services',
+        type: 'e.g. Web & Mobile Dev',
     }
 ]
 

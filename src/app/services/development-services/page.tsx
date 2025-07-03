@@ -9,32 +9,27 @@ gsap.registerPlugin(ScrollTrigger);
 
 const data = [
     {
-        title: "Remittance System",
+        title: "Website Design and Development",
         description:
-            "Multi-channel remittance solutions with compliance, audit trails, and global reach.",
-        image: "/men.avif",
+            "Responsive, SEO-ready websites for brands, businesses, and platforms.",
+        image: "/developer.avif",
     },
     {
-        title: "Payment Gateway System",
+        title: "Mobile App Design and Development",
         description:
-            "Seamless integration for local and international payments (cards, wallets, USSD, etc.).",
+            "Native and cross-platform mobile apps tailored to user experience and business goals.",
         image: "/table.avif",
     },
+
     {
-        title: "Banking Software Solution",
+        title: "Enterprise Software Development",
         description:
-            "Modular digital banking systems designed for scalability and regulatory alignment.",
-        image: "/table.avif",
-    },
-    {
-        title: "Point of Sales (POS) System",
-        description:
-            "Hardware and cloud-based POS systems for fast, reliable retail and merchant transactions.",
+            "Robust, scalable systems designed to automate internal operations and serve customers better.",
         image: "/table.avif",
     },
 ];
 
-const FinancialInfra = () => {
+const Development = () => {
     const sectionRefs = useRef<HTMLDivElement[]>([]);
 
     useEffect(() => {
@@ -60,9 +55,9 @@ const FinancialInfra = () => {
         <div className="lg:px-10 px-3 pt-36 pb-20 text-[#0b0b0b]">
             <div>
                 <h1 className="lg:text-[40px] font-bold uppercase text-3xl font-unbounded">
-                    Financial Services
-                </h1> 
-                <p className="font-inter text-[20px]">We build secure, high-performance platforms that power financial transactions and services at scale.</p>
+                    Development Services
+                </h1>
+                <p className="font-inter text-[20px]">We design and develop beautiful, functional, and scalable digital products across platforms.</p>
             </div>
 
             <div className="space-y-20 pt-28 max-w-4xl mx-auto">
@@ -106,4 +101,4 @@ const FinancialInfra = () => {
     );
 };
 
-export default FinancialInfra;
+export default Development;
