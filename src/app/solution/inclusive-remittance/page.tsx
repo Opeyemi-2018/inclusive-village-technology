@@ -36,7 +36,7 @@ const mainInclusiveData = [
         ],
         image: "/remittance.jpg",
     },
-    {
+    { // This is now logically the THIRD main item, even if "Key Features" is displayed before it.
         title: "Why Choose Inclusive?",
         description: `
 - Trusted by growing remittance businesses
@@ -105,7 +105,8 @@ const Inclusive = () => {
             </div>
 
             <div className="space-y-36 pt-28 ">
-                {mainInclusiveData.map((item, index) => (
+                {/* Render "Business Challenges We Solve" and "The Solution" */}
+                {mainInclusiveData.slice(0, 2).map((item, index) => (
                     <div
                         key={index}
                         ref={(el) => {
@@ -158,54 +159,109 @@ const Inclusive = () => {
                         </div>
                     </div>
                 ))}
-            </div>
 
-            <div className="pt-28">
-                <h2 className="lg:text-[40px] text-3xl font-bold uppercase font-unbounded text-center mb-16">
-                    Key Features
-                </h2>
-                <div className="pt-10">
-                    {keyFeaturesData.map((feature, index) => (
-                        <motion.div
-                            key={index}
-                            onMouseEnter={() => setHoveredFeatureIndex(index)}
-                            onMouseLeave={() => setHoveredFeatureIndex(null)}
-                            className={`transition-all duration-300 cursor-pointer md:py-16 py-10
-                                ${hoveredFeatureIndex === index ? 'md:bg-orange-600 px-12 rounded-2xl md:text-white' : ''}
-                                md:border-b md:border-gray-200
-                                md:hover:bg-orange-600 md:hover:text-white
-                                bg-white`}
-                            initial={{ y: 50, opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            viewport={{ once: true, amount: 0.2 }}
-                            transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
-                        >
-                            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                                <h2 className="text-3xl md:text-4xl font-medium">{feature.name}</h2>
+                {/* --- Key Features Section --- */}
+                <div className="pt-28"> {/* Maintain your existing padding */}
+                    <h2 className="lg:text-[40px] text-3xl font-bold uppercase font-unbounded text-center mb-16">
+                        Key Features
+                    </h2>
+                    <div className="pt-10">
+                        {keyFeaturesData.map((feature, index) => (
+                            <motion.div
+                                key={index}
+                                onMouseEnter={() => setHoveredFeatureIndex(index)}
+                                onMouseLeave={() => setHoveredFeatureIndex(null)}
+                                className={`transition-all duration-300 cursor-pointer md:py-16 py-10
+                                    ${hoveredFeatureIndex === index ? 'md:bg-orange-600 px-12 rounded-2xl md:text-white' : ''}
+                                    md:border-b md:border-gray-200
+                                    md:hover:bg-orange-600 md:hover:text-white
+                                    bg-white`}
+                                initial={{ y: 50, opacity: 0 }}
+                                whileInView={{ y: 0, opacity: 1 }}
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
+                            >
+                                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                                    <h2 className="text-3xl md:text-4xl font-medium">{feature.name}</h2>
 
-                                <AnimatePresence>
-                                    {(hoveredFeatureIndex === index || isMobile) && (
-                                        <motion.p
-                                            className="flex-1 text-left md:max-w-[450px] text-2xl"
-                                            initial={{ y: 40 }}
-                                            animate={{ y: 0 }}
-                                            exit={{ y: 40 }}
-                                            transition={{ duration: 0.3 }}
-                                        >
-                                            {feature.description}
-                                        </motion.p>
+                                    <AnimatePresence>
+                                        {(hoveredFeatureIndex === index || isMobile) && (
+                                            <motion.p
+                                                className="flex-1 text-left md:max-w-[450px] text-2xl"
+                                                initial={{ y: 40 }}
+                                                animate={{ y: 0 }}
+                                                exit={{ y: 40 }}
+                                                transition={{ duration: 0.3 }}
+                                            >
+                                                {feature.description}
+                                            </motion.p>
+                                        )}
+                                    </AnimatePresence>
+
+                                    {!isMobile && (
+                                        <div className="hidden md:block">
+                                            {hoveredFeatureIndex === index ? <HiOutlineMinus size={30} /> : <FiPlus size={30} />}
+                                        </div>
                                     )}
-                                </AnimatePresence>
-
-                                {!isMobile && (
-                                    <div className="hidden md:block">
-                                        {hoveredFeatureIndex === index ? <HiOutlineMinus size={30} /> : <FiPlus size={30} />}
-                                    </div>
-                                )}
-                            </div>
-                        </motion.div>
-                    ))}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
+
+                {mainInclusiveData.slice(2, 3).map((item, index) => ( 
+                     <div
+                        key={index + 2} 
+                        ref={(el) => {
+                            if (el) sectionRefs.current[index + 2] = el;
+                        }}
+                        className={`flex flex-col-reverse ${ (index + 2) % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row" // Adjust index for conditional class
+                            } lg:items-center gap-10`}
+                    >
+                        <div className="lg:w-1/2 w-full space-y-4 text-left">
+                            <div>
+                                <h2 className="lg:text-[27px] text-2xl font-bold uppercase font-unbounded">
+                                    {item.title}
+                                </h2>
+                                <div className="h-1 w-16 bg-orange-600 mt-2 rounded"></div>
+                            </div>
+                            {Array.isArray(item.description) ? (
+                                <ul className="text-[#0b0b0b] font-inter text-[18px] space-y-2">
+                                    {item.title === "Business Challenges We Solve" ? (
+                                        item.description.map((line, i) => (
+                                            <li key={i} className="flex items-start gap-2">
+                                                <span className="w-2 h-2 mt-2 bg-orange-600 rounded-full flex-shrink-0"></span>
+                                                <span>{line}</span>
+                                            </li>
+                                        ))
+                                    ) : (
+                                        item.description.map((line, i) => (
+                                            <li key={i} className="flex items-start">
+                                                <span>{line}</span>
+                                            </li>
+                                        ))
+                                    )}
+                                </ul>
+                            ) : (
+                                <p className="text-[#0b0b0b] font-inter text-[18px] whitespace-pre-line">
+                                    {item.description}
+                                </p>
+                            )}
+                        </div>
+
+                        <div className="lg:w-1/2 w-full lg:inline hidden">
+                            <div className="overflow-hidden rounded-lg group">
+                                <Image
+                                    src={item.image}
+                                    alt={item.title}
+                                    width={500}
+                                    height={500}
+                                    className="w-full h-[350px] lg:h-[350px] object-cover transform transition-transform duration-500 group-hover:scale-105"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );
