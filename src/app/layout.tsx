@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Unbounded } from "next/font/google";
+import { Geist, Geist_Mono, Unbounded, Inter } from "next/font/google";
 import "./globals.css";
+
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import GetStarted from "@/components/getStarted";
-import { Inter } from 'next/font/google'
 
 const inter = Inter({
   subsets: ['latin'],

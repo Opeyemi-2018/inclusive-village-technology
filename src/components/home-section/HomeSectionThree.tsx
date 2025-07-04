@@ -52,49 +52,50 @@ const HomeSectionThree = () => {
         return () => ctx.revert()
     }, [])
 
+
     return (
-        <div className="lg:px-10 px-3">
+        <div className="max-w-[80rem] mx-auto lg:px-10 px-3">
             {/* 🔁 Scrolling Recent Works */}
-            <div className="overflow-hidden w-[200px] h-6 relative mb-6">
+            <div className="overflow-hidden w-[180px] h-6">
                 <div
                     ref={marqueeRef}
                     className="flex whitespace-nowrap w-max"
                     style={{ willChange: 'transform' }}
                 >
                     {[...Array(2)].map((_, i) => (
-                        <div key={i} className="flex items-center gap-3 pr-10">
-                            <p className="text-lg font-semibold">Recent Works</p>
-                            <span className="w-4 h-4 bg-orange-600 rounded-full inline-block"></span>
+                        <div key={i} className="flex items-center gap-2.5 mr-3">
+                            <p className="text-lg capitalize font-medium">Recent Works</p>
+                            <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <div className="flex flex-col lg:flex-row justify-end items-start gap-6 lg:mb-12 mb-2">
+            <div className="flex flex-col lg:flex-row justify-end items-start gap-6 lg:mb-8 mb-2">
                 <h1 className="md:text-7xl md:w-auto w-[50px] text-4xl font-bold mb-20 flex lg:justify-end font-unbounded uppercase">
                     Recent Work
                 </h1>
             </div>
 
-            <div className="grid gap-14 lg:grid-cols-2">
+            <div className="grid lg:grid-cols-2 gap-12">
                 {recentWorks.map(({ id, name, type, info, image }) => (
-                    <div key={id} className="space-y-8 font-inter">
+                    <div key={id} className="space-y-6 font-inter">
                         <div className="w-full h-[300px] md:h-[400px] relative rounded-lg overflow-hidden group">
                             <Image
                                 src={image}
                                 alt={name}
                                 fill
-                                className="object-cover"
+                                className="object-cover w-full h-full"
                             />
                             <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-all duration-300"></div>
                         </div>
 
                         <div className="space-y-2">
-                            <div className="flex items-center gap-7 justify-between">
-                                <p className="capitalize text-[#0b0b0b] md:text-[32px] font-semibold text-[26px]">{name}</p>
-                                <p className="text-[#0b0b0b] text-[16px] whitespace-nowrap">{type}</p>
+                            <div className="flex justify-between items-center">
+                                <p className="capitalize text-[#0b0b0b] lg:text-3xl font-medium tracking-tight">{name}</p>
+                                <p className="text-[#0b0b0bd7] text-[16px] whitespace-nowrap">{type}</p>
                             </div>
-                            <p className="text-[#0b0b0b] text-[16px] capitalize">{info}</p>
+                            <p className="text-[#0b0b0b] text-[16px] capitalize max-w-md">{info}</p>
                         </div>
                     </div>
                 ))}

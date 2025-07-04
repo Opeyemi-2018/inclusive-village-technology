@@ -1,45 +1,17 @@
 'use client'
-
-import { useEffect, useRef } from "react"
-import gsap from "gsap"
 import Image from "next/image"
 import LinkWithArrow from "../contactButton"
 
 const HomeSectionOne = () => {
-    const sectionRef = useRef(null)
-
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.from(".animate-up", {
-                y: 50,
-                opacity: 0,
-                duration: 1,
-                ease: "power3.out",
-                stagger: 0.2,
-            })
-
-
-            gsap.to("#flipInner", {
-                rotateY: "+=360",
-                duration: 6,
-                repeat: -1,
-                ease: "linear",
-                transformOrigin: "center center",
-            })
-        }, sectionRef)
-
-        return () => ctx.revert()
-    }, [])
-
     return (
-        <div ref={sectionRef}>
+        <div>
             <div className="lg:px-10 px-3 lg:pt-0 pt-2 flex flex-col space-y-12 relative">
-                <div className="flex flex-col items-center justify-center w-full font-semibold font-inter animate-up">
-                    <h1 className="w-full tracking-tighter text-[24vw] capitalize text-center leading-none whitespace-nowrap">
+                <div className="flex flex-col items-center justify-center w-full font-semibold font-inter">
+                    <h1 className="w-full tracking-tighter text-[18vw] capitalize text-center font-unbounded leading-none whitespace-nowrap">
                         inclusive
                     </h1>
 
-                    <h2 className="lg:text-4xl text-xl uppercase">village technology</h2>
+                    <h2 className="lg:text-4xl text-xl font-unbounded uppercase">village technology</h2>
                 </div>
 
                 {/* <div className="flex justify-center relative lg:static animate-up">
@@ -70,8 +42,8 @@ const HomeSectionOne = () => {
                 </div> */}
 
 
-                <div className="flex md:items-center md:gap-0 gap-14 justify-between md:flex-row flex-col animate-up">
-                    <p className="max-w-[500px] text-[19px] text-gray-800 leading-relaxed">
+                <div className="flex flex-col lg:flex-row justify-between gap-12 pt-14">
+                    <p className="text-[19px] text-gray-800 leading-relaxed max-w-md">
                         At Inclusive Village, we&apos;re more than a tech company we&apos;re your strategic partner in digital transformation.
                     </p>
                     <div>

@@ -26,52 +26,55 @@ const HomeSectionTwo = () => {
     }, [])
 
     return (
-        <div className="lg:px-10 px-3 py-48">
-            <div className="overflow-hidden w-[180px] h-6 pb-24">
+        <div className="lg:px-10 px-3 py-40">
+            <div className="overflow-hidden w-[180px] h-6 pb-20">
                 <div
                     ref={marqueeRef}
                     className="flex whitespace-nowrap w-max"
                     style={{ willChange: 'transform' }}
                 >
                     {[...Array(2)].map((_, i) => (
-                        <div key={i} className="flex gap-3">
-                            <div className="flex items-center gap-2 justify-start">
-                                <p className="text-lg capitalize font-semibold">About us</p>
-                                <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
-                            </div>
+                        <div key={i} className="flex items-center gap-2.5 mr-3">
+                            <p className="text-lg capitalize font-medium">About us</p>
+                            <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between lg:gap-20 gap-4">
-                <div className="w-full lg:w-96">
+            <div className="w-full max-w-[80rem mx-auto flex items-center gap-36">
+                <div className="w-[40%] h-[30rem] overflow-hidden rounded-2xl">
                     <Image
                         src={'/agency-9.jpg'}
                         alt="man"
                         width={1000}
                         height={600}
-                        className="rounded-lg lg:w-[600px] w-full lg:h-[400px] h-[300px] object-cover"
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: 'center'
+                        }}
                     />
                 </div>
 
-                <div className="max-w-[750px] mt-4 lg:mt-0 lg:inline hidden space-y-10">
-                    <p className="md:text-3xl text-2xl font-medium leading-loose">
-                        We are a software innovation agency with a mission to empower organizations through reliable, cutting-edge digital solutions. With a team of passionate engineers, designers, and strategists. Inclusive Village helps startups, enterprises, and institutions across Africa and beyond achieve their business goals.
+                <div className="w-[60%]">
+                    <p className="text-2xl lg:text-4xl font-medium font-inter">
+                        We are a software agency empowering organizations with innovative digital solutions. Our passionate team helps clients achieve their goals across Africa and beyond.
                     </p>
 
-                    <div className="flex items-center justify-between pt-5">
+                    <div className="flex items-center justify-between mt-20">
                         <div className="flex flex-col">
-                            <h1 className="text-orange-600 text-5xl font-extrabold">200 +</h1>
-                            <p className="text-gray-700 text-[18px]">Projects delivered</p>
+                            <h1 className="text-orange-600 tracking-tight text-4xl font-bold font-unbounded">200+</h1>
+                            <p className="text-gray-700">Projects delivered</p>
                         </div>
                         <div className="flex flex-col">
-                            <h1 className="text-orange-600 text-5xl font-extrabold">99%</h1>
-                            <p className="text-gray-700 text-[18px]">Client Retention</p>
+                            <h1 className="text-orange-600 tracking-tight text-4xl font-bold font-unbounded">99%</h1>
+                            <p className="text-gray-700">Client Retention</p>
                         </div>
                         <div className="flex flex-col">
-                            <h1 className="text-orange-600 text-5xl font-extrabold">12 +</h1>
-                            <p className="text-gray-700 text-[18px]">Industry Verticals</p>
+                            <h1 className="text-orange-600 tracking-tight text-4xl font-bold font-unbounded">12+</h1>
+                            <p className="text-gray-700">Industry Verticals</p>
                         </div>
                     </div>
                 </div>
