@@ -30,13 +30,13 @@ const solutionData = [
     {
         title: "AfriPay+ Gateway System",
         description: "Your all-in-one payment gateway...",
-        image: "/computer.avif",
+        image: "/developer.avif",
         slug: "afripay-gateway",
     },
     {
         title: "Afripay Learn",
         description: "A complete education suite...",
-        image: "/focus.avif",
+        image: "/developer.avif",
         slug: "afripay-learn",
     },
 ];
