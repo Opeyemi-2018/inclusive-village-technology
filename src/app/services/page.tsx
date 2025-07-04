@@ -5,27 +5,27 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const services = [
     {
-        image: '/ipad.avif',
+        image: '/financials.jpg',
         title: 'Financial Services',
         type: 'e.g. POS, Banking Systems',
     },
     {
-        image: '/black-case.avif',
+        image: '/integrations.jpg',
         title: 'Integration Services',
         type: 'e.g. NIBSS, USSD, Mastercard',
     },
     {
-        image: '/ipad.avif',
+        image: '/managements.jpg',
         title: 'Management Systems',
         type: 'e.g. Education, Estate',
     },
     {
-        image: '/black-case.avif',
+        image: '/Infra.jpg',
         title: 'Infrastructure Solutions',
         type: 'Cloud, DevOps',
     },
     {
-        image: '/black-case.avif',
+        image: '/developments.jpg',
         title: 'development services',
         type: 'e.g. Web & Mobile Dev',
     }
@@ -56,13 +56,15 @@ const Work = () => {
                         className="relative group overflow-hidden rounded-lg"
                     >
                         <Link href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
-                            <Image
-                                src={service.image}
-                                alt={service.title}
-                                width={1000}
-                                height={1000}
-                                className="w-full h-full object-cover transition-transform duration-500 md:group-hover:scale-105"
-                            />
+                            <div className="h-96">
+                                <Image
+                                    src={service.image}
+                                    alt={service.title}
+                                    width={1000}
+                                    height={1000}
+                                    className="w-full h-full object-cover transition-transform duration-500 md:group-hover:scale-105"
+                                />
+                            </div>
 
                             <div
                                 className="absolute bottom-0 left-0 w-full h-full 

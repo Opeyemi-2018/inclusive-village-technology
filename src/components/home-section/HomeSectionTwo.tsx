@@ -33,7 +33,6 @@ const HomeSectionTwo = () => {
                     className="flex whitespace-nowrap w-max"
                     style={{ willChange: 'transform' }}
                 >
-                    {/* Duplicate content for seamless scroll */}
                     {[...Array(2)].map((_, i) => (
                         <div key={i} className="flex gap-3">
                             <div className="flex items-center gap-2 justify-start">
@@ -48,7 +47,7 @@ const HomeSectionTwo = () => {
             <div className="flex flex-col lg:flex-row lg:items-center justify-between lg:gap-20 gap-4">
                 <div className="w-full lg:w-96">
                     <Image
-                        src={'/hero-men.jpg'}
+                        src={'/agency-9.jpg'}
                         alt="man"
                         width={1000}
                         height={600}

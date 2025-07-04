@@ -94,7 +94,7 @@ const AboutSectionFour = () => {
                     <div className="lg:w-1/2 w-full grid grid-cols-2 grid-rows-2 gap-4">
                         <div className="row-span-2 col-span-1">
                             <Image
-                                src="/men.avif"
+                                src="/agency-6.webp"
                                 alt="Team work"
                                 width={500}
                                 height={600}
@@ -103,7 +103,7 @@ const AboutSectionFour = () => {
                         </div>
                         <div className="row-span-1 col-span-1">
                             <Image
-                                src="/men.avif"
+                                src="/agency-7.webp"
                                 alt="Collaboration"
                                 width={500}
                                 height={300}
@@ -112,7 +112,7 @@ const AboutSectionFour = () => {
                         </div>
                         <div className="row-span-1 col-span-1">
                             <Image
-                                src="/men.avif"
+                                src="/agency.webp"
                                 alt="Innovation"
                                 width={500}
                                 height={300}

@@ -18,14 +18,14 @@ const data = [
         title: "Mobile App Design and Development",
         description:
             "Native and cross-platform mobile apps tailored to user experience and business goals.",
-        image: "/table.avif",
+        image: "/work-2.avif",
     },
 
     {
         title: "Enterprise Software Development",
         description:
             "Robust, scalable systems designed to automate internal operations and serve customers better.",
-        image: "/table.avif",
+        image: "/work-1.avif",
     },
 ];
 

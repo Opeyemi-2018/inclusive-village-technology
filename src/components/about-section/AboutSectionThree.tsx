@@ -17,7 +17,7 @@ const AboutSectionThree = () => {
             <div className="grid grid-cols-1   lg:grid-cols-3 md:grid-cols-2 gap-6">
                 <div className="relative md:h-[380px] h-[360px] w-full bg-gray-100 rounded-2xl overflow-hidden ">
                     <Image
-                        src={'/man-2.avif'}
+                        src={'/agency-5.avif'}
                         alt="Team working"
                         className="absolute inset-0 w-full h-full object-cover"
                         fill

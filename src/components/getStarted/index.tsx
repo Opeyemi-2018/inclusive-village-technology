@@ -40,7 +40,7 @@ const GetStarted = () => {
 
             <div className="overflow-hidden w-full pt-10">
                 <div className="flex whitespace-nowrap scroll-animation">
-                    {['/ipad.avif', '/mochup.avif', '/phone.avif', '/mac.avif', '/ipad.avif'].map((src, idx) => (
+                    {['/3d.jpg', '/integration.jpg', '/phone.avif', '/mac.avif', '/agency-6.webp'].map((src, idx) => (
                         <Image
                             key={idx}
                             src={src}
@@ -50,7 +50,7 @@ const GetStarted = () => {
                             className="w-[300px] h-[300px] object-cover shrink-0"
                         />
                     ))}
-                    {['/ipad.avif', '/mochup.avif', '/phone.avif', '/mac.avif', '/ipad.avif'].map((src, idx) => (
+                    {['/agency-5.avif', '/3d-2.jpg', '/phone.avif', '/mac.avif', '/3d-3.jpg'].map((src, idx) => (
                         <Image
                             key={`dup-${idx}`}
                             src={src}

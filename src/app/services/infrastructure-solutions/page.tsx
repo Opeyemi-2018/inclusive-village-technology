@@ -10,10 +10,10 @@ gsap.registerPlugin(ScrollTrigger);
 const data = [
     {
         title: "Cloud Services (DevOps)",
-        description: "CI/CD pipelines, containerization, infrastructure as code, cloud cost optimization, and automated deployments.",
-        image: "/men.avif",
+        description:
+            "CI/CD pipelines, containerization, infrastructure as code, cloud cost optimization, and automated deployments.",
+        images: ["/cloud-1.jpg", "/cloud-2.jpg", "/cloud-3.jpg"],
     },
-
 ];
 
 const Integration = () => {
@@ -44,7 +44,10 @@ const Integration = () => {
                 <h1 className="lg:text-[40px] font-bold uppercase text-3xl font-unbounded">
                     Infrastructure Solutions
                 </h1>
-                <p className="font-inter text-[20px]">We help you build cloud-native systems and optimize infrastructure for speed, reliability, and scale.</p>
+                <p className="font-inter text-[20px]">
+                    We help you build cloud-native systems and optimize infrastructure for
+                    speed, reliability, and scale.
+                </p>
             </div>
 
             <div className="space-y-36 pt-28 max-w-4xl mx-auto">
@@ -57,57 +60,41 @@ const Integration = () => {
                         className={`flex flex-col-reverse ${index % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row"
                             } lg:items-center gap-10`}
                     >
-
-
-
                         <div className="lg:w-1/2 w-full">
-                            {index === 0 ? (
-                                <div className="grid grid-cols-2 grid-rows-2 gap-3">
-
-                                    <div className="row-span-1 col-span-1">
+                            {index === 0 && item.images.length === 3 ? (
+                                <div className="grid grid-cols-3 gap-4 h-[400px]">
+                                    <div className="col-span-1 row-span-2">
                                         <Image
-                                            src={item.image}
-                                            alt={`${item.title} 1`}
-                                            width={500}
-                                            height={400}
-                                            className="w-full h-[160px] object-cover rounded-lg"
-                                        />
-                                    </div>
-
-                                    <div className="row-span-1 col-span-1">
-                                        <Image
-                                            src={item.image}
-                                            alt={`${item.title} 2`}
-                                            width={500}
-                                            height={400}
-                                            className="w-full h-[100px] object-cover rounded-lg"
-                                        />
-                                    </div>
-
-                                    <div className="row-span-1 col-span-1">
-                                        <Image
-                                            src={item.image}
+                                            src={item.images[2]}
                                             alt={`${item.title} 3`}
                                             width={500}
                                             height={400}
-                                            className="w-full h-[100px] object-cover rounded-lg"
+                                            className="w-full h-full object-cover rounded-xl"
                                         />
                                     </div>
 
-                                    <div className="row-span-1 col-span-1">
+                                    <div className="col-span-2 grid grid-rows-2 gap-4">
                                         <Image
-                                            src={item.image}
-                                            alt={`${item.title} 4`}
+                                            src={item.images[0]}
+                                            alt={`${item.title} 1`}
                                             width={500}
-                                            height={400}
-                                            className="w-full h-[200px] object-cover rounded-lg"
+                                            height={200}
+                                            className="w-full h-full object-cover rounded-xl"
+                                        />
+                                        <Image
+                                            src={item.images[1]}
+                                            alt={`${item.title} 2`}
+                                            width={500}
+                                            height={200}
+                                            className="w-full h-full object-cover rounded-xl"
                                         />
                                     </div>
                                 </div>
+
                             ) : (
                                 <div className="overflow-hidden rounded-lg group">
                                     <Image
-                                        src={item.image}
+                                        src={item.images[0]}
                                         alt={item.title}
                                         width={500}
                                         height={400}

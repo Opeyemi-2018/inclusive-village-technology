@@ -19,7 +19,7 @@ const AboutSectionOne = () => {
             <div className="flex flex-col-reverse lg:flex-row  justify-between gap-6 pt-20">
                 <div className="w-full lg:flex lg:items-center lg:pt-24">
                     <Image
-                        src={'/man-2.avif'}
+                        src={'/3d.jpg'}
                         alt="man"
                         width={500}
                         height={400}
@@ -28,7 +28,7 @@ const AboutSectionOne = () => {
                 </div>
                 <div className="w-full">
                     <Image
-                        src={'/men.avif'}
+                        src={'/agency-8.webp'}
                         alt="man"
                         width={500}
                         height={400}

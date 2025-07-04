@@ -108,7 +108,7 @@ const HomeSectionFive = () => {
         <div className="flex items-center justify-end gap-2 text-sm font-semibold group">
           <LinkWithArrow
             href="/contact"
-            label="get in touch"
+            label="Let’s Talk"
             underlineColor="bg-black"
             iconColor="text-black"
           />

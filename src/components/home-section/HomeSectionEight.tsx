@@ -13,13 +13,13 @@ interface BlogPost {
 const blogs: BlogPost[] = [
     {
         id: 1,
-        title: "Fintech",
-        image: "/developer.avif",
+        title: "software engineering",
+        image: "/integration.jpg",
         description: "from code to launch Dominating 2025"
     },
     {
         id: 2,
-        title: "Fintech",
+        title: "cloud computting",
         image: "/red-men.avif",
         description: "How We Built a Cloud-Ready Remittance System"
 
@@ -27,7 +27,7 @@ const blogs: BlogPost[] = [
     {
         id: 3,
         title: "Design",
-        image: "/men.avif",
+        image: "/designer.jpg",
         description: "Why UX Is the Missing Link in Africa’s Tech Boom"
 
     }
@@ -75,7 +75,7 @@ const HomeSectionEight = () => {
             <div className='flex items-center justify-center pt-16'>
                 <LinkWithArrow
                     href="/contact"
-                    label="get in touch"
+                    label="Let’s Talk"
                     underlineColor="bg-black"
                     iconColor="text-orange-600"
                 />

@@ -12,25 +12,25 @@ const data = [
         title: "Remittance System",
         description:
             "Multi-channel remittance solutions with compliance, audit trails, and global reach.",
-        image: "/men.avif",
+        image: "/remittance.jpg",
     },
     {
         title: "Payment Gateway System",
         description:
             "Seamless integration for local and international payments (cards, wallets, USSD, etc.).",
-        image: "/table.avif",
+        image: "/payment-gateway.jpg",
     },
     {
         title: "Banking Software Solution",
         description:
             "Modular digital banking systems designed for scalability and regulatory alignment.",
-        image: "/table.avif",
+        image: "/banking.jpg",
     },
     {
         title: "Point of Sales (POS) System",
         description:
             "Hardware and cloud-based POS systems for fast, reliable retail and merchant transactions.",
-        image: "/table.avif",
+        image: "/pos.jpg",
     },
 ];
 

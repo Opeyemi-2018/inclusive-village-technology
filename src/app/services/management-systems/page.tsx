@@ -12,19 +12,19 @@ const data = [
         title: "Education Management System",
         description:
             "A digital suite for academic institutions covering students, staff, and assessments.",
-        image: "/men.avif",
+        image: "/education.jpg",
     },
     {
         title: "Estate Management System",
         description:
             "Manage properties, tenants, rent collection, and maintenance from one platform.",
-        image: "/table.avif",
+        image: "/estate.jpg",
     },
     {
         title: "Business Process Digitalization",
         description:
             "Automate business workflows for faster, data-driven decision-making.",
-        image: "/table.avif",
+        image: "/business.jpg",
     },
 ];
 

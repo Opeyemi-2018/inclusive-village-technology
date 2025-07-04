@@ -48,98 +48,109 @@ const Contact = () => {
                 </h1>
             </div>
 
-            <div className='flex lg:flex-row flex-col lg:gap-0 gap-7 justify-between lg:items-start pt-32'>
-                <div className='space-y-8 text-[#0b0b0b] font-inter'>
-                    <p className='text-[#0b0b0b] text-[20px] font-inter lg:max-w-[400px]'>We’re excited to work with forward-thinking brands, teams, and businesses. Whether you’re looking to build a fintech platform, streamline your estate management, or create an education system that scales—we’re ready when you are.</p>
-                    <div>
-                        <p className='text-[20px] '>+234 (0) 903 822 4418</p>
-                        <p className='text-[24px]'> info@ivillagetech.com</p>
-                    </div>
-                    <div>
-                        <h2 className='text-[20px] font-semibold'>Find us</h2>
-                    </div>
-                    <h2 className='text-[20px] lg:max-w-[400px]'>
-                        Eko Atlantic, Victoria Island, Lagos, Nigeria.
-                        Banana Island, Ikoyi, Lagos, Nigeria.
-                    </h2>
+            {/* Section One */}
+            <div className="lg:flex lg:gap-16 pt-32 flex-col lg:flex-row items-start">
+                {/* LEFT SIDE - Contact Info */}
+                <div className="lg:w-5/12 w-full space-y-8 text-[#0b0b0b] font-inter">
+                    <p className="text-[18px] leading-relaxed">
+                        We’re excited to work with forward-thinking brands, teams, and businesses. Whether you’re looking to build a fintech platform, streamline your estate management, or create an education system that scales — we’re ready when you are.
+                    </p>
 
-                    <div className="flex items-center gap-3 text-orange-600">
-                        <RiTwitterXLine size={25} />
-                        <RiTwitterXLine size={25} />
-                        <RiTwitterXLine size={25} />
-                        <RiTwitterXLine size={25} />
+                    <div className="space-y-2">
+                        <p className="text-[18px] font-medium">+234 (0) 903 822 4418</p>
+                        <p className="text-[18px] font-medium">info@ivillagetech.com</p>
+                    </div>
+
+                    <div>
+                        <h2 className="text-[18px] font-semibold">Find us</h2>
+                        <p className="text-[18px] leading-relaxed">
+                            Eko Atlantic, Victoria Island, Lagos, Nigeria. <br />
+                            Banana Island, Ikoyi, Lagos, Nigeria.
+                        </p>
+                    </div>
+
+                    <div className="flex items-center gap-4 text-orange-600">
+                        <RiTwitterXLine size={22} />
+                        <RiTwitterXLine size={22} />
+                        <RiTwitterXLine size={22} />
+                        <RiTwitterXLine size={22} />
                     </div>
                 </div>
 
-                <div className='bg-gray-100 max-w-[600px] lg:p-10 p-5 rounded-lg w-full'>
-                    <form className='space-y-4'>
-                        <div className='flex flex-col gap-2'>
-                            <label className='text-[20px]'>Name</label>
-                            <input type="text" className='p-3 rounded-lg border border-gray-400' />
-                        </div>
-                        <div className='flex flex-col gap-2'>
-                            <label className='text-[20px]'>Name</label>
-                            <input type="text" className='p-3 rounded-lg border border-gray-400' />
-                        </div>
-                        <div className='flex flex-col gap-2'>
-                            <label className='text-[20px]'>Name</label>
-                            <input type="text" className='p-3 rounded-lg border border-gray-400' />
-                        </div>
-                        <div className='flex flex-col gap-2'>
-                            <label className='text-[20px]'>Name</label>
-                            <input type="text" className='p-3 rounded-lg border border-gray-400' />
-                        </div>
-
-                        <div className='flex flex-col pt-4 gap-3'>
-                            <div className="flex items-center">
+                {/* RIGHT SIDE - Form */}
+                <div className="lg:w-7/12 w-full mt-10 lg:mt-0 bg-gray-100 p-8 rounded-2xl shadow-sm">
+                    <form className="space-y-6">
+                        {/* Input Row */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label className="block mb-1 text-sm font-semibold">Full Name</label>
                                 <input
-                                    type="checkbox"
-                                    className="h-6 w-6 rounded border border-gray-800 appearance-none checked:bg-orange-600 focus:ring-gray-800 cursor-pointer"
-
+                                    type="text"
+                                    placeholder="John Doe"
+                                    className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
                                 />
-                                <label
-                                    className="ml-3 text-lg font-medium text-gray-700 cursor-pointer"
-                                >
-                                    Branding
-                                </label>
                             </div>
-                            <div className="flex items-center">
+                            <div>
+                                <label className="block mb-1 text-sm font-semibold">Email</label>
                                 <input
-                                    type="checkbox"
-                                    className="h-6 w-6 rounded border border-gray-800 appearance-none checked:bg-orange-600 focus:ring-gray-800 cursor-pointer"
-
+                                    type="email"
+                                    placeholder="john@example.com"
+                                    className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
                                 />
-                                <label
-                                    className="ml-3 text-lg font-medium text-gray-700 cursor-pointer"
-                                >
-                                    Branding
-                                </label>
                             </div>
-                            <div className="flex items-center">
+                            <div>
+                                <label className="block mb-1 text-sm font-semibold">Phone</label>
                                 <input
-                                    type="checkbox"
-                                    className="h-6 w-6 rounded border border-gray-800 appearance-none checked:bg-orange-600 focus:ring-gray-800 cursor-pointer"
-
+                                    type="tel"
+                                    placeholder="+234..."
+                                    className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
                                 />
-                                <label
-                                    className="ml-3 text-lg font-medium text-gray-700 cursor-pointer"
-                                >
-                                    Branding
-                                </label>
+                            </div>
+                            <div>
+                                <label className="block mb-1 text-sm font-semibold">Company</label>
+                                <input
+                                    type="text"
+                                    placeholder="Company name"
+                                    className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                                />
                             </div>
                         </div>
 
-                        <div className='flex flex-col gap-2 pb-3'>
-                            <label className='text-[20px]'>More Information</label>
-                            <textarea name="" id="" className='border-gray-400 p-3 rounded-lg border ' placeholder='tell us about it' />
+                        <div>
+                            <label className="block mb-2 text-sm font-semibold">Services Interested In</label>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {["Branding", "Web Development", "UI/UX Design", "Mobile App"].map((service, i) => (
+                                    <label key={i} className="flex items-center gap-3">
+                                        <input
+                                            type="checkbox"
+                                            className="h-5 w-5 rounded border border-gray-400 appearance-none checked:bg-orange-600 cursor-pointer"
+                                        />
+                                        <span className="text-sm">{service}</span>
+                                    </label>
+                                ))}
+                            </div>
                         </div>
 
-                        <button className='p-3 w-full bg-orange-600 rounded-full text-white'>Submit</button>
+                        <div>
+                            <label className="block mb-2 text-sm font-semibold">More Information</label>
+                            <textarea
+                                placeholder="Tell us about your project"
+                                className="w-full min-h-[120px] p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                            ></textarea>
+                        </div>
+
+=                        <button
+                            type="submit"
+                            className="w-full bg-orange-600 text-white py-3 rounded-full font-semibold hover:bg-orange-700 transition"
+                        >
+                            Submit
+                        </button>
                     </form>
                 </div>
             </div>
 
 
+            {/* sectiontwo */}
             <section className="max-w-7xl mx-auto  pt-36 grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div className=" space-y-14 max-w-[300px]">
                     <h1 className="md:text-7xl text-4xl font-unbounded font-bold">FAQ</h1>
