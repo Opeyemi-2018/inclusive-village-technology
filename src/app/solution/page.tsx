@@ -6,19 +6,19 @@ const solutionData = [
     {
         title: "Inclusive Remittance Management System",
         description: "A powerful, multi-channel remittance...",
-        image: "/focus.avif",
+        image: "/remittance.webp",
         slug: "inclusive-remittance",
     },
     {
         title: "Estate Management System",
         description: "Digitize the way you manage properties...",
-        image: "/computer.avif",
+        image: "/estate.jpg",
         slug: "estate-management",
     },
     {
         title: "Banking Software Solution",
         description: "From microfinance to...",
-        image: "/developer.avif",
+        image: "/banking.jpg",
         slug: "banking-software",
     },
     {
@@ -67,18 +67,21 @@ const Solution = () => {
                     <Link
                         key={index}
                         href={`/solution/${item.slug}`}
-                        className="p-3 border border-gray-200 font-inter rounded-lg hover:shadow-md transition"
+                        className=" border border-gray-200 font-inter rounded-lg transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105"
                     >
                         <div className="flex flex-col">
-                            <Image
-                                src={item.image}
-                                alt={item.title}
-                                width={1000}
-                                height={1000}
-                                className="rounded-lg h-64 object-cover"
-                            />
-                            <div className="pt-6">
-                                <p className="text-[24px] pb-2">{item.title}</p>
+                            <div className="relative overflow-hidden ">
+                                <Image
+                                    src={item.image}
+                                    alt={item.title}
+                                    width={1000}
+                                    height={1000}
+                                    className="h-64 object-cover"
+                                />
+                                <div className="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
+                            </div>
+                            <div className="pt-6 px-3">
+                                <p className="text-[20px]">{item.title}</p>
                                 <div className="flex items-center justify-between">
                                     <p className="text-[16px]">{item.description}</p>
                                     <FaArrowRightLong size={20} />

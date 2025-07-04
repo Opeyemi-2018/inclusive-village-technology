@@ -34,9 +34,9 @@ const mainInclusiveData = [
             "Equipped with back-office tools for complete customer and order management.",
             "Designed for 24/7 uptime and low-risk, high-volume handling."
         ],
-        image: "/remittance.jpg",
+        image: "/agency-8.webp",
     },
-    { // This is now logically the THIRD main item, even if "Key Features" is displayed before it.
+    {
         title: "Why Choose Inclusive?",
         description: `
 - Trusted by growing remittance businesses
@@ -44,7 +44,7 @@ const mainInclusiveData = [
 - Fully customizable to your market and region
 - Ready to integrate, expand, and scale with your growth
         `,
-        image: "/remittance.jpg",
+        image: "/3d-3.jpg",
     },
 ];
 
@@ -110,6 +110,7 @@ const Inclusive = () => {
                     <div
                         key={index}
                         ref={(el) => {
+                            // Ensure ref is assigned correctly, push to array
                             if (el) sectionRefs.current[index] = el;
                         }}
                         className={`flex flex-col-reverse ${index % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row"
@@ -153,12 +154,15 @@ const Inclusive = () => {
                                     alt={item.title}
                                     width={500}
                                     height={500}
-                                    className="w-full h-[350px] lg:h-[350px] object-cover transform transition-transform duration-500 group-hover:scale-105"
+                                    // Added conditional class for the first image to flip it
+                                    className={`w-full h-[350px] lg:h-[350px] object-cover transform transition-transform duration-500 group-hover:scale-105 ${index === 0 ? 'scale-x-[-1]' : ''}`}
                                 />
                             </div>
                         </div>
                     </div>
                 ))}
+
+                ---
 
                 {/* --- Key Features Section --- */}
                 <div className="pt-28"> {/* Maintain your existing padding */}
@@ -209,13 +213,16 @@ const Inclusive = () => {
                     </div>
                 </div>
 
-                {mainInclusiveData.slice(2, 3).map((item, index) => ( 
-                     <div
-                        key={index + 2} 
+                ---
+
+                {mainInclusiveData.slice(2, 3).map((item, index) => (
+                    <div
+                        key={index + 2} // Adjusted key for uniqueness
                         ref={(el) => {
+                            // Ensure ref is assigned correctly, push to array
                             if (el) sectionRefs.current[index + 2] = el;
                         }}
-                        className={`flex flex-col-reverse ${ (index + 2) % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row" // Adjust index for conditional class
+                        className={`flex flex-col-reverse ${(index + 2) % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row" // Adjust index for conditional class
                             } lg:items-center gap-10`}
                     >
                         <div className="lg:w-1/2 w-full space-y-4 text-left">
@@ -256,7 +263,7 @@ const Inclusive = () => {
                                     alt={item.title}
                                     width={500}
                                     height={500}
-                                    className="w-full h-[350px] lg:h-[350px] object-cover transform transition-transform duration-500 group-hover:scale-105"
+                                    className={`w-full h-[350px] lg:h-[350px] object-cover transform transition-transform duration-500 group-hover:scale-105`}
                                 />
                             </div>
                         </div>
