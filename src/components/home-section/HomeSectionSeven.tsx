@@ -8,7 +8,7 @@ const HomeSectionSeven = () => {
       <div
         className="relative bg-cover bg-center lg:pt-10 pt-2 px-3 sm:px-6 lg:px-10 h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]"
         style={{
-          backgroundImage: "url('/relaxed-man.jpg')",
+          backgroundImage: "url('/integrations.jpg')",
           backgroundBlendMode: 'lighten',
           backgroundColor: 'rgba(255, 255, 255, 0.5)',
           filter: 'grayscale(60%)',
