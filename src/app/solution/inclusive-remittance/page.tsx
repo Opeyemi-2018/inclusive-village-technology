@@ -160,7 +160,7 @@ const Inclusive = () => {
                 ))}
             </div>
 
-            <div className="pt-28 ">
+            <div className="pt-28">
                 <h2 className="lg:text-[40px] text-3xl font-bold uppercase font-unbounded text-center mb-16">
                     Key Features
                 </h2>
