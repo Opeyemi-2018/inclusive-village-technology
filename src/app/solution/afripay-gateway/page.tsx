@@ -4,9 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { HiOutlineMinus } from 'react-icons/hi';
-import { FiPlus } from 'react-icons/fi';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,7 +13,7 @@ const sectionContent = [
     title: "AfriPay+ Gateway System",
     description: [
       "AfriPay+ is a comprehensive Payment Gateway Solution built to empower businesses with full control over their payment lifecycle—from checkout to settlement.",
-      "Say goodbye to fragmented systems and manual reconciliations. With AfriPay+, your payment stack becomes seamless, automated, and scalable."
+      "Say goodbye to fragmented systems and manual reconciliations. With AfriPay+, your payment stack becomes seamless, automated, and scalable.",
     ],
     image: "/payment-gateway-1.jpg",
   },
@@ -26,7 +24,7 @@ const sectionContent = [
       "Automated Reconciliations — Eliminate manual work with built-in bank reconciliations, batch reporting, and automated journal entries.",
       "General Ledger Integration — Sync payments and deposits directly with your accounting or ERP system for clean books and easy auditing.",
       "Scalable & Global Ready — Process cross-border payments with support for multiple currencies and global payment providers.",
-      "Seamless Experience — Deliver a frictionless user journey from checkout to confirmation across web and mobile platforms."
+      "Seamless Experience — Deliver a frictionless user journey from checkout to confirmation across web and mobile platforms.",
     ],
     image: "/payment-gateway-2.jpg",
   },
@@ -36,7 +34,7 @@ const sectionContent = [
       "PCI-DSS Compliant",
       "Data Encryption at Rest and in Transit",
       "Two-Factor Authentication (2FA)",
-      "Fraud Detection & Prevention Tools"
+      "Fraud Detection & Prevention Tools",
     ],
     image: "/payment-security.jpg",
   },
@@ -66,9 +64,8 @@ const useCases = [
 ];
 
 const Afripay = () => {
-  const sectionRefs = useRef<HTMLDivElement[]>([]);
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [hoveredFeatureIndex, setHoveredFeatureIndex] = useState<number | null>(null);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
     sectionRefs.current.forEach((ref, index) => {
@@ -89,16 +86,6 @@ const Afripay = () => {
     });
   }, []);
 
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
   return (
     <div className="lg:px-10 px-3 pt-36 pb-32 text-[#0b0b0b]">
       <div className="space-y-5">
@@ -114,7 +101,9 @@ const Afripay = () => {
         {sectionContent.map((item, index) => (
           <div
             key={index}
-            ref={(el) => el && (sectionRefs.current[index] = el)}
+            ref={(el) => {
+              sectionRefs.current[index] = el;
+            }}
             className={`flex flex-col-reverse ${index % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row"} lg:items-center gap-10`}
           >
             <div className="lg:w-1/2 w-full space-y-4 text-left">
