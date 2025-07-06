@@ -2,11 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { HiOutlineMinus } from 'react-icons/hi';
 import { FiPlus } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
+import gsap from "gsap";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,6 +62,7 @@ const keyFeaturesData = [
 
 const Inclusive = () => {
     const sectionRefs = useRef<HTMLDivElement[]>([]);
+
     const [hoveredFeatureIndex, setHoveredFeatureIndex] = useState<number | null>(null);
     const [isMobile, setIsMobile] = useState<boolean>(false);
 
@@ -93,19 +95,40 @@ const Inclusive = () => {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
+
+
+
+
     return (
-        <div className="lg:px-10 px-3 pt-36 pb-32 text-[#0b0b0b]">
-            <div className="space-y-5">
-                <h1 className="lg:text-[40px] text-3xl font-bold max-w-4xl uppercase font-unbounded">
+        <div >
+            <div
+                className="relative bg-center bg-cover bg-no-repeat flex flex-col gap-3 items-center justify-center text-center h-[80vh] md:h-screen "
+                style={{
+                    backgroundImage: `url('/integrations.jpg')`,
+                    backgroundBlendMode: 'overlay',
+                    backgroundColor: 'rgba(255, 255, 255, 0.6)',
+                }}
+            >
+                <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent to-white"></div>
+
+
+                <div className="flex items-center gap-2.5 z-10">
+                    <p className="text-lg capitalize font-medium text-black">banking software</p>
+                    <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
+                </div>                {/* Heading */}
+                <h1 className="md:text-6xl max-w-6xl mx-auto text-4xl font-bold font-unbounded uppercase text-black z-10 leading-snug">
                     Inclusive Remittance Management System (MTS)
                 </h1>
-                <p className="font-inter text-[20px]">
+
+                <p className="font-inter text-[20px] text-black z-10">
                     Tailored B2B money transfer for startups, SMEs, and providers. Built for compliance, automation, and growth.
                 </p>
             </div>
 
-            <div className="space-y-36 pt-28 ">
-                {/* Render "Business Challenges We Solve" and "The Solution" */}
+
+
+
+            <div className="space-y-36 pt-28 lg:px-10 px-3  text-[#0b0b0b]">
                 {mainInclusiveData.slice(0, 2).map((item, index) => (
                     <div
                         key={index}
@@ -154,7 +177,6 @@ const Inclusive = () => {
                                     alt={item.title}
                                     width={500}
                                     height={500}
-                                    // Added conditional class for the first image to flip it
                                     className={`w-full h-[350px] lg:h-[350px] object-cover transform transition-transform duration-500 group-hover:scale-105 ${index === 0 ? 'scale-x-[-1]' : ''}`}
                                 />
                             </div>
@@ -165,7 +187,7 @@ const Inclusive = () => {
                 ---
 
                 {/* --- Key Features Section --- */}
-                <div className="pt-28"> {/* Maintain your existing padding */}
+                <div className="pt-28">
                     <h2 className="lg:text-[40px] text-3xl font-bold uppercase font-unbounded text-center mb-16">
                         Key Features
                     </h2>
@@ -213,11 +235,9 @@ const Inclusive = () => {
                     </div>
                 </div>
 
-                ---
-
                 {mainInclusiveData.slice(2, 3).map((item, index) => (
                     <div
-                        key={index + 2} // Adjusted key for uniqueness
+                        key={index + 2}
                         ref={(el) => {
                             // Ensure ref is assigned correctly, push to array
                             if (el) sectionRefs.current[index + 2] = el;
@@ -271,6 +291,7 @@ const Inclusive = () => {
                 ))}
             </div>
         </div>
+
     );
 };
 

@@ -1,3 +1,6 @@
+'use client'
+
+import { usePathname } from 'next/navigation'
 import React from 'react'
 import LinkWithArrow from '../contactButton'
 import { MdOutlineArrowOutward } from 'react-icons/md'
@@ -5,7 +8,38 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 
+
 const GetStarted = () => {
+
+    const pathname = usePathname();
+
+    const dynamicContent = () => {
+        switch (pathname) {
+            case '/solution/banking-software':
+                return {
+                    heading: "Go Digital with Confidence",
+                    paragraph: "Inclusive Banking Software empowers you to deliver modern financial services without compromise.",
+                };
+            case '/solution/estate-management':
+                return {
+                    heading: "Modern Estate Management.",
+                    paragraph: "From payment collection to tenant support, from gate security to maintenance logs—Estate Management System empowers you to run operations seamlessly and professionally",
+                };
+            case '/solution/banking-software':
+                return {
+                    heading: "Go Digital with Confidence",
+                    paragraph: "Inclusive Banking Software empowers you to deliver modern financial services without compromise.",
+                };
+            default:
+                return {
+                    heading: "Let’s Build Something Incredible",
+                    paragraph:
+                        "Whether you're building from scratch, scaling what exists, or transforming legacy tools — we’re ready.",
+                };
+        }
+    };
+
+    const { heading, paragraph } = dynamicContent();
     return (
         <div>
             <div className="lg:px-10 px-3 pt-40 pb-10 bg-white">
@@ -16,11 +50,11 @@ const GetStarted = () => {
                         <Image src={'/work-2.avif'} alt="work" width={250} height={250} className="rounded-lg" />
                     </div>
 
-                    <div>
-                        <h1 className="lg:text-6xl md:text-3xl text-[21px] uppercase font-unbounded font-bold text-center leading-none whitespace-nowrap overflow-hidden">
-                            Let’s Build Something <br /> Incredible
+                    <div className="dynamic">
+                        <h1 className="lg:text-5xl md:text-3xl text-[21px] uppercase font-unbounded font-bold text-center leading-none whitespace-nowrap overflow-hidden">
+                            {heading}
                         </h1>
-                        <p className='text-center py-4 text-[20px] text-gray-800'>Whether you&apos;re building from scratch, scaling what exists, or transforming legacy tools — we’re ready.</p>
+                        <p className="text-center py-4 text-[20px] text-gray-800">{paragraph}</p>
                     </div>
 
                     <div className='flex items-center justify-center pt-16'>

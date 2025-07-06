@@ -9,23 +9,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger);
 
 const HomeSectionTwo = () => {
-    // Ref for the "About us" marquee animation
     const marqueeRef = useRef<HTMLDivElement>(null);
 
-    // Ref for the section containing the counting numbers, used as a ScrollTrigger
     const numbersSectionRef = useRef<HTMLDivElement>(null);
 
-    // Refs for each individual counting number element
     const projectsCountRef = useRef<HTMLHeadingElement>(null);
     const clientRetentionCountRef = useRef<HTMLHeadingElement>(null);
     const industryVerticalsCountRef = useRef<HTMLHeadingElement>(null);
 
-    // State to track if the counting animation has been triggered by scrolling
     const [animationTriggered, setAnimationTriggered] = useState(false);
 
-    // Prepare client logos for the second marquee
     const clientLogos = Array(10).fill("/sayswitch-no-bg.png");
-    const logos = [...clientLogos, ...clientLogos]; // Duplicate to ensure continuous loop
+    const logos = [...clientLogos, ...clientLogos]; 
 
     // Effect for the "About us" marquee animation
     useEffect(() => {
@@ -38,33 +33,28 @@ const HomeSectionTwo = () => {
                 ease: "linear", // Constant speed
                 repeat: -1, // Repeat indefinitely
             });
-        }, marqueeRef); // Scope the GSAP context to marqueeRef
+        }, marqueeRef); 
 
-        // Cleanup function for GSAP context
         return () => ctx.revert();
-    }, []); // Run once on component mount
+    }, []); 
 
-    // Effect to set up the ScrollTrigger for the numbers section
     useEffect(() => {
         const ctx = gsap.context(() => {
             if (numbersSectionRef.current) {
                 ScrollTrigger.create({
                     trigger: numbersSectionRef.current,
-                    start: "top 80%", // Animation starts when the top of the section is 80% down from the viewport top
+                    start: "top 80%", 
                     once: true, // Trigger the animation only once
-                    onEnter: () => setAnimationTriggered(true), // Set state to true when the section enters view
+                    onEnter: () => setAnimationTriggered(true), 
                 });
             }
-        }, numbersSectionRef); // Scope the GSAP context to numbersSectionRef
+        }, numbersSectionRef); 
 
-        // Cleanup function for ScrollTrigger
         return () => ctx.revert();
-    }, []); // Run once on component mount
+    }, []); 
 
-    // Effect for the counting animation, dependent on 'animationTriggered' state
     useEffect(() => {
         if (animationTriggered) {
-            // Define an object to hold the animated values
             const targets = {
                 projects: 0,
                 clientRetention: 0,
@@ -77,14 +67,12 @@ const HomeSectionTwo = () => {
                 duration: 2,
                 ease: "power1.out",
                 onUpdate: () => {
-                    // Update the innerText of the corresponding H1 element
                     if (projectsCountRef.current) {
                         projectsCountRef.current.innerText = Math.round(targets.projects) + '+';
                     }
                 }
             });
 
-            // Animate 'Client Retention' with a slight delay
             gsap.to(targets, {
                 clientRetention: 99,
                 duration: 2,
@@ -97,7 +85,6 @@ const HomeSectionTwo = () => {
                 delay: 0.2
             });
 
-            // Animate 'Industry Verticals' with a further delay
             gsap.to(targets, {
                 industryVerticals: 12,
                 duration: 2,
@@ -110,11 +97,10 @@ const HomeSectionTwo = () => {
                 delay: 0.4
             });
         }
-    }, [animationTriggered]); // This effect runs only when 'animationTriggered' changes to true
+    }, [animationTriggered]); 
 
     return (
         <div className="lg:px-10 px-3 py-40">
-            {/* "About us" Marquee Section */}
             <div className="overflow-hidden w-[180px] h-6 pb-20">
                 <div
                     ref={marqueeRef}
@@ -131,7 +117,6 @@ const HomeSectionTwo = () => {
             </div>
 
             <div className="w-full max-w-[80rem] mx-auto flex flex-wrap lg:flex-nowrap items-center lg:gap-36 gap-20">
-                {/* Image Column */}
                 <div className="w-full lg:w-[40%] h-[30rem] overflow-hidden rounded-2xl">
                     <Image
                         src={'/agency-9.jpg'}

@@ -27,7 +27,7 @@ const Footer = () => {
                 <div className="text-[20px] flex flex-col lg:items-start items-center gap-3">
                     <h2>Contact</h2>
                     <p className="text-[20px]">+234 (0) 903 822 4418</p>
-                    <p className="text-gray-700 text-center">Eko Atlantic, Victoria Island, Lagos, Nigeria.
+                    <p className=" text-center">Eko Atlantic, Victoria Island, Lagos, Nigeria.
                         Banana Island, Ikoyi, Lagos, Nigeria.</p>
                 </div>
                 <div className="flex items-center gap-3 text-orange-600">
