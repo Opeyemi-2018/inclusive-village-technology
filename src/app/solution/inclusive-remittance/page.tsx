@@ -184,8 +184,6 @@ const Inclusive = () => {
                     </div>
                 ))}
 
-                ---
-
                 {/* --- Key Features Section --- */}
                 <div className="pt-28">
                     <h2 className="lg:text-[40px] text-3xl font-bold uppercase font-unbounded text-center mb-16">
