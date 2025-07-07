@@ -43,7 +43,7 @@ const GetStarted = () => {
     return (
         <div>
             <div className="lg:px-10 px-3 pt-40 pb-10 bg-white">
-                <div className="max-w-6xl mx-auto">
+                <div className="max-w-5xl mx-auto">
                     <div className="flex items-center justify-center gap-5 overflow-x-auto scrollbar-hide pb-4">
                         <Image src={'/work-1.avif'} alt="work" width={250} height={250} className="rounded-lg" />
                         <Image src={'/art.avif'} alt="work" width={400} height={400} className="rounded-lg" />
@@ -51,10 +51,11 @@ const GetStarted = () => {
                     </div>
 
                     <div className="dynamic">
-                        <h1 className="lg:text-5xl md:text-3xl text-[21px] uppercase font-unbounded font-bold text-center leading-none whitespace-nowrap overflow-hidden">
+                        <h1 className="text-center text-[34px]  lg:text-[90px] font-unbounded font-bold uppercase leading-snug sm:leading-[3.5rem] lg:leading-[6rem] break-words w-full px-4">
                             {heading}
                         </h1>
-                        <p className="text-center py-4 text-[20px] text-gray-800">{paragraph}</p>
+
+                        <p className="text-center pt-10 text-[20px] lg:inline hidden  text-gray-800">{paragraph}</p>
                     </div>
 
                     <div className='flex items-center justify-center pt-16'>

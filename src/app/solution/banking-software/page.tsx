@@ -62,36 +62,6 @@ const ourSolution =
 
 
 
-// const customizationFeatures = [
-//     {
-//         title: "Multi-Language & RTL Support",
-//         description: "Serve diverse estates with support for both Left-to-Right and Right-to-Left text orientations.",
-//     },
-//     {
-//         title: "Visual Customization",
-//         description: "Apply your estate’s branding with custom themes, fonts, and dark/light mode options.",
-//     },
-//     {
-//         title: "Two-Factor Authentication (2FA)",
-//         description: "Add a second layer of security for all user accounts.",
-//     },
-//     {
-//         title: "Custom Settings",
-//         description: "Configure platform behavior with flexible modules: automated emails, access roles, and company branding.",
-//     },
-//     {
-//         title: "Impersonation Tool",
-//         description: "Admins can log in as any user for debugging or support purposes—without exposing sensitive information.",
-//     },
-//     {
-//         title: "SEO-Ready Landing Page with CMS",
-//         description: "Edit and manage your estate’s public-facing web portal with SEO features and a built-in CMS.",
-//     },
-//     {
-//         title: "Google reCAPTCHA",
-//         description: "Protect login and contact forms from spam or bots using Google’s security tools.",
-//     },
-// ];
 
 const whatYouGet = [
     {
@@ -162,18 +132,17 @@ const BankingSoftware = () => {
                     <p className="text-lg capitalize font-medium ">banking software</p>
                     <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
                 </div>
-                <h1 className="md:text-6xl max-w-6xl mx-auto text-4xl font-bold font-unbounded uppercase  z-10 leading-snug">
+                <h1 className="md:text-[34px] max-w-3xl mx-auto text-4xl font-bold font-unbounded uppercase text-black  leading-snug z-10">
                     Inclusive Banking Software Solution
-
                 </h1>
             </div>
 
 
-            <div className="space-y-44 pt-36 lg:px-10 px-3">
+            <div className="space-y-40 lg:px-10 px-3  pt-24">
                 <div className=" w-full max-w-[80rem]  mx-auto flex flex-wrap lg:flex-nowrap  lg:gap-32 gap-20">
                     <div className="w-full lg:w-[55%]  space-y-7" >
                         <div>
-                            <h1 className="text-2xl lg:text-[27px] uppercase font-unbounded">Truly Digital Core Banking for the Future of Finance</h1>
+                            <h1 className="text-2xl lg:text-[27px] uppercase font-unbounded font-bold">Truly Digital Core Banking for the Future of Finance</h1>
                             <div className="h-1 w-16 bg-orange-600 mt-2 rounded"></div>
                         </div>
                         <p className="text-[18px] ">
@@ -194,7 +163,7 @@ const BankingSoftware = () => {
                 </div>
 
 
-                <div className="lg:px-10 px-3">
+                <div className="">
                     <div className="w-full flex justify-end">
                         <h1 className="md:text-5xl text-3xl font-bold mb-20 font-unbounded uppercase text-left">
                             Key Advantages
@@ -243,7 +212,7 @@ const BankingSoftware = () => {
                 </div>
 
 
-                <div className="lg:px-10 px-3">
+                <div className="">
                     <div className="w-full flex justify-end">
                         <h1 className="md:text-5xl text-3xl font-bold mb-20 font-unbounded uppercase text-right">
                             Our Solution
@@ -263,7 +232,7 @@ const BankingSoftware = () => {
                                 <h2 className="text-7xl mb-4 text-orange-600 font-bold font-unbounded">
                                     {step.number}
                                 </h2>
-                                <p className="text-[22px] font-semibold  mb-10">
+                                <p className="text-[22px] font-semibold text-gray-400 mb-10">
                                     {step.description}
                                 </p>
                             </div>
@@ -271,37 +240,11 @@ const BankingSoftware = () => {
                     </div>
                 </div>
 
-
-                {/* <section className="py-28">
-
-                    <div className="w-full flex justify-end px-3">
-                        <h1 className="md:text-5xl text-3xl font-bold mb-20 font-unbounded uppercase text-right">
-                            Customization, Security & Accessibility
-                        </h1>
-                    </div>
-
-                    <div className="flex flex-col gap-10">
-                        {customizationFeatures.map(({ title, description }) => (
-                            <div
-                                key={title}
-                                className={`max-w-5xl flex flex-col md:flex-row items-center bg-gray-200 rounded-tr-full rounded-br-full overflow-hidden`}
-                            >
-
-                                <div className="p-6 md:p-10 w-full md:w-3/4">
-                                    <h3 className="text-2xl font-semibold mb-2">{title}</h3>
-                                    <p className=" text-[18px]">{description}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </section> */}
-
-                <section className="lg:px-10 px-3  bg-white">
+                <section className="  bg-white">
                     <h2 className="text-3xl md:text-5xl font-unbounded font-bold uppercase pb-28">
                         What You Get
                     </h2>
                     <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-14">
-                        {/* Text Section */}
                         <div className="w-full lg:w-1/2 space-y-6">
                             <ul className="space-y-4 text-lg font-medium">
                                 {whatYouGet.map((reason, index) => (
@@ -315,7 +258,6 @@ const BankingSoftware = () => {
                             </ul>
                         </div>
 
-                        {/* Image Section */}
                         <div className="w-full lg:w-1/2">
                             <Image
                                 src="/managements.jpg"

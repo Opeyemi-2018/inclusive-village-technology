@@ -82,39 +82,6 @@ const financialFeatures = [
     },
 ];
 
-
-
-// const customizationFeatures = [
-//     {
-//         title: "Multi-Language & RTL Support",
-//         description: "Serve diverse estates with support for both Left-to-Right and Right-to-Left text orientations.",
-//     },
-//     {
-//         title: "Visual Customization",
-//         description: "Apply your estate’s branding with custom themes, fonts, and dark/light mode options.",
-//     },
-//     {
-//         title: "Two-Factor Authentication (2FA)",
-//         description: "Add a second layer of security for all user accounts.",
-//     },
-//     {
-//         title: "Custom Settings",
-//         description: "Configure platform behavior with flexible modules: automated emails, access roles, and company branding.",
-//     },
-//     {
-//         title: "Impersonation Tool",
-//         description: "Admins can log in as any user for debugging or support purposes—without exposing sensitive information.",
-//     },
-//     {
-//         title: "SEO-Ready Landing Page with CMS",
-//         description: "Edit and manage your estate’s public-facing web portal with SEO features and a built-in CMS.",
-//     },
-//     {
-//         title: "Google reCAPTCHA",
-//         description: "Protect login and contact forms from spam or bots using Google’s security tools.",
-//     },
-// ];
-
 const reasonsToChoose = [
     {
         title: "All-in-One Platform",
@@ -185,30 +152,29 @@ const EstateManagement = () => {
             >
                 <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent to-white"></div>
 
-
                 <div className="flex items-center gap-2.5 z-10">
                     <p className="text-lg capitalize font-medium text-black">estate management</p>
                     <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
-                </div>                {/* Heading */}
-                <h1 className="md:text-6xl max-w-6xl mx-auto text-4xl font-bold font-unbounded uppercase text-black z-10 leading-snug">
+                </div>                
+                <h1 className="md:text-[34px] max-w-3xl mx-auto text-4xl font-bold font-unbounded uppercase text-black  leading-snug z-10">
                     Estate Management System
                 </h1>
             </div>
 
 
 
-            <div className="space-y-44 lg:px-10 px-3  pt-28 ">
+            <div className="space-y-40 lg:px-10 px-3  pt-24">
                 <div className=" w-full max-w-[80rem]  mx-auto flex flex-wrap lg:flex-nowrap  lg:gap-36 gap-20">
                     <div className="w-full lg:w-[60%]  space-y-7" >
                         <div>
-                            <h1 className="text-2xl lg:text-[27px] uppercase font-unbounded">Revolutionizing Modern Estate & Property Administration</h1>
+                            <h1 className="text-2xl lg:text-[27px] uppercase font-unbounded font-bold">Revolutionizing Modern Estate & Property Administration</h1>
                             <div className="h-1 w-16 bg-orange-600 mt-2 rounded"></div>
                         </div>
                         <p className="text-[18px] ">Estate Management System is a powerful, all-inclusive digital platform engineered to redefine how residential estates, gated communities, and commercial properties are managed. It empowers estate managers, landlords, and facility operators with smart tools to streamline operations—covering everything from tenant onboarding and maintenance to financials and security access.</p>
                         <p className="text-[18px] hidden lg:inline">No more spreadsheets or scattered tools—Estate Management System consolidates all core functions into a unified, cloud-based experience.</p>
                     </div>
 
-                    <div className="w-full lg:w-[60%] h-[40rem] overflow-hidden ">
+                    <div className="w-full lg:w-[60%]  overflow-hidden ">
                         <Image src={'/estate.jpg'} alt="estate" width={600} height={600} className="rounded-2xl" />
                     </div>
                 </div>
@@ -277,10 +243,10 @@ const EstateManagement = () => {
                                 className="bg-gray-200 text-black rounded-2xl p-7 flex flex-col md:gap-8 gap-6 max-w-md w-full"
                             >
 
-                                <h3 className="text-3xl md:text-4xl uppercase font-bold font-unbounded leading-tight mb-2">
+                                <h3 className="text-3xl md:text-[34px] uppercase font-bold font-unbounded leading-tight mb-2">
                                     {financial.title}
                                 </h3>
-                                <p className="text-[22px] font-semibold  mb-10">
+                                <p className="text-[24px] font-semibold text-gray-400 mb-10">
                                     {financial.description}
                                 </p>
                             </div>

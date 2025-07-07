@@ -115,20 +115,23 @@ const Inclusive = () => {
                 <div className="flex items-center gap-2.5 z-10">
                     <p className="text-lg capitalize font-medium text-black">banking software</p>
                     <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
-                </div>                {/* Heading */}
-                <h1 className="md:text-6xl max-w-6xl mx-auto text-4xl font-bold font-unbounded uppercase text-black z-10 leading-snug">
-                    Inclusive Remittance Management System (MTS)
-                </h1>
+                </div>
 
-                <p className="font-inter text-[20px] text-black z-10">
-                    Tailored B2B money transfer for startups, SMEs, and providers. Built for compliance, automation, and growth.
-                </p>
+                <div className="max-w-3xl mx-auto z-10 flex flex-col gap-5">
+                    <h1 className="md:text-[34px]  text-4xl font-bold font-unbounded uppercase text-black  leading-snug">
+                        Inclusive Remittance Management System (MTS)
+                    </h1>
+
+                    <p className="font-inter text-[18px] text-black lg:inline hidden">
+                        Tailored B2B money transfer for startups, SMEs, and providers. Built for compliance, automation, and growth.
+                    </p>
+                </div>
             </div>
 
 
 
 
-            <div className="space-y-36 pt-28 lg:px-10 px-3  text-[#0b0b0b]">
+            <div className="space-y-40 pt-24 lg:px-10 px-3  text-[#0b0b0b]">
                 {mainInclusiveData.slice(0, 2).map((item, index) => (
                     <div
                         key={index}
