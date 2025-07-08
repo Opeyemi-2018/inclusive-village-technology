@@ -6,85 +6,84 @@ import { HiOutlineMinus } from "react-icons/hi";
 import { FiPlus } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 
-const keyAdvantages = [
+const Accessibilities = [
     {
-        title: "Light Speed Processing",
+        title: "Web Platform",
         description:
-            "Execute millions of transactions reliably and in real time — optimized for scale and speed."
+            "Access full functionality via any modern browser with a responsive dashboard for real-time financial control."
     },
     {
-        title: "Business Intelligence",
+        title: "Mobile Apps (iOS & Android)",
         description:
-            "Access deep financial insights and customer data dashboards to guide strategic decisions."
+            "Manage operations on the go—issue invoices, accept payments, get alerts."
     },
     {
-        title: "Be in Control",
+        title: "Admin Control Panel",
         description:
-            "Manage configurations, workflows, and reporting with a flexible admin experience."
+            "Central hub for monitoring financial data, managing users, and enforcing compliance."
     },
     {
-        title: "Self-Onboarding Corebanking",
+        title: "RESTful API",
         description:
-            "Reduce onboarding time with self-service banking workflows for retail and SME customers."
-    },
-    {
-        title: " Affordability",
-        description:
-            "Built to reduce operational costs by automating critical processes and eliminating technical debt."
-    },
-    {
-        title: "Unrivalled Banking Experience",
-        description:
-            "Offer seamless user journeys across digital and branch banking channels — backed by multi-device, multilingual access."
+            "Connect seamlessly to ERPs, CRMs, and custom systems for automation and workflow integration."
     },
 
 ];
 
-const ourSolution =
+const Technologies =
     [
         {
             number: 1,
-            description: 'Serve retail, SME, and institutional clients with ease',
+            title: "Flutter ",
+            description: 'for unified cross-platform development',
         },
         {
             number: 2,
-            description: 'Digitize banking workflows across branches and online channels',
+            title: "Laravel (PHP) ",
+            description: ' for secure, scalable backend services',
         },
         {
             number: 3,
-            description: 'Collaborate seamlessly with fintech partners, mobile money, and payment providers',
+            title: "Native Modules ",
+            description: 'for mobile-specific optimization',
         },
         {
             number: 4,
-            description: 'Reduce operational overhead while increasing service quality',
+            title: "CDN & Modular Architecture ",
+            description: ' for ultra-fast performance and stability',
         },
     ];
 
+const securityAndCompliance = [
+    {
+        title: "Security & Compliance",
+        description: "AfriPay+ is built with enterprise-grade protection in mind:",
+        features: [
+            "PCI-DSS Compliant",
+            "Data Encryption at Rest and in Transit",
+            "Two-Factor Authentication (2FA)",
+            "Fraud Detection & Prevention Tools"
+        ]
+    }
+];
 
 
-
-const whatYouGet = [
+const Features = [
     {
-        description: "Full core banking engine (accounts, ledger, KYC, transactions)",
+        description: " Invoicing & Billing",
     },
     {
-        description: "Real-time reporting and BI tools",
+        description: "Payments & Collections",
     },
     {
-        description: "Scalable API infrastructure",
+        description: "Transaction & Fund Management",
     },
     {
-        description: "Customer self-service portals",
-    },
-    {
-        description: "Integration with NIBSS, POS, mobile money, and payment gateways",
-    },
-    {
-        description: "Regulatory & compliance-ready modules",
+        description: "Cross-Border Capabilities",
     },
 ];
 
-const BankingSoftware = () => {
+const EazyBiller = () => {
     const marqueeRef = useRef<HTMLDivElement>(null);
     const [hoveredFeatureIndex, setHoveredFeatureIndex] = useState<number | null>(null);
     const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -136,7 +135,7 @@ const BankingSoftware = () => {
             <div
                 className="relative bg-center bg-cover bg-no-repeat flex flex-col gap-3 items-center justify-center text-center h-[80vh] md:h-screen "
                 style={{
-                    backgroundImage: `url('/banking.jpg')`,
+                    backgroundImage: `url('/biller-1.jpg')`,
                     backgroundBlendMode: 'overlay',
                     backgroundColor: 'rgba(255, 255, 255, 0.4)',
                 }}
@@ -151,14 +150,14 @@ const BankingSoftware = () => {
                     >
                         {[...Array(2)].map((_, i) => (
                             <div key={i} className="flex items-center gap-2.5 mr-3">
-                                <p className="text-lg capitalize font-medium">banking software</p>
+                                <p className="text-lg capitalize font-medium">Eazybiller</p>
                                 <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
                             </div>
                         ))}
                     </div>
                 </div>
                 <h1 className="md:text-[34px] max-w-3xl mx-auto text-4xl font-bold font-unbounded uppercase text-black  leading-snug z-10">
-                    Inclusive Banking Software Solution
+                    Eazybiller (Invoicing)
                 </h1>
             </div>
 
@@ -167,17 +166,18 @@ const BankingSoftware = () => {
                 <div className=" w-full max-w-[80rem]  mx-auto flex flex-wrap lg:flex-nowrap  lg:gap-32 gap-20">
                     <div className="w-full lg:w-[55%]  space-y-7" >
                         <div>
-                            <h1 className="text-2xl lg:text-[27px] uppercase font-unbounded font-bold">Truly Digital Core Banking for the Future of Finance</h1>
+                            <h1 className="text-2xl lg:text-[27px] uppercase font-unbounded font-bold">Eazy Biller — Complete Financial Operations Suite for Modern Businesses</h1>
                             <div className="h-1 w-16 bg-orange-600 mt-2 rounded"></div>
                         </div>
                         <p className="text-[18px] ">
-                            The banking landscape in Africa is transforming rapidly — driven by technology, digital expectations, and the growing demand for financial inclusion. Traditional systems are no longer enough. Financial institutions need a flexible, cloud-based, and scalable solution to stay ahead.</p>
+                            Eazy Biller is a next-generation, all-in-one financial management platform that transforms how businesses, freelancers, and enterprises handle invoicing, payment collection, and financial automation.
+                            From sleek invoice creation to global payment integration, Eazy Biller empowers your organization to simplify complex workflows, improve cash flow, and deliver a modern billing experience—securely and at scale.</p>
                         {/* <p className="text-[18px] hidden lg:inline">Inclusive Banking Software Solution is a truly digital core banking platform built on modern microservice architecture. Designed in-house by Inclusive Village, it helps financial institutions break free from rigid legacy systems and embrace a fast, secure, API-ready future.</p> */}
                     </div>
 
                     <div className="w-full lg:w-[50%] overflow-hidden">
                         <Image
-                            src="/banking.jpg"
+                            src="/biller-2.jpg"
                             alt="banking"
                             width={600}
                             height={600}
@@ -190,11 +190,11 @@ const BankingSoftware = () => {
 
                 <div className="">
                     <div className="w-full flex justify-end">
-                        <h1 className="md:text-5xl text-3xl font-bold mb-20 font-unbounded uppercase text-left">
-                            Key Advantages
+                        <h1 className="md:text-5xl text-3xl max-w-4xl font-bold mb-20 font-unbounded uppercase text-left">
+                            Multi-Platform Accessibility
                         </h1>
                     </div>
-                    {keyAdvantages.map((feature, index) => (
+                    {Accessibilities.map((feature, index) => (
                         <motion.div
                             key={index}
                             onMouseEnter={() => setHoveredFeatureIndex(index)}
@@ -240,24 +240,23 @@ const BankingSoftware = () => {
                 <div className="">
                     <div className="w-full flex justify-end">
                         <h1 className="md:text-5xl text-3xl font-bold mb-20 font-unbounded uppercase text-right">
-                            Our Solution
+                            Powered by Leading Technologies
                         </h1>
                     </div>
 
-                    <p className="text-[18px] py-16">Inclusive offers a next-generation banking software that empowers banks, digital lenders, MFIs, cooperatives, and neobanks to thrive in the digital economy.
-
-                        Built for agility, security, and performance, our solution helps you:</p>
-
                     <div className="flex flex-col items-center gap-10 pb-6">
-                        {ourSolution.map((step) => (
+                        {Technologies.map((step) => (
                             <div
                                 key={step.number}
-                                className="bg-gray-200  rounded-2xl p-7 flex flex-col md:gap-8 gap-6 max-w-md w-full"
+                                className="bg-gray-200 text-black rounded-2xl p-7 flex flex-col md:gap-8 gap-6 max-w-md w-full"
                             >
                                 <h2 className="text-7xl mb-4 text-orange-600 font-bold font-unbounded">
                                     {step.number}
                                 </h2>
-                                <p className="text-[22px] font-semibold text-gray-400 mb-10">
+                                <h3 className="text-3xl md:text-4xl uppercase font-bold font-unbounded leading-tight mb-2">
+                                    {step.title}
+                                </h3>
+                                <p className="text-[22px] font-semibold text-gray-500 mb-10">
                                     {step.description}
                                 </p>
                             </div>
@@ -267,12 +266,12 @@ const BankingSoftware = () => {
 
                 <section className="  bg-white">
                     <h2 className="text-3xl md:text-5xl font-unbounded font-bold uppercase pb-28">
-                        What You Get
+                        Core Feature Suite
                     </h2>
-                    <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-14">
+                    <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
                         <div className="w-full lg:w-1/2 space-y-6">
                             <ul className="space-y-4 text-lg font-medium">
-                                {whatYouGet.map((reason, index) => (
+                                {Features.map((reason, index) => (
                                     <li key={index} className="flex items-start gap-2">
                                         <span className="text-orange-600 text-xl mt-1">•</span>
                                         <span>
@@ -283,7 +282,7 @@ const BankingSoftware = () => {
                             </ul>
                         </div>
 
-                        <div className="w-full lg:w-1/2">
+                        <div className="w-full lg:w-1/3">
                             <Image
                                 src="/managements.jpg"
                                 alt="Estate illustration"
@@ -295,11 +294,43 @@ const BankingSoftware = () => {
                     </div>
                 </section>
 
+                <section>
+                    <div className="w-full flex justify-end">
+                        <h1 className="md:text-5xl text-3xl font-bold mb-20 font-unbounded uppercase text-right">
+                            Security & Compliance
+                        </h1>
+                    </div>
+                    <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
+                        <div className="w-full lg:w-1/2">
+                            <Image
+                                src="/security.jpg"
+                                alt="Security"
+                                width={600}
+                                height={600}
+                                className="rounded-xl w-full h-72 object-cover "
+                            />
+                        </div>
+                        <div className="w-full lg:w-1/2">
+                            {securityAndCompliance.map((item, index) => (
+                                <div key={index}>
+                                    <p className="text-gray-700 mb-6 text-lg">{item.description}</p>
+                                    <ul className="space-y-4">
+                                        {item.features.map((feature, i) => (
+                                            <li key={i} className="flex items-start gap-3">
+                                                <span className="text-orange-600 mt-1">•</span>
+                                                <span className="text-base text-gray-800">{feature}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
 
             </div>
-
         </div>
     )
 }
 
-export default BankingSoftware
+export default EazyBiller

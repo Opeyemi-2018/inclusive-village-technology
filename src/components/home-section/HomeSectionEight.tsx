@@ -1,7 +1,8 @@
 'use client';
 import Image from 'next/image';
-
+import gsap from 'gsap';
 import LinkWithArrow from '../contactButton';
+import { useEffect, useRef } from 'react';
 
 interface BlogPost {
     id: number;
@@ -32,13 +33,43 @@ const blogs: BlogPost[] = [
 
     }
 ];
+
+
+
 const HomeSectionEight = () => {
+    const marqueeRef = useRef(null)
+
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.to(marqueeRef.current, {
+                xPercent: -50,
+                duration: 6,
+                ease: "linear",
+                repeat: -1,
+            })
+        }, marqueeRef)
+
+        return () => ctx.revert()
+    }, [])
+
     return (
         <div className="lg:px-10 px-3 pt-40 pb-10 bg-white">
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:mb-16 mb-5">
-                <div className="flex items-center gap-3">
-                    <p className="text-lg font-semibold">Latest Blog</p>
-                    <span className="w-5 h-5 bg-orange-600 rounded-full inline-block"></span>
+              
+                <div className="overflow-hidden w-[180px] h-6">
+                    <div
+                        ref={marqueeRef}
+                        className="flex whitespace-nowrap w-max"
+                        style={{ willChange: 'transform' }}
+                    >
+                        {[...Array(2)].map((_, i) => (
+                            <div key={i} className="flex items-center gap-2.5 mr-3">
+                                <p className="text-lg capitalize font-medium">Latest Blog</p>
+                                <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
                 <h1 className="flex-1 lg:text-7xl uppercase text-4xl font-unbounded font-bold max-w-2xl">
                     Our blog <br /> insights

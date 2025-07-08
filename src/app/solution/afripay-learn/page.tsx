@@ -1,4 +1,7 @@
+'use client'
+import gsap from "gsap";
 import Image from "next/image"
+import { useEffect, useRef } from "react";
 
 
 const overview = [
@@ -96,6 +99,20 @@ const why = [
 
 
 const AfriPayLearn = () => {
+    const marqueeRef = useRef(null)
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.to(marqueeRef.current, {
+                xPercent: -50,
+                duration: 6,
+                ease: "linear",
+                repeat: -1,
+            })
+        }, marqueeRef)
+
+        return () => ctx.revert()
+    }, [])
     return (
         <div className="  text-[#0b0b0b] font-inter">
             <div
@@ -103,15 +120,25 @@ const AfriPayLearn = () => {
                 style={{
                     backgroundImage: `url('/afri-learn-2.jpg')`,
                     backgroundBlendMode: 'overlay',
-                    backgroundColor: 'rgba(255, 255, 255, 0.6)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.4)',
                 }}
             >
                 <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent to-white"></div>
 
 
-                <div className="flex items-center gap-2.5 z-10">
-                    <p className="text-lg capitalize font-medium ">AfriPay Learn</p>
-                    <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
+                <div className="overflow-hidden w-[180px] h-6">
+                    <div
+                        ref={marqueeRef}
+                        className="flex whitespace-nowrap w-max"
+                        style={{ willChange: 'transform' }}
+                    >
+                        {[...Array(2)].map((_, i) => (
+                            <div key={i} className="flex items-center gap-2.5 mr-3">
+                                <p className="text-lg capitalize font-medium">afripay learn</p>
+                                <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
                 <h1 className="md:text-[34px] max-w-3xl mx-auto text-4xl font-bold font-unbounded uppercase text-black  leading-snug z-10">
                     AfriPay Learn — Education Management System
@@ -127,7 +154,7 @@ const AfriPayLearn = () => {
                             <div className="h-1 w-16 bg-orange-600 mt-2 rounded"></div>
                         </div>
                         <p className="text-[18px] ">AfriPay Learn is a robust, scalable, and intuitive Education Management System (EMS) designed to streamline the academic, administrative, financial, and operational workflows of schools and universities. Whether you manage a primary school, secondary school, polytechnic, or a multi-campus university — AfriPay Learn centralizes your operations in one powerful platform.</p>
-                        <p className="text-[18px] hidden lg:inline">Built for simplicity and scale, it enables institutions to reduce overhead, enhance stakeholder communication, and deliver exceptional educational experiences.</p>
+                        {/* <p className="text-[18px] hidden lg:inline">Built for simplicity and scale, it enables institutions to reduce overhead, enhance stakeholder communication, and deliver exceptional educational experiences.</p> */}
                     </div>
 
                     <div className="w-full lg:w-[50%] overflow-hidden">
@@ -171,94 +198,64 @@ const AfriPayLearn = () => {
 
 
                 <section className="">
-                    <div className="w-full  flex justify-end">
-                        <h1 className="md:text-5xl text-3xl font-bold mb-20 font-unbounded uppercase text-right max-w-3xl">
-                            Core Modules & Capabilities
+                    <div className=" flex justify-end ">
+                        <h1 className="md:text-5xl text-3xl font-bold mb-20 font-unbounded uppercase text-right max-w-3xl mx-auto">
+                             Core Modules & Capabilities
                         </h1>
                     </div>
-                    <div className="max-w-6xl mx-auto space-y-16">
-                        {/* === Administrative & User Management === */}
-                        <div className="w-full max-w-[80rem] mx-auto flex flex-wrap lg:flex-nowrap lg:gap-32 gap-20 items-start">
-                            <div className="w-full lg:w-[55%] space-y-6">
-                                <h2 className=" font-unbounded font-bold text-2xl lg:text-[27px] uppercase relative inline-block">
-                                    Administrative & User Management
-                                    <span className="absolute bottom-0 left-0 w-1/2 h-[3px] bg-orange-600 block mt-2"></span>
-                                </h2>
-                                <ul className="space-y-3 text-[17px]">
-                                    {admin.map((item, i) => (
-                                        <li key={i} className="flex items-start gap-2">
-                                            <span className="w-2 h-2 mt-2 rounded-full bg-black inline-block"></span>
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                            {/* <div className="w-full lg:w-[50%] overflow-hidden">
-                            <Image
-                                src="/afri-learn-3.jpg"
-                                alt="Administrative"
-                                width={600}
-                                height={400}
-                                className="rounded-2xl object-cover h-80 w-full"
-                            />
-                        </div> */}
+
+                    <div className="space-y-16 max-w-5xl mx-auto">
+
+                        <div className=" space-y-6">
+                            <h2 className=" font-unbounded font-bold text-2xl lg:text-[27px] uppercase relative inline-block">
+                                Administrative & User Management
+                                <span className="absolute bottom-0 left-0 w-1/2 h-[3px] bg-orange-600 block mt-2"></span>
+                            </h2>
+                            <ul className="space-y-3 text-[17px]">
+                                {admin.map((item, i) => (
+                                    <li key={i} className="flex items-start gap-2">
+                                        <span className="w-2 h-2 mt-2 rounded-full bg-black inline-block"></span>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
 
                         {/* === Institutional Communication === */}
-                        <div className="w-full max-w-[80rem] mx-auto flex flex-wrap lg:flex-nowrap lg:gap-32 gap-20 items-start">
-                            <div className="w-full lg:w-[55%] space-y-6">
-                                <h2 className=" font-unbounded font-bold text-2xl lg:text-[27px] uppercase relative inline-block">
-                                    Institutional Communication
-                                    <span className="absolute bottom-0 left-0 w-1/2 h-[3px] bg-orange-600 block mt-2"></span>
-                                </h2>
-                                <ul className="space-y-3 text-[17px]">
-                                    {communication.map((item, i) => (
-                                        <li key={i} className="flex items-start gap-2">
-                                            <span className="w-2 h-2 mt-2 rounded-full bg-black inline-block"></span>
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                            {/* <div className="w-full lg:w-[50%] overflow-hidden">
-                            <Image
-                            src="/afri-learn-4.jpg"
-                            alt="Communication"
-                            width={600}
-                                height={400}
-                                className="rounded-2xl object-cover h-80 w-full"
-                            />
-                        </div> */}
+                        <div className="space-y-6">
+                            <h2 className=" font-unbounded font-bold text-2xl lg:text-[27px] uppercase relative inline-block">
+                                Institutional Communication
+                                <span className="absolute bottom-0 left-0 w-1/2 h-[3px] bg-orange-600 block mt-2"></span>
+                            </h2>
+                            <ul className="space-y-3 text-[17px]">
+                                {communication.map((item, i) => (
+                                    <li key={i} className="flex items-start gap-2">
+                                        <span className="w-2 h-2 mt-2 rounded-full bg-black inline-block"></span>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
 
                         {/* === Institutional Operations === */}
-                        <div className="w-full max-w-[80rem] mx-auto flex flex-wrap lg:flex-nowrap lg:gap-32 gap-20 items-start">
-                            <div className="w-full lg:w-[55%] space-y-6">
-                                <h2 className=" font-unbounded font-bold text-2xl lg:text-[27px] uppercase relative inline-block">
-                                    Institutional Operations
-                                    <span className="absolute bottom-0 left-0 w-1/2 h-[3px] bg-orange-600 block mt-2"></span>
-                                </h2>
-                                <ul className="space-y-3 text-[17px]">
-                                    {operations.map((item, i) => (
-                                        <li key={i} className="flex items-start gap-2">
-                                            <span className="w-2 h-2 mt-2 rounded-full bg-black inline-block"></span>
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                            {/* <div className="w-full lg:w-[50%] overflow-hidden">
-                            <Image
-                                src="/afri-learn-1.jpg"
-                                alt="Communication"
-                                width={600}
-                                height={400}
-                                className="rounded-2xl object-cover h-80 w-full"
-                                />
-                        </div> */}
+                        <div className="space-y-6">
+                            <h2 className=" font-unbounded font-bold text-2xl lg:text-[27px] uppercase relative inline-block">
+                                Institutional Operations
+                                <span className="absolute bottom-0 left-0 w-1/2 h-[3px] bg-orange-600 block mt-2"></span>
+                            </h2>
+                            <ul className="space-y-3 text-[17px]">
+                                {operations.map((item, i) => (
+                                    <li key={i} className="flex items-start gap-2">
+                                        <span className="w-2 h-2 mt-2 rounded-full bg-black inline-block"></span>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
+
                 </section>
+
 
                 {/* Academic Management – image right on desktop */}
                 <div className="w-full max-w-[80rem] mx-auto flex  flex-col lg:flex-row-reverse lg:gap-32 gap-20 items-center">

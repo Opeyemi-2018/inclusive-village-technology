@@ -95,7 +95,20 @@ const Inclusive = () => {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
+    const marqueeRef = useRef(null)
 
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.to(marqueeRef.current, {
+                xPercent: -50,
+                duration: 6,
+                ease: "linear",
+                repeat: -1,
+            })
+        }, marqueeRef)
+
+        return () => ctx.revert()
+    }, [])
 
 
 
@@ -106,15 +119,24 @@ const Inclusive = () => {
                 style={{
                     backgroundImage: `url('/integrations.jpg')`,
                     backgroundBlendMode: 'overlay',
-                    backgroundColor: 'rgba(255, 255, 255, 0.6)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.4)',
                 }}
             >
                 <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent to-white"></div>
 
-
-                <div className="flex items-center gap-2.5 z-10">
-                    <p className="text-lg capitalize font-medium text-black">banking software</p>
-                    <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
+                <div className="overflow-hidden w-[180px] h-6">
+                    <div
+                        ref={marqueeRef}
+                        className="flex whitespace-nowrap w-max"
+                        style={{ willChange: 'transform' }}
+                    >
+                        {[...Array(2)].map((_, i) => (
+                            <div key={i} className="flex items-center gap-2.5 mr-3">
+                                <p className="text-lg capitalize font-medium">inclusive remittance</p>
+                                <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="max-w-3xl mx-auto z-10 flex flex-col gap-5">
@@ -198,10 +220,10 @@ const Inclusive = () => {
                                 key={index}
                                 onMouseEnter={() => setHoveredFeatureIndex(index)}
                                 onMouseLeave={() => setHoveredFeatureIndex(null)}
-                                className={`transition-all duration-300 cursor-pointer md:py-16 py-10
-                                    ${hoveredFeatureIndex === index ? 'md:bg-orange-600 px-12 rounded-2xl md:text-white' : ''}
+                                className={`transition-all duration-300 cursor-pointer py-10 text-[#0b0b0b]
+                                    ${hoveredFeatureIndex === index ? 'md:bg-orange-600 px-8 rounded-2xl ' : ''}
                                     md:border-b md:border-gray-200
-                                    md:hover:bg-orange-600 md:hover:text-white
+                                    md:hover:bg-orange-600 
                                     bg-white`}
                                 initial={{ y: 50, opacity: 0 }}
                                 whileInView={{ y: 0, opacity: 1 }}
@@ -209,7 +231,7 @@ const Inclusive = () => {
                                 transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
                             >
                                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                                    <h2 className="text-3xl md:text-4xl font-medium">{feature.name}</h2>
+                                    <h2 className="text-3xl md:text-4xl font-medium lg:max-w-2xl">{feature.name}</h2>
 
                                     <AnimatePresence>
                                         {(hoveredFeatureIndex === index || isMobile) && (

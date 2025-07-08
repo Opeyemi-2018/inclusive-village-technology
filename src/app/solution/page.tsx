@@ -1,17 +1,20 @@
+'use client'
+import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const solutionData = [
     {
         title: "Inclusive Remittance Management System",
-        description: "A powerful, multi-channel remittance...",
-        image: "/remittance.webp",
+        description: "A powerful, multi-channel remittance",
+        image: "/remi.avif",
         slug: "inclusive-remittance",
     },
     {
         title: "Estate Management System",
-        description: "Digitize the way you manage properties...",
+        description: "Digitize the way you manage properties",
         image: "/estate.jpg",
         slug: "estate-management",
     },
@@ -23,13 +26,13 @@ const solutionData = [
     },
     {
         title: "Enterprise Software Development",
-        description: "Custom enterprise systems...",
+        description: "Custom enterprise systems",
         image: "/developer.avif",
         slug: "enterprise-software",
     },
     {
         title: "AfriPay+ Gateway System",
-        description: "Your all-in-one payment gateway...",
+        description: "Your all-in-one payment gateway",
         image: "/afripay-2.jpg",
         slug: "afripay-gateway",
     },
@@ -39,15 +42,46 @@ const solutionData = [
         image: "/afri-learn-1.jpg",
         slug: "afripay-learn",
     },
+    {
+        title: "Eazybiller ",
+        description: "Professional invoicing made simple",
+        image: "/invoice.webp",
+        slug: "eazybiller",
+    },
 ];
 
 const Solution = () => {
+
+    const marqueeRef = useRef(null)
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.to(marqueeRef.current, {
+                xPercent: -50,
+                duration: 6,
+                ease: "linear",
+                repeat: -1,
+            })
+        }, marqueeRef)
+
+        return () => ctx.revert()
+    }, [])
     return (
         <div className="lg:px-10 px-3 pt-36">
             <div className="flex flex-col justify-center items-center">
-                <div className="flex items-center gap-3">
-                    <p className="text-lg font-semibold">Ideas & Tips</p>
-                    <span className="w-5 h-5 pt-2 bg-orange-600 rounded-full inline-block"></span>
+                <div className="overflow-hidden w-[180px] h-6">
+                    <div
+                        ref={marqueeRef}
+                        className="flex whitespace-nowrap w-max"
+                        style={{ willChange: 'transform' }}
+                    >
+                        {[...Array(2)].map((_, i) => (
+                            <div key={i} className="flex items-center gap-2.5 mr-3">
+                                <p className="text-lg capitalize font-medium">solutions</p>
+                                <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 <h1 className="pt-10 uppercase font-unbounded md:text-6xl text-4xl font-bold">

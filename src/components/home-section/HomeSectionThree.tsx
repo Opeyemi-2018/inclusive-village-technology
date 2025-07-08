@@ -11,28 +11,28 @@ const recentWorks = [
         name: "AfriPay+",
         type: "Gateway System",
         info: "A fast, secure, and developer-friendly payment gateway.",
-        image: "/afripay.png"
+        image: "/afripay-2.jpg"
     },
     {
         id: 4,
         name: "Inclusive Remittance",
         info: "A compliant, multi-channel remittance platform .",
         type: "Gateway System",
-        image: "/remittance.webp"
+        image: "/remi.avif"
     },
     {
         id: 5,
         name: "Afripay Learn",
         info: "A full-featured learning management system for schools.",
         type: "Gateway System",
-        image: "/afripay-learn.png"
+        image: "/afri-learn-3.jpg"
     },
     {
         id: 6,
         name: "Eazybiller",
         info: "An invoicing and billing automation solution that simplifies finances for SMEs.",
         type: "Gateway System",
-        image: "/easybiller.png"
+        image: "/biller-1.jpg"
     }
 ]
 

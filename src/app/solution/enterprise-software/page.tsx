@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { HiOutlineMinus } from "react-icons/hi";
 import { FiPlus } from "react-icons/fi";
 
- const whatWeBuild = [
+const whatWeBuild = [
     {
         title: "Customer Relationship Management (CRM)",
         description:
@@ -34,7 +34,7 @@ import { FiPlus } from "react-icons/fi";
     },
 ];
 
- const keyBenefits = [
+const keyBenefits = [
     {
         title: "Tailored to Fit",
         description:
@@ -62,7 +62,7 @@ import { FiPlus } from "react-icons/fi";
     },
 ];
 
- const ourProcess = [
+const ourProcess = [
     {
         number: 1,
         title: "Discovery & Workflow Mapping",
@@ -132,21 +132,45 @@ const EnterpriseSoftware = () => {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.to(marqueeRef.current, {
+                xPercent: -50,
+                duration: 6,
+                ease: "linear",
+                repeat: -1,
+            })
+        }, marqueeRef)
+
+        return () => ctx.revert()
+    }, [])
+
     return (
         <div>
             <div className="relative bg-center bg-cover bg-no-repeat flex flex-col gap-3 items-center justify-center text-center h-[80vh] md:h-screen "
                 style={{
                     backgroundImage: `url('/agency-1.jpg')`,
                     backgroundBlendMode: 'overlay',
-                    backgroundColor: 'rgba(255, 255, 255, 0.6)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.4)',
                 }}
             >
                 <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent to-white"></div>
 
 
-                <div className="flex items-center gap-2.5 z-10">
-                    <p className="text-lg capitalize font-medium ">  Enterprise Software Development</p>
-                    <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
+                <div className="overflow-hidden w-[180px] h-6">
+                    <div
+                        ref={marqueeRef}
+                        className="flex whitespace-nowrap w-max"
+                        style={{ willChange: 'transform' }}
+                    >
+                        {[...Array(2)].map((_, i) => (
+                            <div key={i} className="flex items-center gap-2.5 mr-3">
+                                <p className="text-lg capitalize font-medium">software development</p>
+                                <span className="w-2 h-2 bg-orange-600 rounded-full inline-block"></span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
                 <h1 className="md:text-[34px] max-w-3xl mx-auto text-4xl font-bold font-unbounded uppercase   leading-snug z-10">
                     Enterprise Software Development
@@ -164,7 +188,7 @@ const EnterpriseSoftware = () => {
                         <p className="text-[18px] ">
                             We design and develop enterprise-grade software tailored specifically to your business workflows, goals, and growth strategy. From custom ERP systems to HRMS platforms, CRMs, and other internal business tools—our approach focuses on clean architecture, scalability, and user-centric design.
                         </p>
-                        <p className="text-[18px] hidden lg:inline">Whether you&apos;re looking to optimize internal operations, enhance team collaboration, or unlock real-time insights across departments, we build tools that work the way your business works.</p>
+                        {/* <p className="text-[18px] hidden lg:inline">Whether you&apos;re looking to optimize internal operations, enhance team collaboration, or unlock real-time insights across departments, we build tools that work the way your business works.</p> */}
                     </div>
 
                     <div className="w-full lg:w-[50%] overflow-hidden">
@@ -179,7 +203,7 @@ const EnterpriseSoftware = () => {
 
                 </div>
 
-                <section className="py-20 ">
+                <section className=" ">
                     <div className="w-full flex justify-end">
                         <h2 className="text-4xl sm:text-5xl font-unbounded font-bold uppercase mb-6 relative inline-block">
                             What We Build
@@ -187,40 +211,18 @@ const EnterpriseSoftware = () => {
                         </h2>
                     </div>
 
-                    <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 md:py-16 py-10">
-                        <div className="flex flex-col gap-6 w-full lg:w-1/2">
-                            <div className="">
-                                <Image
-                                    src="/agency-9.jpg"
-                                    alt="What We Build"
-                                    width={600}
-                                    height={600}
-                                    className="rounded-2xl object-cover  w-full h-64"
-                                />
-                            </div>
-                            <div className="">
-                                <Image
-                                    src="/integrations.jpg"
-                                    alt="What We Build"
-                                    width={600}
-                                    height={600}
-                                    className="rounded-2xl object-cover  w-full h-64"
-                                />
-                            </div>
-                        </div>
-                        <div className="w-full lg:w-1/2">
-                            <div className="space-y-8 mt-10">
-                                {whatWeBuild.map((item, index) => (
-                                    <div key={index} className="">
-                                        <h3 className="text-xl font-semibold mb-1">
-                                            {item.title}
-                                        </h3>
-                                        <p className=" text-base leading-relaxed">
-                                            {item.description}
-                                        </p>
-                                    </div>
-                                ))}
-                            </div>
+                    <div className="w-full lg:w-1/2 max-w-5xl  mx-auto">
+                        <div className="space-y-24 mt-10">
+                            {whatWeBuild.map((item, index) => (
+                                <div key={index} className="">
+                                    <h3 className="text-xl font-semibold mb-1 font-unbounded">
+                                        {item.title}
+                                    </h3>
+                                    <p className=" text-base leading-relaxed">
+                                        {item.description}
+                                    </p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -237,10 +239,10 @@ const EnterpriseSoftware = () => {
                             key={index}
                             onMouseEnter={() => setHoveredFeatureIndex(index)}
                             onMouseLeave={() => setHoveredFeatureIndex(null)}
-                            className={`transition-all duration-300 cursor-pointer md:py-16 py-10
-                                    ${hoveredFeatureIndex === index ? 'md:bg-orange-600 px-12 rounded-2xl md:text-white' : ''}
+                            className={`transition-all duration-300 cursor-pointer py-10 text-[#0b0b0b]
+                                    ${hoveredFeatureIndex === index ? 'md:bg-orange-600 px-8 rounded-2xl ' : ''}
                                     md:border-b md:border-gray-200
-                                    md:hover:bg-orange-600 md:hover:text-white
+                                    md:hover:bg-orange-600 
                                     bg-white`}
                             initial={{ y: 50, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}

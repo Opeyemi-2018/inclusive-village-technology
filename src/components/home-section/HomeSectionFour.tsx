@@ -83,9 +83,9 @@ const HomeSectionFour = () => {
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                         className={`transition-all duration-300 cursor-pointer md:py-16 py-10 
-                            ${hoveredIndex === index ? 'md:bg-orange-600 px-12 rounded-2xl md:text-white' : ''}
+                            ${hoveredIndex === index ? 'md:bg-orange-600 px-8 rounded-2xl text-[#0b0b0b]' : ''}
                             md:border-b md:border-gray-200
-                            md:hover:bg-orange-600 md:hover:text-white
+                            md:hover:bg-orange-600 text-[#0b0b0b]
                             bg-white`}
                         initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}

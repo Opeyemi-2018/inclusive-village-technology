@@ -60,7 +60,7 @@ const HomeSectionFive = () => {
         >
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex items-center gap-3 pr-10">
-              <p className="text-lg font-semibold">Our Services</p>
+              <p className="text-lg font-semibold">Our process</p>
               <span className="w-4 h-4 bg-orange-600 rounded-full inline-block"></span>
             </div>
           ))}
